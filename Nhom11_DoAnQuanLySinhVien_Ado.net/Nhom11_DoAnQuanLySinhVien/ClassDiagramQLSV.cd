@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiem" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAMAAQwwBABJQBAAJxgAAAAgKcBgIIBBhAAUAJBg=</HashCode>
+      <FileName>BangDiem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemCaNhan" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAJQgAIAAyRACBQABWCBIACWICAAIgAQEMQIBAAQEAA=</HashCode>
+      <FileName>BangDiemCaNhan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FrMain" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Ac1i9CCAUmAswKlAUDPHACCDIiCxSU6QEpzwcThV6ww=</HashCode>
+      <FileName>FrMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.frmDangNhap" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gFxAIQAAEiAAgggAACCAYIAKCABACAAAAAAFASDSAAI=</HashCode>
+      <FileName>frmDangNhap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FrmTongKet" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQRAJAAiQEIAEARDCAIACmIAAAAJQaAIAIAAAQAAI=</HashCode>
+      <FileName>FrmTongKet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.Program" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.ReportDanhSachKhoa" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABQAAJAAyQAAAAABCCAIACGIAAAgAAAABAIAAAQAgA=</HashCode>
+      <FileName>ReportDanhSachKhoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.ReportDanhSachLop" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBQIAIAAiQAAAQCBCCAIACGIAAAAAAAAAAIAAAwAgA=</HashCode>
+      <FileName>ReportDanhSachLop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.ReportDanhSachMon" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQAAJAAiQAAAAADCCAIACGIAAAAAAAABAJAAAQAgA=</HashCode>
+      <FileName>ReportDanhSachMon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.ReportDanhSachSinhVien" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBQAAJAAiQAIAAARiCAIACmIAAAQJQYAIAIQAgQAAI=</HashCode>
+      <FileName>ReportDanhSachSinhVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.SINHVIENTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAADAICAAAAAAAIQAARBA=</HashCode>
+      <FileName>BangDiem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.TONGKETTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAWAAUPkBAIcAIACAAAAAASAKCAAAAAEAAAAARBA=</HashCode>
+      <FileName>BangDiem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.KETQUAHOCTAPTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEDgBAAcAIAGAAAAAAGEICAAAACAAAAAARBE=</HashCode>
+      <FileName>BangDiem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.HOCKITableAdapter" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.KHOATableAdapter" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEEAAAAcAIAAAAAAAACEICAAAAAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.LOPTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAIAACEICAAAAAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.MONTableAdapter" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAQAAAAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQABACBAAQBAhAEBAAAAMAAoAAACgAAAAEQAAAAgFAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLDangNhap" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\BLDangNhap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLDiemSinhVien" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAiAQQAAAAAAIAAAUAAAgAAACAAoAAAAAQAAA=</HashCode>
+      <FileName>BS Layer\BLDiemSinhVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLDoiMatKhau" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\BLDoiMatKhau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLGiangVien" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgEAQAUAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\BLGiangVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLKhoa" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAQAACAAAAAAAAAAAAAAAAAAgAIAAAAAgA=</HashCode>
+      <FileName>BS Layer\BLKhoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLLogin" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAQAAAACAAAAAABAAAAAAAAAAAAACAQAAA=</HashCode>
+      <FileName>BS Layer\BLLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLLopHoc" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAQAACAAAAAAABIAAAAAABAAECAAAAAABA=</HashCode>
+      <FileName>BS Layer\BLLopHoc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLMonHoc" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACQAAAABAQAAAEACAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>BS Layer\BLMonHoc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLSinhVien" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAACAAQAGAAAAAIEQAAAQAAAABAAAAABAEAAAA=</HashCode>
+      <FileName>BS Layer\BLSinhVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLSoLuongGVTheoMon" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>BS Layer\BLSoLuongGVTheoMon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLSoLuongSVTheoKhoa" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>BS Layer\BLSoLuongSVTheoKhoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLThongTinTaiKhoan" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BS Layer\BLThongTinTaiKhoan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.BS_Layer.BLTinhHinhHocTap" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAgAAAAAQAAA=</HashCode>
+      <FileName>BS Layer\BLTinhHinhHocTap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.DB_Layer.DBMain" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAACQAAIAAAAAAAACCABA=</HashCode>
+      <FileName>DB Layer\DBMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.DanhGiaNangLuc" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABAASgAIAAQAiSAAECGKAACgJCAACAKAggAAAA=</HashCode>
+      <FileName>FormControl\DanhGiaNangLuc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.DiemSinhVien" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kg+AgARZIWxcRCI1dCKTpICmOAcSgMSAsAAaSoAigAU=</HashCode>
+      <FileName>FormControl\DiemSinhVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.DoiMatKhau" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMYAAAAAACABAAAAEACAAIiCCAEAAEAAAEAQwAIAIAA=</HashCode>
+      <FileName>FormControl\DoiMatKhau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.information" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAIKAAABAAAACAAACCAAAAAACAgAAAAABAAAA=</HashCode>
+      <FileName>FormControl\information.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.QuanLyGiangVien" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>khWGAANRKTUQgDAgMEKRsQCGGAIYgEiAGEAaaIAAAAk=</HashCode>
+      <FileName>FormControl\QuanLyGiangVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.QuanLyKhoa" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kgSAAABRASIYACAgMEKSoBCCGAIAAFCAECACiACAAAE=</HashCode>
+      <FileName>FormControl\QuanLyKhoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.QuanLyLopHoc" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kgyEADBRSSIQACAiMMKQoACiGAMASEAAMAADCBIAABE=</HashCode>
+      <FileName>FormControl\QuanLyLopHoc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.QuanLyMonHoc" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kkSCAABxASAQgCAgMGKQpCCTGAIAAECAECAKCJAAAAk=</HashCode>
+      <FileName>FormControl\QuanLyMonHoc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.QuanLyNguoiDung" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>koSAAAFRASAQADAwcEKQoQCCGAMqAMbAEDICaAAAIAE=</HashCode>
+      <FileName>FormControl\QuanLyNguoiDung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.SoLuongGiangVienTheoMon" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAoAACQAAAgAAACBAACCCABBAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormControl\SoLuongGiangVienTheoMon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.SoLuongSinhVienTheoKhoa" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAoAACQAAAAAAACJAACCCAAAACAAAAAAAAAAEAA=</HashCode>
+      <FileName>FormControl\SoLuongSinhVienTheoKhoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.ThongTinSinhVien" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>sgyAAAFRESAQICQyNEKT4ACmOQMACEACEIACSBJApCM=</HashCode>
+      <FileName>FormControl\ThongTinSinhVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.FormControl.ThongTinTaiKhoan" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEIAAACAaAAAACAKAIACCAwEgBKCAAAIAAQACECA=</HashCode>
+      <FileName>FormControl\ThongTinTaiKhoan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gRSABAARAABsCAAAAIQRECLADYAAAAAQYgBGCAASEsg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nhom11_DoAnQuanLySinhVien.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAQABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SqlServerTypes.Utilities" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>SqlServerTypes\Loader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
