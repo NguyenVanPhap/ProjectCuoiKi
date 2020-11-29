@@ -65,17 +65,17 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
             dgvDiem.AutoResizeColumns();
 
-            lblHoTen.Text = "Name:";
+            
             lblMaMon.Text = "Subject ID:";
             lblDiemSV.Text = "STUDENT GRADES MANAGEMENT";
             lblDiemLan1.Text = "1st grade:";
             lblDiemLan2.Text = "2nd grade:";
-            lblDiemTK.Text = "Final grade:";
+            
             lblHK.Text = "Semester:";
             lblNam.Text = "Year:";
             lblLop.Text = "Class:";
             lblkhoa.Text = "Faculty:";
-            lblHoTen.Text = "Name:";
+            
             lblTimKiem.Text = "Search:";
             lblMaSV.Text = "Student ID:";
             lblLuu.Text = "Save";
@@ -112,12 +112,12 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             lblMaMon.Text = "Môn học:";
             lblDiemLan1.Text = "Điểm thi lần 1:";
             lblDiemLan1.Text = "Điểm thi lần 2:";
-            lblDiemTK.Text = "Điểm tổng kết:";
+            
             lblHK.Text = "Học kì:";
             lblNam.Text = "Năm học:";
             lblLop.Text = "Lớp:";
             lblkhoa.Text = "Khoa:";
-            lblHoTen.Text = "Họ và tên:";
+            
             lblMaMon.Text = "Môn học:";
             lblMaSV.Text = "Mã SV:";
             lblTimKiem.Text = "Tìm kiếm:";
@@ -181,7 +181,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 Load_Khoa();
                 Load_MonHoc();
                 Load_Lop();
-                this.txtHoTen.ResetText();
+                //this.txtHoTen.ResetText();
                 this.btnLuu.Enabled = false;
                 this.btnHuyBo.Enabled = false;
                 this.btnThem.Enabled = true;
@@ -242,11 +242,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            txtDiemThi1.ResetText();
+            txtDiemthi1.ResetText();
             txtDiemThi2.ResetText();
-            txtDiemTK.ResetText();
+           
             txtMaSV.ResetText();
-            txtHoTen.ResetText();
+            
             errorProvider.Clear();
             if (cbbKhoa.Text == "")
                 errorProvider.SetError(cbbKhoa, "Chưa nhập Khoa!");
@@ -275,11 +275,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
             mon = cbbMonHoc.Text; hk = cbbHocKi.Text; nam = cbbNamHoc.Text;
             Them = true;
-            txtDiemThi1.ResetText();
+            txtDiemthi1.ResetText();
             txtDiemThi2.ResetText();
-            txtDiemTK.ResetText();
+            
             this.txtMaSV.ResetText();
-            this.txtHoTen.ResetText();
+            
             this.txtDiemThi2.ResetText();
 
             this.btnLuu.Enabled = true;
@@ -317,11 +317,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 ctrl.Enabled = true;
             }
 
-            txtDiemThi1.ResetText();
+            txtDiemthi1.ResetText();
             txtDiemThi2.ResetText();
-            txtDiemTK.ResetText();
+            
             txtMaSV.ResetText();
-            txtHoTen.ResetText();
+            
             this.btnThem.Enabled = true;
             this.btnSua.Enabled = true;
             this.btnXoa.Enabled = true;
@@ -383,7 +383,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             this.lblXoa.ForeColor = Color.Gray;
 
             this.txtMaSV.Enabled = false;
-            this.txtHoTen.Focus();
+           
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -426,10 +426,9 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     {
                         dem++;
                         dgvDiem.Rows[i].Selected = true;
-                        txtDiemThi1.Text = dgvDiem.Rows[i].Cells[7].Value.ToString();
+                        txtDiemthi1.Text = dgvDiem.Rows[i].Cells[7].Value.ToString();
                         txtDiemThi2.Text = dgvDiem.Rows[i].Cells[8].Value.ToString();
-                        txtDiemTK.Text = dgvDiem.Rows[i].Cells[9].Value.ToString();
-                        txtHoTen.Text = dgvDiem.Rows[i].Cells[1].Value.ToString();
+                       
                         if (Them)
                         {
                             if (dgvDiem.Rows[i].Cells[3].Value.ToString() == cbbMonHoc.Text && dgvDiem.Rows[i].Cells[5].Value.ToString() == cbbHocKi.Text && dgvDiem.Rows[i].Cells[6].Value.ToString() == cbbNamHoc.Text)
@@ -455,10 +454,9 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
             int r = dgvDiem.CurrentCell.RowIndex;
             txtMaSV.Text = dgvDiem.Rows[r].Cells[0].Value.ToString();
-            txtDiemThi1.Text = dgvDiem.Rows[r].Cells[7].Value.ToString();
+            txtDiemthi1.Text = dgvDiem.Rows[r].Cells[7].Value.ToString();
             txtDiemThi2.Text = dgvDiem.Rows[r].Cells[8].Value.ToString();
-            txtDiemTK.Text = dgvDiem.Rows[r].Cells[9].Value.ToString();
-            txtHoTen.Text = dgvDiem.Rows[r].Cells[1].Value.ToString();
+            
             //cbbHocKi.SelectedIndex = cbbHocKi.Items.IndexOf(dgvDiem.Rows[r].Cells[5].Value.ToString());
             //cbbMonHoc.SelectedIndex = cbbMonHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[3].Value.ToString());
             //cbbNamHoc.SelectedIndex = cbbNamHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[6].Value.ToString());
@@ -486,18 +484,18 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                         MessageBox.Show("Dữ liệu bị trùng!");
                     else
                     {
-                        if (dbDSV.ThemDiemSinhVien(txtMaSV.Text, cbbMonHoc.Text, cbbHocKi.Text, cbbNamHoc.Text, txtDiemThi1.Text, txtDiemThi2.Text, txtDiemTK.Text, txtGhiChu.Text, ref err))
-                        {
-                            cbbHocKi.Text = hk;
-                            cbbMonHoc.Text = mon;
-                            cbbNamHoc.Text = nam;
+                        //if (dbDSV.ThemDiemSinhVien(txtMaSV.Text, cbbMonHoc.Text, cbbHocKi.Text, cbbNamHoc.Text, txtDiemthi1.Text, txtDiemThi2.Text, txtGhiChu.Text, ref err))
+                        //{
+                        //    cbbHocKi.Text = hk;
+                        //    cbbMonHoc.Text = mon;
+                        //    cbbNamHoc.Text = nam;
 
-                            Load_Data();
-                            btnTimKiem_Click(null, null);
-                            MessageBox.Show("Đã thêm xong!");
-                        }
-                        else
-                            MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
+                        //    Load_Data();
+                        //    btnTimKiem_Click(null, null);
+                        //    MessageBox.Show("Đã thêm xong!");
+                        //}
+                        //else
+                        //    MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
                     }
                 }
             }
@@ -508,16 +506,16 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     MessageBox.Show("Không có mục nào được chọn!");
                 else
                 {
-                    if (dbDSV.CapNhatDiemHocTap(txtMaSV.Text, dgvDiem.Rows[r].Cells[3].Value.ToString(),
-                        dgvDiem.Rows[r].Cells[5].Value.ToString(), dgvDiem.Rows[r].Cells[6].Value.ToString(),
-                        txtDiemThi1.Text, txtDiemThi2.Text, txtDiemTK.Text, txtGhiChu.Text, ref err))
-                    {
-                        Load_Data();
-                        btnTimKiem_Click(null, null);
-                        MessageBox.Show("Đã sửa xong!");
-                    }
-                    else
-                        MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
+                    //if (dbDSV.CapNhatDiemHocTap(txtMaSV.Text, dgvDiem.Rows[r].Cells[3].Value.ToString(),
+                    //    dgvDiem.Rows[r].Cells[5].Value.ToString(), dgvDiem.Rows[r].Cells[6].Value.ToString(),
+                    //    txtDiemthi1.Text, txtDiemThi2.Text, "", txtGhiChu.Text, ref err))
+                    //{
+                    //    Load_Data();
+                    //    btnTimKiem_Click(null, null);
+                    //    MessageBox.Show("Đã sửa xong!");
+                    //}
+                    //else
+                    //    MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
                 }
             }
             foreach (Control ctrl in grpLuaChon.Controls)

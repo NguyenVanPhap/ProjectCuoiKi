@@ -103,7 +103,7 @@
             this.btnQLSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLSV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnQLSV.Location = new System.Drawing.Point(264, 276);
-            this.btnQLSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLSV.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLSV.Name = "btnQLSV";
             this.btnQLSV.Size = new System.Drawing.Size(185, 286);
             this.btnQLSV.TabIndex = 7;
@@ -121,7 +121,7 @@
             this.btnQLMH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLMH.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnQLMH.Location = new System.Drawing.Point(617, 119);
-            this.btnQLMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLMH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLMH.Name = "btnQLMH";
             this.btnQLMH.Size = new System.Drawing.Size(413, 148);
             this.btnQLMH.TabIndex = 12;
@@ -139,7 +139,7 @@
             this.btnQLLop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLLop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnQLLop.Location = new System.Drawing.Point(457, 274);
-            this.btnQLLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLLop.Name = "btnQLLop";
             this.btnQLLop.Size = new System.Drawing.Size(229, 146);
             this.btnQLLop.TabIndex = 11;
@@ -157,7 +157,7 @@
             this.btnQLKhoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLKhoa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnQLKhoa.Location = new System.Drawing.Point(693, 276);
-            this.btnQLKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLKhoa.Name = "btnQLKhoa";
             this.btnQLKhoa.Size = new System.Drawing.Size(337, 146);
             this.btnQLKhoa.TabIndex = 10;
@@ -175,7 +175,7 @@
             this.btnQLDSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLDSV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnQLDSV.Location = new System.Drawing.Point(457, 431);
-            this.btnQLDSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLDSV.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLDSV.Name = "btnQLDSV";
             this.btnQLDSV.Size = new System.Drawing.Size(573, 130);
             this.btnQLDSV.TabIndex = 9;
@@ -617,7 +617,7 @@
             // 
             this.pnlPhanCach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlPhanCach.Location = new System.Drawing.Point(497, 57);
-            this.pnlPhanCach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPhanCach.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPhanCach.Name = "pnlPhanCach";
             this.pnlPhanCach.Size = new System.Drawing.Size(786, 1);
             this.pnlPhanCach.TabIndex = 14;
@@ -629,7 +629,7 @@
             this.ptbTroVe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbTroVe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbTroVe.Location = new System.Drawing.Point(48, 16);
-            this.ptbTroVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbTroVe.Margin = new System.Windows.Forms.Padding(4);
             this.ptbTroVe.Name = "ptbTroVe";
             this.ptbTroVe.Size = new System.Drawing.Size(69, 43);
             this.ptbTroVe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -664,7 +664,7 @@
             this.btnDGNL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDGNL.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnDGNL.Location = new System.Drawing.Point(264, 119);
-            this.btnDGNL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDGNL.Margin = new System.Windows.Forms.Padding(4);
             this.btnDGNL.Name = "btnDGNL";
             this.btnDGNL.Size = new System.Drawing.Size(345, 146);
             this.btnDGNL.TabIndex = 13;

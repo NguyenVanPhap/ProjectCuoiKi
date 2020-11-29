@@ -21,14 +21,16 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string sqlstring = "sp_LayMonHoc";
             string[] paramenters = { };
             string[] values = { };
-            return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
+            return db.ExcuteQueryDataSet(sqlstring, CommandType.StoredProcedure, paramenters, values);
         }
         public bool ThemMonHoc(string MaMon, string TenMon, string SoTinChi, ref string err)
         {
             //string sqlString = "Insert Into MON Values('" + MaMon + "',N'" +
             //    TenMon + "','" + SoTinChi + "')";
             string sqlstring = "sp_ThemMonHoc";
-            string[] paramenters = { "@MaMH, @TenMH, @SoTinChi" };
+            string[] paramenters = { "@MaMH", "@TenMH", "@SoTinChi" };
+
+            
             string[] values = { MaMon, TenMon, SoTinChi };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
@@ -36,7 +38,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         {
             //string sqlString = "Delete From MON Where MaMon='" + MaMon + "'";
             string sqlstring = "Sp_XoaMonHoc";
-            string[] paramenters = { "@MaMH " };
+            string[] paramenters = { "@MaMH" };
             string[] values = { MaMon};
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
@@ -46,7 +48,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             //    "', SoTinChi='" + SoTinChi +
             //    "' Where MaMon='" + MaMon + "'";
             string sqlstring = "sp_CapNhatMonHoc";
-            string[] paramenters = { "@MaMH, @TenMH, @SoTinChi" };
+            string[] paramenters = { "@MaMH", "@TenMH", "@SoTinChi" };
             string[] values = { MaMon, TenMon, SoTinChi };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }

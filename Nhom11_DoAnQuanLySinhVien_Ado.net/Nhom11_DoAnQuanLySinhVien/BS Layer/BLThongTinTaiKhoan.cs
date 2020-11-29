@@ -21,7 +21,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string sqlString = "sp_LayThongTinTaiKhoan";
             string[] paramenters = { "@TenDangNhap" };
             string[] values = { TenDN};
-            return db.ExcuteQueryDataSet(sqlString, CommandType.StoredProcedure, paramenters, values);
+            return dbThongTinTaiKhoan.ExcuteQueryDataSet(sqlString, CommandType.StoredProcedure, paramenters, values);
         }
     }
 }

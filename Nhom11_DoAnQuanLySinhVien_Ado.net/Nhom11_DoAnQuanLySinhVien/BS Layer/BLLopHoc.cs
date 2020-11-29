@@ -18,23 +18,35 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public DataSet LayLopHoc()
         {
-            return db.ExcuteQueryDataSet("Select * From LOP", CommandType.Text);
+            string sqlstring = "sp_LayLopHoc_Lop";
+            string[] paramenters = { };
+            string[] values = { };
+            return db.ExcuteQueryDataSet(sqlstring, CommandType.StoredProcedure, paramenters, values);
         }
         public bool ThemLopHoc(string MaKhoa, string MaLop, string TenLop, string SiSo, ref string err)
         {
-            string sqlString = "Insert Into LOP Values('" + MaKhoa + "','" + MaLop + "',N'" + TenLop + "','"+SiSo+"')";
-            return db.MyExcuteNonQuery(sqlString, CommandType.Text, ref err);
+            String sqlstring = "sp_ThemLopHoc";
+            string[] paramenters = { "@MaLop", "@TenLop", "@MaKhoa" };
+            string[] values = { MaLop, TenLop, MaKhoa };
+
+            return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
         public bool XoaLopHoc(string MaLop, ref string err)
         {
-            string sqlString = "Delete From LOP Where MaLop='" + MaLop + "'";
-            return db.MyExcuteNonQuery(sqlString, CommandType.Text, ref err);
+            String sqlstring = "sp_XoaLopHoc";
+            string[] paramenters = { "@MaLop" };
+            string[] values = { MaLop };
+
+            return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
         public bool CapNhatLopHoc(string MaKhoa, string MaLop, string TenLop, string SiSo, ref string err)
         {
-            string sqlString = "Update LOP Set MaKhoa = '" + MaKhoa + "', TenLop = N'" +
-                TenLop +"',SiSo='"+ SiSo +"' Where MaLop = '" + MaLop + "'";
-            return db.MyExcuteNonQuery(sqlString, CommandType.Text, ref err);
+            String sqlstring = "sp_CapNhapLopHoc";
+            string[] paramenters = { "@MaLop", "@TenLop", "@MaKhoa" };
+            string[] values = { MaLop, TenLop, MaKhoa };
+
+            return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
+
         }
 
         public List<string> LayMaKhoa()
@@ -54,38 +66,44 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         {
 
 
-            string selectcommand = "Select * From LOP where MaLop='" + MaLop + "'";
-            //SqlDataReader reader = db.MyExcuteReader(selectcommand, CommandType.Text);
-            //if (reader.Read())
-            //{
-            //    reader.Dispose();
-            //    return true;
-            //}
-            //reader.Dispose();
+            String sqlstring = "sp_KiemTraMaLopTonTai";
+            string[] paramenters = { "@MaLop" };
+            string[] values = { MaLop };
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.Text,paramenters,values);
+            if (reader.Read())
+            {
+                reader.Dispose();
+                return true;
+            }
+            reader.Dispose();
             return false;
         }
         public bool kiemTraMaKhoaChinhXac(string MaKhoa, ref string err)
         {
-            string selectcommand = "Select * From Khoa where MaKhoa='" + MaKhoa + "'";
-            //SqlDataReader reader = db.MyExcuteReader(selectcommand, CommandType.Text);
-            //if (reader.Read())
-            //{
-            //    reader.Dispose();
-            //    return true;
-            //}
-            //reader.Dispose();
+            string sqlstring = "sp_KiemTraMaKhoaChinhXac";
+            string[] paramenters = { "@MaKhoa" };
+            string[] values = { MaKhoa };
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure,paramenters,values);
+            if (reader.Read())
+            {
+                reader.Dispose();
+                return true;
+            }
+            reader.Dispose();
             return false;
         }
         public bool kiemTraSinhVienCoLop(string MaLop, ref string err)
         {
-            string selectcommand = "Select MaLop From SINHVIEN where MaLop='" + MaLop + "'";
-            //SqlDataReader reader = db.MyExcuteReader(selectcommand, CommandType.Text);
-            //if (reader.Read())
-            //{
-            //    reader.Dispose();
-            //    return true;
-            //}
-            //reader.Dispose();
+            string sqlstring = "sp_KiemTraMaKhoaChinhXac";
+            string[] paramenters = { "@MaLop" };
+            string[] values = { MaLop };
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
+            if (reader.Read())
+            {
+                reader.Dispose();
+                return true;
+            }
+            reader.Dispose();
             return false;
         }
     }

@@ -138,16 +138,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             }
         }
 
-        private void dgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int r = dgvMonHoc.CurrentCell.RowIndex;
-            this.txtMaMon.Text =
-                dgvMonHoc.Rows[r].Cells[0].Value.ToString();
-            this.txtTenMon.Text =
-                dgvMonHoc.Rows[r].Cells[1].Value.ToString();
-            this.txtSoTinChi.Text =
-                dgvMonHoc.Rows[r].Cells[2].Value.ToString();
-        }
+        
 
         private void QuanLyMonHoc_Load(object sender, EventArgs e)
         {
@@ -328,10 +319,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 int ktTonTaiMHKhac = dbMonHoc.KiemTraMonHocTonTaiKhac(this.txtMaMon.Text, ref err);
                 if (ktTonTaiMHKhac > -1 && ktTonTaiMHKhac < 2)
                 {
-                    if (ktTonTaiMHKhac == 0)
-                        MessageBox.Show("Bạn phải xóa Mẫu Môn Học " + this.txtMaMon.Text + " từ bảng Giảng Viên", "Thông báo!",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    else if (ktTonTaiMHKhac == 1)
+                    
+                    if (ktTonTaiMHKhac == 1)
                         MessageBox.Show("Bạn phải xóa Mẫu Môn Học " + this.txtMaMon.Text + " từ bảng Kết Quả Học Tập", "Thông báo!",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -350,6 +339,20 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             }
             else
                 MessageBox.Show("Không thực hiện việc xóa mẫu tin!");
+        }
+
+        private void dgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                int r = dgvMonHoc.CurrentCell.RowIndex;
+                this.txtMaMon.Text =
+                    dgvMonHoc.Rows[r].Cells[0].Value.ToString();
+                this.txtTenMon.Text =
+                    dgvMonHoc.Rows[r].Cells[1].Value.ToString();
+                this.txtSoTinChi.Text =
+                    dgvMonHoc.Rows[r].Cells[2].Value.ToString();
+
+            
         }
     }
 }

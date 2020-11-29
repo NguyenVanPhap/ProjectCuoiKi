@@ -43,10 +43,6 @@
             this.lblSiSo = new System.Windows.Forms.Label();
             this.lblTenLop = new System.Windows.Forms.Label();
             this.dgvLop = new System.Windows.Forms.DataGridView();
-            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDanhSach = new System.Windows.Forms.GroupBox();
             this.btnHuyBo = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -73,10 +69,10 @@
             this.txtTenLop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTenLop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenLop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLop.Location = new System.Drawing.Point(119, 116);
-            this.txtTenLop.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenLop.Location = new System.Drawing.Point(159, 143);
+            this.txtTenLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(128, 29);
+            this.txtTenLop.Size = new System.Drawing.Size(170, 35);
             this.txtTenLop.TabIndex = 9;
             // 
             // txtMaLop
@@ -84,10 +80,10 @@
             this.txtMaLop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaLop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaLop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLop.Location = new System.Drawing.Point(119, 74);
-            this.txtMaLop.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaLop.Location = new System.Drawing.Point(159, 91);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(128, 29);
+            this.txtMaLop.Size = new System.Drawing.Size(170, 35);
             this.txtMaLop.TabIndex = 8;
             // 
             // cboMaKhoa
@@ -96,10 +92,10 @@
             this.cboMaKhoa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cboMaKhoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMaKhoa.FormattingEnabled = true;
-            this.cboMaKhoa.Location = new System.Drawing.Point(119, 30);
-            this.cboMaKhoa.Margin = new System.Windows.Forms.Padding(2);
+            this.cboMaKhoa.Location = new System.Drawing.Point(159, 37);
+            this.cboMaKhoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboMaKhoa.Name = "cboMaKhoa";
-            this.cboMaKhoa.Size = new System.Drawing.Size(128, 29);
+            this.cboMaKhoa.Size = new System.Drawing.Size(169, 35);
             this.cboMaKhoa.TabIndex = 7;
             // 
             // lblLop
@@ -107,10 +103,9 @@
             this.lblLop.AutoSize = true;
             this.lblLop.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLop.ForeColor = System.Drawing.Color.Red;
-            this.lblLop.Location = new System.Drawing.Point(345, 26);
-            this.lblLop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLop.Location = new System.Drawing.Point(460, 32);
             this.lblLop.Name = "lblLop";
-            this.lblLop.Size = new System.Drawing.Size(262, 32);
+            this.lblLop.Size = new System.Drawing.Size(338, 42);
             this.lblLop.TabIndex = 44;
             this.lblLop.Text = "       QUẢN LÝ LỚP";
             // 
@@ -118,10 +113,9 @@
             // 
             this.lblMaKhoa.AutoSize = true;
             this.lblMaKhoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaKhoa.Location = new System.Drawing.Point(20, 35);
-            this.lblMaKhoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMaKhoa.Location = new System.Drawing.Point(27, 43);
             this.lblMaKhoa.Name = "lblMaKhoa";
-            this.lblMaKhoa.Size = new System.Drawing.Size(79, 21);
+            this.lblMaKhoa.Size = new System.Drawing.Size(103, 27);
             this.lblMaKhoa.TabIndex = 6;
             this.lblMaKhoa.Text = "Mã khoa:";
             // 
@@ -129,10 +123,9 @@
             // 
             this.lblMalop.AutoSize = true;
             this.lblMalop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMalop.Location = new System.Drawing.Point(20, 80);
-            this.lblMalop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMalop.Location = new System.Drawing.Point(27, 98);
             this.lblMalop.Name = "lblMalop";
-            this.lblMalop.Size = new System.Drawing.Size(67, 21);
+            this.lblMalop.Size = new System.Drawing.Size(87, 27);
             this.lblMalop.TabIndex = 0;
             this.lblMalop.Text = "Mã lớp:";
             // 
@@ -148,11 +141,11 @@
             this.grbSelection.Controls.Add(this.lblMalop);
             this.grbSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSelection.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbSelection.Location = new System.Drawing.Point(39, 113);
-            this.grbSelection.Margin = new System.Windows.Forms.Padding(2);
+            this.grbSelection.Location = new System.Drawing.Point(52, 139);
+            this.grbSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbSelection.Name = "grbSelection";
-            this.grbSelection.Padding = new System.Windows.Forms.Padding(2);
-            this.grbSelection.Size = new System.Drawing.Size(270, 344);
+            this.grbSelection.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbSelection.Size = new System.Drawing.Size(360, 423);
             this.grbSelection.TabIndex = 45;
             this.grbSelection.TabStop = false;
             this.grbSelection.Text = "Lựa chọn";
@@ -162,20 +155,19 @@
             this.txtSiSo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtSiSo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSiSo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSiSo.Location = new System.Drawing.Point(119, 157);
-            this.txtSiSo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSiSo.Location = new System.Drawing.Point(159, 193);
+            this.txtSiSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSiSo.Name = "txtSiSo";
-            this.txtSiSo.Size = new System.Drawing.Size(128, 29);
+            this.txtSiSo.Size = new System.Drawing.Size(170, 35);
             this.txtSiSo.TabIndex = 9;
             // 
             // lblSiSo
             // 
             this.lblSiSo.AutoSize = true;
             this.lblSiSo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSiSo.Location = new System.Drawing.Point(20, 162);
-            this.lblSiSo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSiSo.Location = new System.Drawing.Point(27, 199);
             this.lblSiSo.Name = "lblSiSo";
-            this.lblSiSo.Size = new System.Drawing.Size(54, 21);
+            this.lblSiSo.Size = new System.Drawing.Size(63, 27);
             this.lblSiSo.TabIndex = 4;
             this.lblSiSo.Text = "Sĩ số:";
             // 
@@ -183,10 +175,9 @@
             // 
             this.lblTenLop.AutoSize = true;
             this.lblTenLop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenLop.Location = new System.Drawing.Point(20, 121);
-            this.lblTenLop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenLop.Location = new System.Drawing.Point(27, 149);
             this.lblTenLop.Name = "lblTenLop";
-            this.lblTenLop.Size = new System.Drawing.Size(72, 21);
+            this.lblTenLop.Size = new System.Drawing.Size(92, 27);
             this.lblTenLop.TabIndex = 4;
             this.lblTenLop.Text = "Tên lớp:";
             // 
@@ -203,16 +194,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaKhoa,
-            this.MaLop,
-            this.TenLop,
-            this.SiSo});
             this.dgvLop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLop.EnableHeadersVisualStyles = false;
             this.dgvLop.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvLop.Location = new System.Drawing.Point(2, 24);
-            this.dgvLop.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvLop.Location = new System.Drawing.Point(3, 30);
+            this.dgvLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLop.Name = "dgvLop";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -223,52 +209,20 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLop.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLop.RowHeadersWidth = 51;
-            this.dgvLop.Size = new System.Drawing.Size(413, 318);
+            this.dgvLop.Size = new System.Drawing.Size(550, 391);
             this.dgvLop.TabIndex = 0;
             this.dgvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellClick);
-            // 
-            // MaKhoa
-            // 
-            this.MaKhoa.DataPropertyName = "MaKhoa";
-            this.MaKhoa.HeaderText = "Mã Khoa";
-            this.MaKhoa.MinimumWidth = 6;
-            this.MaKhoa.Name = "MaKhoa";
-            this.MaKhoa.Width = 150;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.MinimumWidth = 6;
-            this.MaLop.Name = "MaLop";
-            this.MaLop.Width = 125;
-            // 
-            // TenLop
-            // 
-            this.TenLop.DataPropertyName = "TenLop";
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.MinimumWidth = 6;
-            this.TenLop.Name = "TenLop";
-            this.TenLop.Width = 125;
-            // 
-            // SiSo
-            // 
-            this.SiSo.DataPropertyName = "SiSo";
-            this.SiSo.HeaderText = "Sĩ Số";
-            this.SiSo.MinimumWidth = 6;
-            this.SiSo.Name = "SiSo";
-            this.SiSo.Width = 125;
             // 
             // grbDanhSach
             // 
             this.grbDanhSach.Controls.Add(this.dgvLop);
             this.grbDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbDanhSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDanhSach.Location = new System.Drawing.Point(325, 113);
-            this.grbDanhSach.Margin = new System.Windows.Forms.Padding(2);
+            this.grbDanhSach.Location = new System.Drawing.Point(433, 139);
+            this.grbDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbDanhSach.Name = "grbDanhSach";
-            this.grbDanhSach.Padding = new System.Windows.Forms.Padding(2);
-            this.grbDanhSach.Size = new System.Drawing.Size(417, 344);
+            this.grbDanhSach.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbDanhSach.Size = new System.Drawing.Size(556, 423);
             this.grbDanhSach.TabIndex = 46;
             this.grbDanhSach.TabStop = false;
             this.grbDanhSach.Text = "Danh sách";
@@ -283,10 +237,10 @@
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuyBo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuyBo.Location = new System.Drawing.Point(782, 253);
-            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHuyBo.Location = new System.Drawing.Point(1043, 311);
+            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(72, 73);
+            this.btnHuyBo.Size = new System.Drawing.Size(96, 90);
             this.btnHuyBo.TabIndex = 51;
             this.btnHuyBo.UseVisualStyleBackColor = false;
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
@@ -301,10 +255,10 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(782, 407);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Location = new System.Drawing.Point(1043, 501);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(72, 73);
+            this.btnXoa.Size = new System.Drawing.Size(96, 90);
             this.btnXoa.TabIndex = 52;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -318,10 +272,10 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(782, 332);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLuu.Location = new System.Drawing.Point(1043, 409);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(72, 73);
+            this.btnLuu.Size = new System.Drawing.Size(96, 90);
             this.btnLuu.TabIndex = 50;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -335,10 +289,10 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(782, 176);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Location = new System.Drawing.Point(1043, 217);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(72, 73);
+            this.btnSua.Size = new System.Drawing.Size(96, 90);
             this.btnSua.TabIndex = 48;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -352,10 +306,10 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(782, 99);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Location = new System.Drawing.Point(1043, 122);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(72, 73);
+            this.btnThem.Size = new System.Drawing.Size(96, 90);
             this.btnThem.TabIndex = 49;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -365,9 +319,10 @@
             this.lblThem.AutoSize = true;
             this.lblThem.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThem.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblThem.Location = new System.Drawing.Point(869, 120);
+            this.lblThem.Location = new System.Drawing.Point(1159, 148);
+            this.lblThem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThem.Name = "lblThem";
-            this.lblThem.Size = new System.Drawing.Size(70, 26);
+            this.lblThem.Size = new System.Drawing.Size(88, 35);
             this.lblThem.TabIndex = 54;
             this.lblThem.Text = "Thêm";
             // 
@@ -376,9 +331,10 @@
             this.lblSua.AutoSize = true;
             this.lblSua.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSua.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblSua.Location = new System.Drawing.Point(882, 197);
+            this.lblSua.Location = new System.Drawing.Point(1176, 242);
+            this.lblSua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSua.Name = "lblSua";
-            this.lblSua.Size = new System.Drawing.Size(51, 26);
+            this.lblSua.Size = new System.Drawing.Size(64, 35);
             this.lblSua.TabIndex = 54;
             this.lblSua.Text = "Sửa";
             // 
@@ -387,9 +343,10 @@
             this.lblHuyBo.AutoSize = true;
             this.lblHuyBo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblHuyBo.Location = new System.Drawing.Point(865, 274);
+            this.lblHuyBo.Location = new System.Drawing.Point(1153, 337);
+            this.lblHuyBo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHuyBo.Name = "lblHuyBo";
-            this.lblHuyBo.Size = new System.Drawing.Size(87, 26);
+            this.lblHuyBo.Size = new System.Drawing.Size(108, 35);
             this.lblHuyBo.TabIndex = 54;
             this.lblHuyBo.Text = "Hủy bỏ";
             // 
@@ -398,9 +355,10 @@
             this.lblLuu.AutoSize = true;
             this.lblLuu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuu.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblLuu.Location = new System.Drawing.Point(880, 353);
+            this.lblLuu.Location = new System.Drawing.Point(1173, 434);
+            this.lblLuu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLuu.Name = "lblLuu";
-            this.lblLuu.Size = new System.Drawing.Size(55, 26);
+            this.lblLuu.Size = new System.Drawing.Size(69, 35);
             this.lblLuu.TabIndex = 54;
             this.lblLuu.Text = "Lưu";
             // 
@@ -409,15 +367,16 @@
             this.lblXoa.AutoSize = true;
             this.lblXoa.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXoa.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblXoa.Location = new System.Drawing.Point(879, 431);
+            this.lblXoa.Location = new System.Drawing.Point(1172, 530);
+            this.lblXoa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblXoa.Name = "lblXoa";
-            this.lblXoa.Size = new System.Drawing.Size(58, 26);
+            this.lblXoa.Size = new System.Drawing.Size(73, 35);
             this.lblXoa.TabIndex = 54;
             this.lblXoa.Text = " Xóa";
             // 
             // QuanLyLopHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblXoa);
@@ -433,9 +392,9 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grbSelection);
             this.Controls.Add(this.grbDanhSach);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyLopHoc";
-            this.Size = new System.Drawing.Size(963, 526);
+            this.Size = new System.Drawing.Size(1284, 647);
             this.Load += new System.EventHandler(this.QuanLyLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epvMaLop)).EndInit();
             this.grbSelection.ResumeLayout(false);
@@ -465,10 +424,6 @@
         private System.Windows.Forms.Label lblMalop;
         private System.Windows.Forms.GroupBox grbDanhSach;
         private System.Windows.Forms.DataGridView dgvLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SiSo;
         private System.Windows.Forms.TextBox txtSiSo;
         private System.Windows.Forms.Label lblSiSo;
         private System.Windows.Forms.Label lblXoa;

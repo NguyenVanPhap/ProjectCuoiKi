@@ -44,8 +44,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
             lblUsers.Text = "USERS MANAGEMENT";
 
-            lblGioiTinh.Text = "Sex:";
-            lblHoTen.Text = "Name:";
+           
             lblpassword.Text = "Password:";
             lblQuyen.Text = "Permission:";
             lblTaiKhoan.Text = "Account:";
@@ -79,9 +78,9 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
             dgvLogin.AutoResizeColumns();
 
-            lblGioiTinh.Text = "Giới tính:";
+            
             lblpassword.Text = "Mật khẩu:";
-            lblHoTen.Text = "Họ và tên:";
+            
             lblQuyen.Text = "Quyền:";
             lblTaiKhoan.Text = "Tài khoản:";
             lblUsers.Text = "QUẢN LÝ NGƯỜI DÙNG";
@@ -124,8 +123,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
                 dgvLogin.DataSource = dtLogin;
                 dgvLogin.AutoResizeColumns();
-                this.txtHoTen.ResetText();
-                this.cboGioiTinh.ResetText();
+               
                 this.mskPhone.ResetText();
                 this.txtEmail.ResetText();
                 this.txtTaiKhoan.ResetText();
@@ -195,10 +193,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 dgvLogin.Rows[r].Cells[0].Value.ToString();
             this.txtMatKhau.Text =
                 dgvLogin.Rows[r].Cells[1].Value.ToString();
-            this.txtHoTen.Text =
-                dgvLogin.Rows[r].Cells[2].Value.ToString();
-            this.cboGioiTinh.Text =
-                dgvLogin.Rows[r].Cells[3].Value.ToString();
+            
             this.mskPhone.Text =
                 dgvLogin.Rows[r].Cells[4].Value.ToString();
             this.txtEmail.Text =
@@ -211,8 +206,6 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
             Them = true;
 
-            this.txtHoTen.ResetText();
-            this.cboGioiTinh.ResetText();
             this.mskPhone.ResetText();
             this.txtEmail.ResetText();
             this.txtTaiKhoan.ResetText();
@@ -274,13 +267,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             this.lblXoa.ForeColor = Color.Gray;
 
             this.txtTaiKhoan.Enabled = false;
-            this.txtHoTen.Focus();
+           
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
-            this.txtHoTen.ResetText();
-            this.cboGioiTinh.ResetText();
             this.mskPhone.ResetText();
             this.txtEmail.ResetText();
             this.txtTaiKhoan.ResetText();
@@ -334,32 +325,32 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 }
                 else
                 {
-                    if (dbLogin.ThemLogin(this.txtTaiKhoan.Text.Trim(), this.txtMatKhau.Text.Trim(),
-                            this.txtHoTen.Text, this.cboGioiTinh.Text, this.mskPhone.Text, this.txtEmail.Text,
-                            this.cboQuyen.Text, ref err))
-                    {
-                        LoadData();
-                        MessageBox.Show("Đã thêm xong!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
-                    }
+                    //if (dbLogin.ThemLogin(this.txtTaiKhoan.Text.Trim(), this.txtMatKhau.Text.Trim(),
+                    //        this.txtHoTen.Text, this.cboGioiTinh.Text, this.mskPhone.Text, this.txtEmail.Text,
+                    //        this.cboQuyen.Text, ref err))
+                    //{
+                    //    LoadData();
+                    //    MessageBox.Show("Đã thêm xong!");
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
+                    //}
                 }
             }
             else
             {
-                if (dbLogin.CapNhatLogin(this.txtTaiKhoan.Text, this.txtMatKhau.Text.Trim(),
-                        this.txtHoTen.Text, this.cboGioiTinh.Text, this.mskPhone.Text, this.txtEmail.Text,
-                        this.cboQuyen.Text, ref err))
-                {
-                    LoadData();
-                    MessageBox.Show("Đã sửa xong!");
-                }
-                else
-                {
-                    MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
-                }
+                //if (dbLogin.CapNhatLogin(this.txtTaiKhoan.Text, this.txtMatKhau.Text.Trim(),
+                //        this.txtHoTen.Text, this.cboGioiTinh.Text, this.mskPhone.Text, this.txtEmail.Text,
+                //        this.cboQuyen.Text, ref err))
+                //{
+                //    LoadData();
+                //    MessageBox.Show("Đã sửa xong!");
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
+                //}
             }
         }
 

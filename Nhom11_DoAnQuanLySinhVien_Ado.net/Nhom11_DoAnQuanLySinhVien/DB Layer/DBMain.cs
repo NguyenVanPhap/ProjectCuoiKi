@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
 {
     class DBMain
     {
-        string connStr = "Data Source=DESKTOP-4ULE13O;Initial Catalog=QuanLyDiemSinhVienDB;Integrated Security=True";
+        string connStr = "Data Source=DESKTOP-D3AR037;Initial Catalog=QuanLyDiemSinhVienDB;Integrated Security=True";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter ada = null;
@@ -25,10 +26,11 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
                 conn.Close();
             conn.Open();
             comm.CommandText = strSQl;
-            comm.CommandType = ct;
-            for(int i=0;i<parammenters.Length;i++)
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.Parameters.Clear();
+            for (int i = 0; i < parammenters.Length; i++)
             {
-                comm.Parameters.Add(new SqlParameter(parammenters[i], values[i]));
+                comm.Parameters.Add(new SqlParameter {ParameterName= parammenters[i],Value= values[i]});
             }    
             return comm.ExecuteReader();
         }
@@ -43,9 +45,10 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
             conn.Open();
             comm.CommandText = strSQl;
             comm.CommandType = ct;
+            comm.Parameters.Clear();
             for (int i = 0; i < parammenters.Length; i++)
             {
-                comm.Parameters.Add(new SqlParameter(parammenters[i], values[i]));
+                comm.Parameters.Add(new SqlParameter { ParameterName = parammenters[i], Value = values[i] });
             }
             ada = new SqlDataAdapter(comm);
             DataSet ds = new DataSet();
@@ -60,9 +63,12 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
             conn.Open();
             comm.CommandText = strSQl;
             comm.CommandType = ct;
+
+            comm.Parameters.Clear();
             for (int i = 0; i < parammenters.Length; i++)
             {
-                comm.Parameters.Add(new SqlParameter(parammenters[i], values[i]));
+                comm.Parameters.Add(new SqlParameter { ParameterName = parammenters[i], Value = values[i] });
+              
             }
             try
             {
