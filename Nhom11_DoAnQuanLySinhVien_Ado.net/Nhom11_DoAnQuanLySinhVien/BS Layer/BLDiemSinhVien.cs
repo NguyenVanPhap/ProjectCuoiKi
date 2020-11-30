@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
+
 namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
 {
     class BLDiemSinhVien
@@ -25,8 +27,8 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string[] values = {};
             SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
 
-            
-            
+
+            dsMon.Add("ALL");
             while (reader.Read())
             {
                 dsMon.Add(reader.GetString(0));
@@ -84,6 +86,22 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             reader.Dispose();
             return dssv;
         }
+
+        public string LayMaKhoa_SinhVien(string masv)
+        {
+            string makhoa = "CNTT";
+            string sqlstring = "sp_Lay_Khoa_SinhVien";
+            string[] paramenters = { "@MaSV" };
+            string[] values = { masv };
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
+            while (reader.Read())
+            {
+                 makhoa= reader.GetString(0);
+            }
+            db.myDispose();
+            reader.Dispose();
+            return makhoa;
+        }
         public string DiemCaNhan(string masv)
         {
             string KQHTCN = "";
@@ -133,6 +151,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             }
            
             SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
+            dsLop.Add("ALL");
             while (reader.Read())
             {
                 dsLop.Add(reader.GetString(0));
@@ -141,7 +160,21 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             reader.Dispose();
             return dsLop;
         }
-
+        public int laymahocki(string namhoc, string hocki)
+        {
+            int mahocki=1;
+            string sqlstring = "sp_LayMaHocKi"; 
+            string[] paramenters = { "@Hocki" ,"@namhoc"};
+            string[] values = {namhoc,hocki};
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
+            while (reader.Read())
+            {
+                mahocki=reader.GetInt32(0);
+            }
+            db.myDispose();
+            reader.Dispose();
+            return mahocki;
+        }
         public DataSet LayDiemSinhVien()
         {
             string[] paramenters = { };
@@ -149,7 +182,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string sqlstring= "sp_LayDiemSinhVien";
             return db.ExcuteQueryDataSet(sqlstring, System.Data.CommandType.StoredProcedure,paramenters,values);
         }
-
+        
 
         public DataSet LayDiemHocLaiTheoKhoaLopHocKiMon(string MaKhoa, string Malop, string HK, string Mon, string NamHoc)
         {
@@ -164,140 +197,56 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             }
             else
             {
-                if (NamHoc == "")
+                if (Mon == "ALL")
                 {
-                    if (Mon == "")
+                    
+                    if (Malop != "ALL" )
                     {
-                        if (Malop == "" && HK == "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa";
-                            paramenters = new string[] { "@MaKhoa" };
-                            values = new string[] { MaKhoa };
-                        }
-                        if (Malop != "" && HK != "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HK";
-                            paramenters = new string[] { "@MaKhoa", "@maLop", "@HocKi" };
-                            values = new string[] { MaKhoa, Malop, HK };
-                        }
-                        if (Malop != "" && HK == "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop";
-                            paramenters = new string[] { "@MaKhoa", "@maLop" };
-                            values = new string[] { MaKhoa, Malop };
-                        }
-
-                        if (Malop == "" && HK != "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop";
-                            paramenters = new string[] { "@MaKhoa", "@HocKi" };
-                            values = new string[] { MaKhoa, HK };
-                        }
+                        //SqlString = "='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.HocKi=" + HK + " and kqhl.NamHoc=" + NamHoc;
+                        SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HocKi_namHoc";
+                        paramenters = new string[] { "@MaKhoa", "@lop", "@HK", "@namhoc" };
+                        values = new string[] { MaKhoa, Malop, HK, NamHoc };
                     }
-                    else
+                    
+                    if (Malop == "ALL"|| Malop == "")
                     {
-                        if (Malop == "" && HK == "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa_mon";
-                            paramenters = new string[] { "@MaKhoa", "@Mon" };
-                            values = new string[] { MaKhoa, Mon };
-                        }    
-                        if (Malop != "" && HK != "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HK_Mon";
-                            paramenters = new string[] { "@MaKhoa","@maLop","@HocKi","@mon" };
-                            values = new string[] { MaKhoa,Malop,HK,Mon };
-                        }
-                        if (Malop != "" && HK == "")
-                        {
-                            //SqlString = Malop + "' and mn.MaMon='" + Mon + "'";
-                            SqlString = "spn";
-                            paramenters = new string[] { "@MaKhoa", "@maLop", "@HocKi", "@mon" };
-                            values = new string[] { MaKhoa, Malop, HK, Mon };
-                        }
-                        if (Malop == "" && HK != "")
-                        {
-                            SqlString = "sp_LayDiemSinhVien_Khoa_HK_Mon";
-                            paramenters = new string[] { "@MaKhoa", "@HocKi", "@mon" };
-                            values = new string[] { MaKhoa,HK, Mon };
-                        }
-
+                        //SqlString = "'" + MaKhoa + "' and kqhl.HocKi=" + HK + " and kqhl.NamHoc=" + NamHoc;
+                        SqlString = "sp_LayDiemSinhVien_Khoa_HocKi_namHoc";
+                        paramenters = new string[] { "@MaKhoa", "@HK", "@namhoc" };
+                        values = new string[] { MaKhoa, HK, NamHoc };
                     }
                 }
                 else
                 {
-                    if (Mon == "")
+                    
+                    if (Malop != "ALL")
                     {
-                        if (Malop == "" && HK == "")
-                        {
-                            //SqlString = "n ='" + MaKhoa + "' and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_nam";
-                            paramenters = new string[] { "@MaKhoa","@namhoc" };
-                            values = new string[] { MaKhoa, HK, NamHoc };
-                        }
-                        if (Malop != "" && HK != "")
-                        {
-                            //SqlString = "='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.HocKi=" + HK + " and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HocKi_namHoc";
-                            paramenters = new string[] { "@MaKhoa","@lop", "@HK", "@namhoc" };
-                            values = new string[] { MaKhoa,Malop,HK, NamHoc };
-                        }
-                        if (Malop != "" && HK == "")
-                        {
-                            //SqlString = "'" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop_namHoc";
-                            paramenters = new string[] { "@MaKhoa", "@lop", "@namhoc" };
-                            values = new string[] { MaKhoa, Malop, NamHoc };
-                        }
-                        if (Malop == "" && HK != "")
-                        {
-                            //SqlString = "'" + MaKhoa + "' and kqhl.HocKi=" + HK + " and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_HocKi_namHoc";
-                            paramenters = new string[] { "@MaKhoa", "@HK", "@namhoc" };
-                            values = new string[] { MaKhoa, HK, NamHoc };
-                        }
+                        //SqlString = "='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.HocKi=" + HK + "and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
+                        SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HocKi_Mon_namHoc";
+                        paramenters = new string[] { "@MaKhoa","@lop","@HK","@mon" ,"@namhoc"};
+                        values = new string[] { MaKhoa, Malop, HK, Mon, NamHoc };
                     }
-                    else
+                    
+                    if (Malop == "ALL"|| Malop == "")
                     {
-                        if (Malop == "" && HK == "")
-                        {
-                            //SqlString = "'" + MaKhoa + "' and mn.MaMon = '" + Mon + "'and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_mon_namHoc";
-                            paramenters = new string[] { "@MaKhoa", "@mon", "@namhoc" };
-                            values = new string[] { MaKhoa, Mon,NamHoc };
-                        }
-                        if (Malop != "" && HK != "")
-                        {
-                            //SqlString = "='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.HocKi=" + HK + "and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HocKi_Mon_namHoc";
-                            paramenters = new string[] { "@MaKhoa","@lop", "@HocKi", "@mon","@namhoc" };
-                            values = new string[] { MaKhoa,Malop, HK, Mon ,NamHoc};
-                        }
-                        if (Malop != "" && HK == "")
-                        {
-                            //SqlString = "ON kh.MaKhoa = lp.MaKhoa WHERE kh.MaKhoa='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_Lop_Mon_namHoc";
-                            paramenters = new string[] { "@MaKhoa", "@lop", "@mon", "@namhoc" };
-                            values = new string[] { MaKhoa, Malop, Mon, NamHoc };
-                        }
-                        if (Malop == "" && HK != "")
-                        {
-                            //SqlString = "'" + MaKhoa + "' and kqhl.HocKi=" + HK + "and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
-                            SqlString = "sp_LayDiemSinhVien_Khoa_HocKi_Mon_namHoc";
-                            paramenters = new string[] { "@MaKhoa", "@HK", "@mon", "@namhoc" };
-                            values = new string[] { MaKhoa, HK, Mon, NamHoc };
-                        }
-
+                        //SqlString = "'" + MaKhoa + "' and kqhl.HocKi=" + HK + "and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
+                        SqlString = "sp_LayDiemSinhVien_Khoa_HocKi_Mon_namHoc";
+                        paramenters = new string[] { "@MaKhoa", "@HK", "@mon", "@namhoc" };
+                        values = new string[] { MaKhoa, HK, Mon, NamHoc };
                     }
 
                 }
+
+
+
 
             }
             return db.ExcuteQueryDataSet(SqlString, System.Data.CommandType.StoredProcedure,paramenters,values);
 
         }
         public bool ThemDiemSinhVien(string MaSV ,string MaMH ,
-                       string MaHocKi ,
+                       string hocki ,
+                       string namhoc,
                        string DiemChuyenCan ,
                        string DiemGiuaKi ,
                        string DiemBaiTap ,
@@ -305,6 +254,8 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
                        string DiemThiLan2 ,
                        string DiemTongKet, ref string err)
         {
+
+            string MaHocKi = laymahocki(hocki, namhoc).ToString();
             if (DiemThiLan1 == "")
                 DiemThiLan1 = "0";
             if (DiemThiLan2 == "")
@@ -326,7 +277,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
                        DiemTongKet };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
-        public bool CapNhatDiemHocTap(string MaSV, string MaMH, string MaHocKi,string DiemChuyenCan,string DiemGiuaKi,string DiemBaiTap, string DiemThiLan1,string DiemThiLan2, string DiemTongKet, ref string err)
+        public bool CapNhatDiemHocTap(string MaSV, string MaMH, string HocKi,string namhoc,string DiemChuyenCan,string DiemGiuaKi,string DiemBaiTap, string DiemThiLan1,string DiemThiLan2, string DiemTongKet, ref string err)
         { 
             if (DiemThiLan1 == "")
                 DiemThiLan1 = "0";
@@ -336,17 +287,18 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             {
                 DiemTongKet = ((float)(float.Parse(DiemThiLan1) + float.Parse(DiemThiLan2)) / 2).ToString();
             }
-           
+            string MaHocKi = laymahocki(HocKi, namhoc).ToString();
             string sqlstring = "sp_updateDIEM";
             string[] paramenters = { "@MaSV", "@MaMH", "@MaHK", "@DiemChuyenCan", "@DiemGiuaKi", "@DiemBaiTap", "@DiemLan1", "@DiemLan2", "@DiemTongKet" };
             string[] values = {MaSV , MaMH ,MaHocKi ,DiemChuyenCan , DiemGiuaKi , DiemBaiTap , DiemThiLan1 ,DiemThiLan2 , DiemTongKet };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
-        public bool XoaDiemHocTap(string masv, string MaMon, string HK,string NamHoc ,ref string err)
+        public bool XoaDiemHocTap(string masv, string MaMon, string HocKi,string NamHoc ,ref string err)
         {
+            string MaHocKi = laymahocki(HocKi, NamHoc).ToString();
             String sqlstring = "sp_del_DIEM";
             string[] paramenters = {  "@MASV","@MaMH","@MaHK"  };
-            string[] values = {masv,MaMon,HK };
+            string[] values = {masv,MaMon,MaHocKi };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
     }

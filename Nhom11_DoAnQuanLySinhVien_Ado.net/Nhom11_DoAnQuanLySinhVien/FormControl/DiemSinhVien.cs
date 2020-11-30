@@ -26,6 +26,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         Image image_delete_off;
 
         string mon = "", hk = "", nam = "";
+        string khoa = "";
         DataTable dtDiemSinhVien = null;
         bool Them; string err;
         BLDiemSinhVien dbDSV = new BLDiemSinhVien();
@@ -242,14 +243,20 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            txtDiemthi1.ResetText();
-            txtDiemThi2.ResetText();
-           
-            txtMaSV.ResetText();
+            //txtDiemthi1.ResetText();
+            //txtDiemThi2.ResetText();
+            
+            //txtMaSV.ResetText();
             
             errorProvider.Clear();
-            if (cbbKhoa.Text == "")
-                errorProvider.SetError(cbbKhoa, "Chưa nhập Khoa!");
+            if (cbbKhoa.Text == "ALL")
+                errorProvider.SetError(cbbKhoa, "Chưa chọn khoa");
+            else
+            if (cbbHocKi.Text == "" || cbbHocKi.Text == "ALL")
+                errorProvider.SetError(cbbHocKi, "Cần nhập Học Kì!");
+            else
+                if (cbbNamHoc.Text == ""|| cbbNamHoc.Text == "ALL")
+                errorProvider.SetError(cbbNamHoc, "Cần nhập Năm Học!");
             else
             {
                 try
@@ -262,11 +269,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     dgvDiem.DataSource = dtDiemSinhVien;
                     dgvDiem.AutoResizeColumns();
 
-                    dgvDiem_CellClick(null, null);
+                    //dgvDiem_CellClick(null, null);
                 }
-                catch
+                catch(Exception ex)
                 {
-  //                  MessageBox.Show(err);
+                    MessageBox.Show("error: "+ex.Message);
                 }
             }
         }
@@ -274,6 +281,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         private void btnThem_Click(object sender, EventArgs e)
         {
             mon = cbbMonHoc.Text; hk = cbbHocKi.Text; nam = cbbNamHoc.Text;
+            khoa = cbbKhoa.Text;
             Them = true;
             txtDiemthi1.ResetText();
             txtDiemThi2.ResetText();
@@ -350,6 +358,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            mon = cbbMonHoc.Text; hk = cbbHocKi.Text; nam = cbbNamHoc.Text;
+            khoa = cbbKhoa.Text;
             foreach (Control ctrl in grpLuaChon.Controls)
             {
                 if (ctrl.Name != cbbMonHoc.Name && ctrl.Name != cbbHocKi.Name && ctrl.Name != cbbNamHoc.Name && ctrl.Name != lblHK.Name && ctrl.Name != lblMaMon.Name && ctrl.Name != lblNam.Name)
@@ -394,8 +404,15 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 if (DL == DialogResult.Yes)
                 {
                     int r = dgvDiem.CurrentCell.RowIndex;
-                    if (dbDSV.XoaDiemHocTap(this.txtMaSV.Text, dgvDiem.Rows[r].Cells[3].Value.ToString(),
-                        dgvDiem.Rows[r].Cells[5].Value.ToString(), dgvDiem.Rows[r].Cells[6].Value.ToString(), ref err))
+                    if (dbDSV.XoaDiemHocTap(
+                        this.txtMaSV.Text,
+                        //dgvDiem.Rows[r].Cells[3].Value.ToString(),
+                        //dgvDiem.Rows[r].Cells[5].Value.ToString(), 
+                        //dgvDiem.Rows[r].Cells[6].Value.ToString(),
+                        cbbMonHoc.Text.Trim(),
+                        cbbHocKi.Text.Trim(),
+                        cbbNamHoc.Text.Trim(),
+                        ref err))
                     {
                         Load_Data();
                         Kiemtra();
@@ -452,15 +469,36 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void dgvDiem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = dgvDiem.CurrentCell.RowIndex;
-            txtMaSV.Text = dgvDiem.Rows[r].Cells[0].Value.ToString();
-            txtDiemthi1.Text = dgvDiem.Rows[r].Cells[7].Value.ToString();
-            txtDiemThi2.Text = dgvDiem.Rows[r].Cells[8].Value.ToString();
-            
-            //cbbHocKi.SelectedIndex = cbbHocKi.Items.IndexOf(dgvDiem.Rows[r].Cells[5].Value.ToString());
-            //cbbMonHoc.SelectedIndex = cbbMonHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[3].Value.ToString());
-            //cbbNamHoc.SelectedIndex = cbbNamHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[6].Value.ToString());
-            //cbbLop.SelectedIndex = cbbLop.Items.IndexOf(dgvDiem.Rows[r].Cells[2].Value.ToString());
+            try
+            {
+                int r = dgvDiem.CurrentCell.RowIndex;
+                txtMaSV.Text = dgvDiem.Rows[r].Cells[0].Value.ToString();
+                txtDCC.Text = dgvDiem.Rows[r].Cells[7].Value.ToString();
+                txtDiemGK.Text = dgvDiem.Rows[r].Cells[8].Value.ToString();
+                txtDiemBT.Text = dgvDiem.Rows[r].Cells[9].Value.ToString();
+
+                txtDiemthi1.Text = dgvDiem.Rows[r].Cells[10].Value.ToString();
+                txtDiemThi2.Text = dgvDiem.Rows[r].Cells[11].Value.ToString();
+
+
+                cbbHocKi.SelectedIndex = cbbHocKi.Items.IndexOf(dgvDiem.Rows[r].Cells[5].Value.ToString());
+                cbbHocKi.Text = dgvDiem.Rows[r].Cells[5].Value.ToString();
+
+                cbbMonHoc.SelectedIndex = cbbMonHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[3].Value.ToString());
+                cbbMonHoc.Text = dgvDiem.Rows[r].Cells[3].Value.ToString();
+
+                cbbNamHoc.SelectedIndex = cbbNamHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[6].Value.ToString());
+                cbbNamHoc.Text = dgvDiem.Rows[r].Cells[6].Value.ToString();
+
+                cbbLop.SelectedIndex = cbbLop.Items.IndexOf(dgvDiem.Rows[r].Cells[2].Value.ToString());
+                cbbLop.Text = dgvDiem.Rows[r].Cells[2].Value.ToString();
+
+                cbbKhoa.SelectedIndex = cbbKhoa.Items.IndexOf(dbDSV.LayMaKhoa_SinhVien(txtMaSV.Text));
+
+
+            }
+            catch(Exception ex)
+            { }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -484,18 +522,18 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                         MessageBox.Show("Dữ liệu bị trùng!");
                     else
                     {
-                        //if (dbDSV.ThemDiemSinhVien(txtMaSV.Text, cbbMonHoc.Text, cbbHocKi.Text, cbbNamHoc.Text, txtDiemthi1.Text, txtDiemThi2.Text, txtGhiChu.Text, ref err))
-                        //{
-                        //    cbbHocKi.Text = hk;
-                        //    cbbMonHoc.Text = mon;
-                        //    cbbNamHoc.Text = nam;
-
-                        //    Load_Data();
-                        //    btnTimKiem_Click(null, null);
-                        //    MessageBox.Show("Đã thêm xong!");
-                        //}
-                        //else
-                        //    MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
+                        if (dbDSV.ThemDiemSinhVien(txtMaSV.Text, cbbMonHoc.Text, cbbHocKi.Text, cbbNamHoc.Text,txtDCC.Text,txtDiemGK.Text,txtDiemBT.Text, txtDiemthi1.Text, txtDiemThi2.Text,"", ref err))
+                        {
+                            cbbHocKi.Text = hk;
+                            cbbMonHoc.Text = mon;
+                            cbbNamHoc.Text = nam;
+                            cbbKhoa.Text = khoa;
+                            Load_Data();
+                            btnTimKiem_Click(null, null);
+                            MessageBox.Show("Đã thêm xong!");
+                        }
+                        else
+                            MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
                     }
                 }
             }
@@ -506,16 +544,25 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     MessageBox.Show("Không có mục nào được chọn!");
                 else
                 {
-                    //if (dbDSV.CapNhatDiemHocTap(txtMaSV.Text, dgvDiem.Rows[r].Cells[3].Value.ToString(),
-                    //    dgvDiem.Rows[r].Cells[5].Value.ToString(), dgvDiem.Rows[r].Cells[6].Value.ToString(),
-                    //    txtDiemthi1.Text, txtDiemThi2.Text, "", txtGhiChu.Text, ref err))
-                    //{
-                    //    Load_Data();
-                    //    btnTimKiem_Click(null, null);
-                    //    MessageBox.Show("Đã sửa xong!");
-                    //}
-                    //else
-                    //    MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
+                    if (dbDSV.CapNhatDiemHocTap(
+                        txtMaSV.Text,
+                        dgvDiem.Rows[r].Cells[3].Value.ToString(),
+                        dgvDiem.Rows[r].Cells[5].Value.ToString(),
+                        dgvDiem.Rows[r].Cells[6].Value.ToString(),
+                        txtDCC.Text,
+                        txtDiemGK.Text,
+                        txtDiemBT.Text,
+                        txtDiemthi1.Text, 
+                        txtDiemThi2.Text, 
+                        "", 
+                        ref err))
+                    {
+                        Load_Data();
+                        btnTimKiem_Click(null, null);
+                        MessageBox.Show("Đã sửa xong!");
+                    }
+                    else
+                        MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
                 }
             }
             foreach (Control ctrl in grpLuaChon.Controls)

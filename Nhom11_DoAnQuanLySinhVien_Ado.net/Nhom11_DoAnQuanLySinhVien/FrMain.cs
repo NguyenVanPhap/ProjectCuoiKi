@@ -26,7 +26,7 @@ namespace Nhom11_DoAnQuanLySinhVien
         //FormControl.QuanLyNguoiDung QLND;
        
         QuanLyMonHoc QLMH;
-        //DiemSinhVien DiemSV;
+        DiemSinhVien DiemSV;
         //QuanLyKhoa QLK;
         //QuanLyLopHoc QLLH;
         //ThongTinSinhVien TTSV;
@@ -63,7 +63,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             ////THHT = new TinhHinhHocTap();
           
             QLMH = new QuanLyMonHoc();
-            //DiemSV = new DiemSinhVien();
+            DiemSV = new DiemSinhVien();
            // QLK = new QuanLyKhoa();
            // QLLH = new QuanLyLopHoc();
            // TTSV = new ThongTinSinhVien();
@@ -78,7 +78,7 @@ namespace Nhom11_DoAnQuanLySinhVien
            //this.pnlDisplay.Controls.Add(QLND);
             
            this.pnlDisplay.Controls.Add(QLMH);
-           // this.pnlDisplay.Controls.Add(DiemSV);
+           this.pnlDisplay.Controls.Add(DiemSV);
             //this.pnlDisplay.Controls.Add(QLK);
             //this.pnlDisplay.Controls.Add(QLLH);
             //this.pnlDisplay.Controls.Add(TTSV);
@@ -90,7 +90,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             //this.SLSVTK.Visible = false;
             //this.chart.Visible = false;
             //this.QLND.Visible = false;
-            //this.DiemSV.Visible = false;
+            this.DiemSV.Visible = false;
             
             this.QLMH.Visible = false;
             //this.QLK.Visible = false;
@@ -122,8 +122,8 @@ namespace Nhom11_DoAnQuanLySinhVien
             }
             
             this.ptbTroVe.Visible = true;
-            //this.DiemSV.Visible = true;
-            //this.DiemSV.BringToFront();
+            this.DiemSV.Visible = true;
+            this.DiemSV.BringToFront();
         }
 
        
