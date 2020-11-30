@@ -809,7 +809,6 @@ D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\
 D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.FormControl.ThongTinTaiKhoan.resources
 D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.FrMain.resources
 D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.frmDangNhap.resources
-D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.frmTest.resources
 D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.FrmTongKet.resources
 D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.Properties.Resources.resources
 D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\obj\Debug\Nhom11_DoAnQuanLySinhVien.ReportDanhSachKhoa.resources

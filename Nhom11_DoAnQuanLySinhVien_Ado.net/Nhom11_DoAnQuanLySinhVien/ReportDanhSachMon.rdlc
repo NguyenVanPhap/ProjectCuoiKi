@@ -240,14 +240,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="MaMon">
+                    <Textbox Name="MaMH">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MaMon.Value</Value>
+                              <Value>=Fields!MaMH.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -259,7 +259,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>MaMon</rd:DefaultName>
+                      <rd:DefaultName>MaMH</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -275,14 +275,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TenMon">
+                    <Textbox Name="TenMH">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TenMon.Value</Value>
+                              <Value>=Fields!TenMH.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -294,7 +294,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TenMon</rd:DefaultName>
+                      <rd:DefaultName>TenMH</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -443,20 +443,27 @@
       </ConnectionProperties>
       <rd:DataSourceID>99d580ee-5099-4304-b6ac-536cc8ea81cc</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="QuanLyDiemSinhVien">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>5b2f4512-9f51-4585-9143-6b9e98c6b051</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSetMon">
       <Query>
-        <DataSourceName>BangDiem</DataSourceName>
+        <DataSourceName>QuanLyDiemSinhVien</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="MaMon">
-          <DataField>MaMon</DataField>
+        <Field Name="MaMH">
+          <DataField>MaMH</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TenMon">
-          <DataField>TenMon</DataField>
+        <Field Name="TenMH">
+          <DataField>TenMH</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="SoTinChi">
@@ -465,12 +472,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BangDiem</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Dell\Downloads\Đồ án cuối kì\Nhom11_DoAnQuanLySinhVien\Nhom11_DoAnQuanLySinhVien\BangDiem.xsd</rd:SchemaPath>
-        <rd:TableName>MON</rd:TableName>
+        <rd:DataSetName>QuanLyDiemSinhVien</rd:DataSetName>
+        <rd:SchemaPath>D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\QuanLyDiemSinhVien.xsd</rd:SchemaPath>
+        <rd:TableName>MonHoc</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>MONTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>MonHocTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

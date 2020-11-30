@@ -32,28 +32,22 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachMon));
             this.MONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BangDiem = new Nhom11_DoAnQuanLySinhVien.BangDiem();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.rpvDSM = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.MONTableAdapter = new Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.MONTableAdapter();
             this.lblMaMon = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.cbbMaMon = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.MONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).BeginInit();
             this.pnlTittlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // MONBindingSource
             // 
             this.MONBindingSource.DataMember = "MON";
-            this.MONBindingSource.DataSource = this.BangDiem;
             // 
             // BangDiem
             // 
-            this.BangDiem.DataSetName = "BangDiem";
-            this.BangDiem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnlTittlebar
             // 
@@ -101,7 +95,6 @@
             // 
             // MONTableAdapter
             // 
-            this.MONTableAdapter.ClearBeforeFill = true;
             // 
             // lblMaMon
             // 
@@ -161,7 +154,6 @@
             this.Text = "ReportDanhSachMon";
             this.Load += new System.EventHandler(this.ReportDanhSachMon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,9 +166,7 @@
         private System.Windows.Forms.Button btnexit;
         private Microsoft.Reporting.WinForms.ReportViewer rpvDSM;
         private System.Windows.Forms.BindingSource MONBindingSource;
-        private BangDiem BangDiem;
-        private BangDiemTableAdapters.MONTableAdapter MONTableAdapter;
-        private System.Windows.Forms.Label lblMaMon;
+      private System.Windows.Forms.Label lblMaMon;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.ComboBox cbbMaMon;
     }

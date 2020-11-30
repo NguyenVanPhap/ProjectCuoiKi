@@ -33,5 +33,16 @@ namespace Nhom11_DoAnQuanLySinhVien.Properties {
                 return ((string)(this["QuanlydiemSinhVienConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-D3AR037;Initial Catalog=QuanLyDiemSinhVienDB;Integrated Secur" +
+            "ity=True")]
+        public string QuanLyDiemSinhVienDBConnectionString {
+            get {
+                return ((string)(this["QuanLyDiemSinhVienDBConnectionString"]));
+            }
+        }
     }
 }

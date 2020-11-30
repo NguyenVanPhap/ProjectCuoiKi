@@ -29,7 +29,7 @@ namespace Nhom11_DoAnQuanLySinhVien
         DiemSinhVien DiemSV;
         //QuanLyKhoa QLK;
         //QuanLyLopHoc QLLH;
-        //ThongTinSinhVien TTSV;
+        ThongTinSinhVien TTSV;
         //ThongTinTaiKhoan TTTK;
 
         int language = 0;
@@ -66,7 +66,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             DiemSV = new DiemSinhVien();
            // QLK = new QuanLyKhoa();
            // QLLH = new QuanLyLopHoc();
-           // TTSV = new ThongTinSinhVien();
+           TTSV = new ThongTinSinhVien();
            // DMK = new DoiMatKhau(account);
            // TTTK = new ThongTinTaiKhoan(account, DMK);
            // inf = new information();
@@ -81,7 +81,7 @@ namespace Nhom11_DoAnQuanLySinhVien
            this.pnlDisplay.Controls.Add(DiemSV);
             //this.pnlDisplay.Controls.Add(QLK);
             //this.pnlDisplay.Controls.Add(QLLH);
-            //this.pnlDisplay.Controls.Add(TTSV);
+           this.pnlDisplay.Controls.Add(TTSV);
             //this.pnlDisplay.Controls.Add(TTTK);
             //this.pnlDisplay.Controls.Add(inf);
             //this.pnlDisplay.Controls.Add(DMK);
@@ -95,7 +95,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             this.QLMH.Visible = false;
             //this.QLK.Visible = false;
             //this.QLLH.Visible = false;
-            //this.TTSV.Visible = false;
+            this.TTSV.Visible = false;
             //this.DMK.Visible = false;
             //this.TTTK.Visible = false;
             //this.inf.Visible = false;  
@@ -174,13 +174,13 @@ namespace Nhom11_DoAnQuanLySinhVien
             {
                 crtl.Visible = false;
             }
-           
-            //this.ptbTroVe.Visible = true;
-            //this.TTSV.Visible = true;
-            //this.TTSV.BringToFront();
 
-            //this.TTSV.LoadCboMaLop();
-            //this.TTSV.LoadCboMaKhoa();
+            this.ptbTroVe.Visible = true;
+            this.TTSV.Visible = true;
+            this.TTSV.BringToFront();
+
+            this.TTSV.LoadCboMaLop();
+            this.TTSV.LoadCboMaKhoa();
         }
 
         private void btnQLMH_Click(object sender, EventArgs e)
@@ -406,6 +406,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             btnDGNL.Visible = true;
 
             BangDiemCaNhan f = new BangDiemCaNhan();
+            f.MASV = account;
             f.Show();
         }
 

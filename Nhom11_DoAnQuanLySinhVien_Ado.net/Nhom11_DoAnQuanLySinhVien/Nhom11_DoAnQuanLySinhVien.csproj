@@ -81,14 +81,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BangDiem.cs">
-      <DependentUpon>BangDiem.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BangDiem.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BangDiem.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BangDiemCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,12 +177,6 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTest.Designer.cs">
-      <DependentUpon>frmTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTongKet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +189,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDiemSinhVien.cs">
+      <DependentUpon>QuanLyDiemSinhVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDiemSinhVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDiemSinhVien.xsd</DependentUpon>
     </Compile>
     <Compile Include="ReportDanhSachKhoa.cs">
       <SubType>Form</SubType>
@@ -271,9 +265,6 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTest.resx">
-      <DependentUpon>frmTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmTongKet.resx">
       <DependentUpon>FrmTongKet.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,17 +291,6 @@
     <EmbeddedResource Include="ReportDanhSachLop.rdlc" />
     <EmbeddedResource Include="ReportDiemCaNhan.rdlc" />
     <EmbeddedResource Include="ReportTongKet.rdlc" />
-    <None Include="BangDiem.xsc">
-      <DependentUpon>BangDiem.xsd</DependentUpon>
-    </None>
-    <None Include="BangDiem.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BangDiem.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="BangDiem.xss">
-      <DependentUpon>BangDiem.xsd</DependentUpon>
-    </None>
     <None Include="ClassDiagramQLSV.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -327,6 +307,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyDiemSinhVien.xsc">
+      <DependentUpon>QuanLyDiemSinhVien.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyDiemSinhVien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyDiemSinhVien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyDiemSinhVien.xss">
+      <DependentUpon>QuanLyDiemSinhVien.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Tittle.png" />
   </ItemGroup>
   <ItemGroup>

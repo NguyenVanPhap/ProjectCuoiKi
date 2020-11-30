@@ -321,21 +321,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="HoTen">
+                    <Textbox Name="TenSV">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!HoTen.Value</Value>
+                              <Value>=Fields!TenSV.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>HoTen</rd:DefaultName>
+                      <rd:DefaultName>TenSV</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -351,7 +351,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TenLop1">
+                    <Textbox Name="TenLop">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -365,7 +365,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TenLop1</rd:DefaultName>
+                      <rd:DefaultName>TenLop</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -475,7 +475,7 @@
               <TablixHeader>
                 <Size>1in</Size>
                 <CellContents>
-                  <Textbox Name="TenKhoa1">
+                  <Textbox Name="TenKhoa">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -489,7 +489,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>TenKhoa1</rd:DefaultName>
+                    <rd:DefaultName>TenKhoa</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -517,7 +517,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>DataSetTongKet</DataSetName>
         <Top>0.06944in</Top>
         <Height>0.75in</Height>
         <Width>8.93611in</Width>
@@ -593,11 +593,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>421b8c24-334f-4001-be4a-0ebed8e7bed0</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="QuanLyDiemSinhVien">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>22806c98-51ee-4960-931e-968fc96550a4</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSetTongKet">
       <Query>
-        <DataSourceName>BangDiem</DataSourceName>
+        <DataSourceName>QuanLyDiemSinhVien</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -605,8 +612,8 @@
           <DataField>MASV</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="HoTen">
-          <DataField>HoTen</DataField>
+        <Field Name="TenSV">
+          <DataField>TenSV</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TenKhoa">
@@ -623,12 +630,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BangDiem</rd:DataSetName>
-        <rd:SchemaPath>D:\LAPTRINHWINDOWN\Nhom11_DoAnQuanLySinhVien\Nhom11_DoAnQuanLySinhVien\BangDiem.xsd</rd:SchemaPath>
-        <rd:TableName>TONGKET</rd:TableName>
-        <rd:TableAdapterFillMethod>FillwithKhoa</rd:TableAdapterFillMethod>
+        <rd:DataSetName>QuanLyDiemSinhVien</rd:DataSetName>
+        <rd:SchemaPath>D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\QuanLyDiemSinhVien.xsd</rd:SchemaPath>
+        <rd:TableName>DataTableTongKet</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>TONGKETTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTableTongKetTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

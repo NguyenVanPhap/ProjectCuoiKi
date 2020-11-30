@@ -199,7 +199,7 @@
             this.menuStrip.Location = new System.Drawing.Point(511, 14);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(728, 35);
+            this.menuStrip.Size = new System.Drawing.Size(878, 35);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -414,7 +414,7 @@
             this.mnuEnglish,
             this.mnuVietnamese});
             this.mnuLanguage.Name = "mnuLanguage";
-            this.mnuLanguage.Size = new System.Drawing.Size(192, 32);
+            this.mnuLanguage.Size = new System.Drawing.Size(224, 32);
             this.mnuLanguage.Text = "Ngôn ngữ";
             // 
             // mnuEnglish

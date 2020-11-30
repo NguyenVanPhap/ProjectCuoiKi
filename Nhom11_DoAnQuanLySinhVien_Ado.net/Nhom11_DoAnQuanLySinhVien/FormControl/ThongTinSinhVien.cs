@@ -192,20 +192,20 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int r = dgvSinhVien.CurrentCell.RowIndex;
+            int r = dgvSinhVien.CurrentCell.RowIndex;
 
-            //this.txtMaSV.Text =
-            //    dgvSinhVien.Rows[r].Cells[0].Value.ToString();
-            //this.txtHoTen.Text =
-            //    dgvSinhVien.Rows[r].Cells[1].Value.ToString();
-            //this.mskNgaySinh.Text =
-            //    dgvSinhVien.Rows[r].Cells[2].Value.ToString();
-            //this.cboGioiTinh.Text =
-            //    dgvSinhVien.Rows[r].Cells[3].Value.ToString();
-            //this.txtDiaChi.Text =
-            //    dgvSinhVien.Rows[r].Cells[4].Value.ToString();
-            //this.cboMaLop.Text =
-            //    dgvSinhVien.Rows[r].Cells[5].Value.ToString();
+            this.txtMaSV.Text =
+                dgvSinhVien.Rows[r].Cells[0].Value.ToString();
+            this.txtHoTen.Text =
+                dgvSinhVien.Rows[r].Cells[1].Value.ToString();
+            this.cboGioiTinh.Text =
+                dgvSinhVien.Rows[r].Cells[2].Value.ToString();
+            this.mskNgaySinh.Text =
+                dgvSinhVien.Rows[r].Cells[3].Value.ToString();
+            this.txtDiaChi.Text =
+                dgvSinhVien.Rows[r].Cells[4].Value.ToString();
+            this.cboMaLop.Text =
+                dgvSinhVien.Rows[r].Cells[5].Value.ToString();
         }
 
         private void ThongTinSinhVien_Load(object sender, EventArgs e)

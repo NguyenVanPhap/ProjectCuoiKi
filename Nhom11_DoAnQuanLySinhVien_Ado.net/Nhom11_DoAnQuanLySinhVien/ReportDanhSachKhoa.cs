@@ -34,10 +34,10 @@ namespace Nhom11_DoAnQuanLySinhVien
         }
         private void ReportDanhSachKhoa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'BangDiem.KHOA' table. You can move, or remove it, as needed.
-            this.KHOATableAdapter.Fill(this.BangDiem.KHOA);
+            //// TODO: This line of code loads data into the 'BangDiem.KHOA' table. You can move, or remove it, as needed.
+            //this.KHOATableAdapter.Fill(this.BangDiem.KHOA);
 
-            this.rpvDSK.RefreshReport();
+            //this.rpvDSK.RefreshReport();
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -49,15 +49,15 @@ namespace Nhom11_DoAnQuanLySinhVien
         {
             if (this.cbbMaKhoa.Text != "ALL")
             {
-                this.KHOATableAdapter.FillKhoa(this.BangDiem.KHOA, "%" +this.cbbMaKhoa.Text+ "%");
+                //this.KHOATableAdapter.FillKhoa(this.BangDiem.KHOA, "%" +this.cbbMaKhoa.Text+ "%");
 
-                this.rpvDSK.RefreshReport();
+                //this.rpvDSK.RefreshReport();
             }
             else
             {
-                this.KHOATableAdapter.Fill(this.BangDiem.KHOA);
+                //this.KHOATableAdapter.Fill(this.BangDiem.KHOA);
 
-                this.rpvDSK.RefreshReport();
+                //this.rpvDSK.RefreshReport();
             }    
         }
 

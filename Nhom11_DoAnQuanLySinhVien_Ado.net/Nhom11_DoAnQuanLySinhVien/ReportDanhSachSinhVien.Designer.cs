@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachSinhVien));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.SINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BangDiem = new Nhom11_DoAnQuanLySinhVien.BangDiem();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.cbbKhoa = new System.Windows.Forms.ComboBox();
@@ -41,21 +39,13 @@
             this.lblLop = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.reportViewerDSSV = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SINHVIENTableAdapter = new Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.SINHVIENTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.SINHVIENBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).BeginInit();
+            this.QuanLyDiemSinhVien = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVien();
+            this.SinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SinhVienTableAdapter = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVienTableAdapters.SinhVienTableAdapter();
             this.pnlTittlebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SinhVienBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // SINHVIENBindingSource
-            // 
-            this.SINHVIENBindingSource.DataMember = "SINHVIEN";
-            this.SINHVIENBindingSource.DataSource = this.BangDiem;
-            // 
-            // BangDiem
-            // 
-            this.BangDiem.DataSetName = "BangDiem";
-            this.BangDiem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnlTittlebar
             // 
@@ -156,8 +146,8 @@
             // reportViewerDSSV
             // 
             this.reportViewerDSSV.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.SINHVIENBindingSource;
+            reportDataSource1.Name = "DataSetDSSV";
+            reportDataSource1.Value = this.SinhVienBindingSource;
             this.reportViewerDSSV.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerDSSV.LocalReport.ReportEmbeddedResource = "Nhom11_DoAnQuanLySinhVien.ReportDanhSachSinhVien.rdlc";
             this.reportViewerDSSV.Location = new System.Drawing.Point(0, 47);
@@ -168,9 +158,19 @@
             this.reportViewerDSSV.TabIndex = 53;
             this.reportViewerDSSV.Load += new System.EventHandler(this.reportViewerDSSV_Load);
             // 
-            // SINHVIENTableAdapter
+            // QuanLyDiemSinhVien
             // 
-            this.SINHVIENTableAdapter.ClearBeforeFill = true;
+            this.QuanLyDiemSinhVien.DataSetName = "QuanLyDiemSinhVien";
+            this.QuanLyDiemSinhVien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // SinhVienBindingSource
+            // 
+            this.SinhVienBindingSource.DataMember = "SinhVien";
+            this.SinhVienBindingSource.DataSource = this.QuanLyDiemSinhVien;
+            // 
+            // SinhVienTableAdapter
+            // 
+            this.SinhVienTableAdapter.ClearBeforeFill = true;
             // 
             // ReportDanhSachSinhVien
             // 
@@ -189,9 +189,9 @@
             this.Name = "ReportDanhSachSinhVien";
             this.Text = "ReportDanhSachSinhVien";
             this.Load += new System.EventHandler(this.ReportDanhSachSinhVien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SINHVIENBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SinhVienBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,8 +207,8 @@
         private System.Windows.Forms.Label lblLop;
         private System.Windows.Forms.Button btnTimKiem;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerDSSV;
-        private System.Windows.Forms.BindingSource SINHVIENBindingSource;
-        private BangDiem BangDiem;
-        private BangDiemTableAdapters.SINHVIENTableAdapter SINHVIENTableAdapter;
+        private System.Windows.Forms.BindingSource SinhVienBindingSource;
+        private QuanLyDiemSinhVien QuanLyDiemSinhVien;
+        private QuanLyDiemSinhVienTableAdapters.SinhVienTableAdapter SinhVienTableAdapter;
     }
 }

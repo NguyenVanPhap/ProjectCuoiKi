@@ -36,7 +36,6 @@ namespace Nhom11_DoAnQuanLySinhVien
         private void ReportDanhSachLop_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'BangDiem.LOP' table. You can move, or remove it, as needed.
-            this.LOPTableAdapter.Fill(this.BangDiem.LOP);
 
             this.rpvDSL.RefreshReport();
         }
@@ -50,13 +49,13 @@ namespace Nhom11_DoAnQuanLySinhVien
         {
             if (this.cbbMaLop.Text != "ALL")
             {
-                this.LOPTableAdapter.FillLop(this.BangDiem.LOP, "%"+this.cbbMaLop.Text+"%");
+                //this.LOPTableAdapter.FillLop(this.BangDiem.LOP, "%"+this.cbbMaLop.Text+"%");
 
                 this.rpvDSL.RefreshReport();
             }
             else
             {
-                this.LOPTableAdapter.Fill(this.BangDiem.LOP);
+                //this.LOPTableAdapter.Fill(this.BangDiem.LOP);
 
                 this.rpvDSL.RefreshReport();
             }    

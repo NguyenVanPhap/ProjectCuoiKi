@@ -62,16 +62,16 @@ namespace Nhom11_DoAnQuanLySinhVien
                 if (cbbNam.Text == "ALL")
                 {
                     if (cbbLop.Text == "ALL")
-                        this.TONGKETTableAdapter.FillbyALL(this.BangDiem.TONGKET);
+                        this.DataTableTongKetTableAdapter.FillByALL(this.QuanLyDiemSinhVien.DataTableTongKet);
                     else
-                        this.TONGKETTableAdapter.FillByLop(this.BangDiem.TONGKET, cbbLop.Text);
+                        this.DataTableTongKetTableAdapter.FillBylop(this.QuanLyDiemSinhVien.DataTableTongKet, cbbLop.Text);
                 }
                 else
                 {
                     if (cbbLop.Text == "ALL")
-                        this.TONGKETTableAdapter.FillByNamHoc(this.BangDiem.TONGKET, int.Parse(cbbNam.Text));
+                        this.DataTableTongKetTableAdapter.FillByNamHoc(this.QuanLyDiemSinhVien.DataTableTongKet, cbbNam.Text);
                     else
-                        this.TONGKETTableAdapter.FillByLopNamHoc(this.BangDiem.TONGKET,cbbLop.Text,int.Parse(cbbNam.Text));
+                        this.DataTableTongKetTableAdapter.FillBylopNamHoc(this.QuanLyDiemSinhVien.DataTableTongKet,cbbLop.Text,cbbNam.Text);
                 }
 
             }
@@ -80,16 +80,18 @@ namespace Nhom11_DoAnQuanLySinhVien
                 if (cbbNam.Text == "ALL")
                 {
                     if (cbbLop.Text == "ALL")
-                        this.TONGKETTableAdapter.FillwithKhoa(this.BangDiem.TONGKET, cbbKhoa.Text);
+                        this.DataTableTongKetTableAdapter.FillWithKhoa(this.QuanLyDiemSinhVien.DataTableTongKet, cbbKhoa.Text);
                     else
-                        this.TONGKETTableAdapter.FillByLop(this.BangDiem.TONGKET, cbbLop.Text);
+                        this.DataTableTongKetTableAdapter.FillByKhoa_Lop(this.QuanLyDiemSinhVien.DataTableTongKet, cbbKhoa.Text,cbbLop.Text);
                 }
                 else
                 {
                     if (cbbLop.Text == "ALL")
-                        this.TONGKETTableAdapter.FillByNHKhoa(this.BangDiem.TONGKET, cbbKhoa.Text, int.Parse(cbbNam.Text));
+                       this.DataTableTongKetTableAdapter.FillBynamHoc_Khoa(this.QuanLyDiemSinhVien.DataTableTongKet, cbbKhoa.Text, cbbNam.Text);
                     else
-                        this.TONGKETTableAdapter.FillByLopNamHoc(this.BangDiem.TONGKET, cbbLop.Text,int.Parse(cbbNam.Text));
+                        this.DataTableTongKetTableAdapter.FillBylopNamHoc(this.QuanLyDiemSinhVien.DataTableTongKet, cbbLop.Text, cbbNam.Text);
+
+
                 }
 
             }
@@ -98,6 +100,8 @@ namespace Nhom11_DoAnQuanLySinhVien
         }
         private void FrmTongKet_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'QuanLyDiemSinhVien.DataTableTongKet' table. You can move, or remove it, as needed.
+            this.DataTableTongKetTableAdapter.FillByALL(this.QuanLyDiemSinhVien.DataTableTongKet);
             // TODO: This line of code loads data into the 'BangDiem.TONGKET' table. You can move, or remove it, as needed.
             load_data();
             load_khoa();

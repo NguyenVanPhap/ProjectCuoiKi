@@ -32,28 +32,22 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachKhoa));
             this.KHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BangDiem = new Nhom11_DoAnQuanLySinhVien.BangDiem();
             this.rpvDSK = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblKhoa = new System.Windows.Forms.Label();
-            this.KHOATableAdapter = new Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.KHOATableAdapter();
             this.cbbMaKhoa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.KHOABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).BeginInit();
             this.pnlTittlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // KHOABindingSource
             // 
             this.KHOABindingSource.DataMember = "KHOA";
-            this.KHOABindingSource.DataSource = this.BangDiem;
             // 
             // BangDiem
             // 
-            this.BangDiem.DataSetName = "BangDiem";
-            this.BangDiem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpvDSK
             // 
@@ -131,7 +125,7 @@
             // 
             // KHOATableAdapter
             // 
-            this.KHOATableAdapter.ClearBeforeFill = true;
+            
             // 
             // cbbMaKhoa
             // 
@@ -161,7 +155,6 @@
             this.Text = "ReportDanhSachKhoa";
             this.Load += new System.EventHandler(this.ReportDanhSachKhoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KHOABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,8 +167,7 @@
         private System.Windows.Forms.Panel pnlTittlebar;
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.BindingSource KHOABindingSource;
-        private BangDiem BangDiem;
-        private BangDiemTableAdapters.KHOATableAdapter KHOATableAdapter;
+
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label lblKhoa;
         private System.Windows.Forms.ComboBox cbbMaKhoa;

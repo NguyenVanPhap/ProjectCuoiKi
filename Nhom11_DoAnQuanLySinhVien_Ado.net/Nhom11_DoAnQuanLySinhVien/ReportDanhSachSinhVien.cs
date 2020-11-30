@@ -69,23 +69,27 @@ namespace Nhom11_DoAnQuanLySinhVien
         {
             load_khoa();
             load_lop();
-            // TODO: This line of code loads data into the 'BangDiem.SINHVIEN' table. You can move, or remove it, as needed.
+            //TODO: This line of code loads data into the 'BangDiem.SINHVIEN' table.You can move, or remove it, as needed.
+
+
             if (cbbLop.Text == "ALL")
             {
-                if(cbbKhoa.Text=="ALL")
-                    this.SINHVIENTableAdapter.Fill(this.BangDiem.SINHVIEN);
+                if (cbbKhoa.Text == "ALL")
+                    this.SinhVienTableAdapter.Fill(this.QuanLyDiemSinhVien.SinhVien);
                 else
-                    this.SINHVIENTableAdapter.FillByKhoa(this.BangDiem.SINHVIEN,cbbKhoa.Text);
+                    this.SinhVienTableAdapter.FillByKhoa(this.QuanLyDiemSinhVien.SinhVien, cbbKhoa.Text);
 
             }
             else
-                this.SINHVIENTableAdapter.FillByLOp(this.BangDiem.SINHVIEN,cbbLop.Text);
+                this.SinhVienTableAdapter.FillBylop(this.QuanLyDiemSinhVien.SinhVien, cbbLop.Text);
 
 
             this.reportViewerDSSV.RefreshReport();
         }
         private void ReportDanhSachSinhVien_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'QuanLyDiemSinhVien.SinhVien' table. You can move, or remove it, as needed.
+            this.SinhVienTableAdapter.Fill(this.QuanLyDiemSinhVien.SinhVien);
             load_data();
         }
 

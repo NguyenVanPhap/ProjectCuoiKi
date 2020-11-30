@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinSinhVien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSV = new System.Windows.Forms.Label();
             this.mskNgaySinh = new System.Windows.Forms.MaskedTextBox();
             this.cboGioiTinh = new System.Windows.Forms.ComboBox();
@@ -90,7 +90,7 @@
             this.mskNgaySinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskNgaySinh.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskNgaySinh.Location = new System.Drawing.Point(144, 138);
-            this.mskNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.mskNgaySinh.Mask = "00/00/0000";
             this.mskNgaySinh.Name = "mskNgaySinh";
             this.mskNgaySinh.Size = new System.Drawing.Size(175, 35);
@@ -104,7 +104,7 @@
             "Nam",
             "Nữ"});
             this.cboGioiTinh.Location = new System.Drawing.Point(145, 187);
-            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cboGioiTinh.Name = "cboGioiTinh";
             this.cboGioiTinh.Size = new System.Drawing.Size(124, 35);
             this.cboGioiTinh.TabIndex = 4;
@@ -114,7 +114,7 @@
             this.cboMaLop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMaLop.FormattingEnabled = true;
             this.cboMaLop.Location = new System.Drawing.Point(144, 289);
-            this.cboMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.cboMaLop.Name = "cboMaLop";
             this.cboMaLop.Size = new System.Drawing.Size(176, 35);
             this.cboMaLop.TabIndex = 6;
@@ -135,7 +135,7 @@
             this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(144, 238);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(175, 35);
             this.txtDiaChi.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(145, 89);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(175, 35);
             this.txtHoTen.TabIndex = 2;
@@ -155,7 +155,7 @@
             this.txtMaSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaSV.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSV.Location = new System.Drawing.Point(145, 39);
-            this.txtMaSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaSV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSV.Name = "txtMaSV";
             this.txtMaSV.Size = new System.Drawing.Size(175, 35);
             this.txtMaSV.TabIndex = 1;
@@ -235,29 +235,29 @@
             // 
             // dgvSinhVien
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSinhVien.EnableHeadersVisualStyles = false;
             this.dgvSinhVien.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvSinhVien.Location = new System.Drawing.Point(4, 32);
-            this.dgvSinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSinhVien.Name = "dgvSinhVien";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSinhVien.RowHeadersWidth = 51;
             this.dgvSinhVien.Size = new System.Drawing.Size(605, 434);
             this.dgvSinhVien.TabIndex = 1;
@@ -280,9 +280,9 @@
             this.grbTTCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbTTCT.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTTCT.Location = new System.Drawing.Point(20, 178);
-            this.grbTTCT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbTTCT.Margin = new System.Windows.Forms.Padding(4);
             this.grbTTCT.Name = "grbTTCT";
-            this.grbTTCT.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbTTCT.Padding = new System.Windows.Forms.Padding(4);
             this.grbTTCT.Size = new System.Drawing.Size(344, 358);
             this.grbTTCT.TabIndex = 53;
             this.grbTTCT.TabStop = false;
@@ -294,9 +294,9 @@
             this.grbDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbDanhSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDanhSach.Location = new System.Drawing.Point(385, 177);
-            this.grbDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.grbDanhSach.Name = "grbDanhSach";
-            this.grbDanhSach.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbDanhSach.Padding = new System.Windows.Forms.Padding(4);
             this.grbDanhSach.Size = new System.Drawing.Size(613, 470);
             this.grbDanhSach.TabIndex = 52;
             this.grbDanhSach.TabStop = false;
@@ -329,7 +329,7 @@
             this.cboMaKhoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMaKhoa.FormattingEnabled = true;
             this.cboMaKhoa.Location = new System.Drawing.Point(617, 26);
-            this.cboMaKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMaKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cboMaKhoa.Name = "cboMaKhoa";
             this.cboMaKhoa.Size = new System.Drawing.Size(159, 35);
             this.cboMaKhoa.TabIndex = 25;
@@ -342,7 +342,7 @@
             this.cboTimMaLop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTimMaLop.FormattingEnabled = true;
             this.cboTimMaLop.Location = new System.Drawing.Point(941, 27);
-            this.cboTimMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTimMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.cboTimMaLop.Name = "cboTimMaLop";
             this.cboTimMaLop.Size = new System.Drawing.Size(161, 35);
             this.cboTimMaLop.TabIndex = 24;
@@ -357,9 +357,9 @@
             this.grbTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbTimKiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTimKiem.Location = new System.Drawing.Point(21, 90);
-            this.grbTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.grbTimKiem.Name = "grbTimKiem";
-            this.grbTimKiem.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbTimKiem.Padding = new System.Windows.Forms.Padding(4);
             this.grbTimKiem.Size = new System.Drawing.Size(1120, 75);
             this.grbTimKiem.TabIndex = 54;
             this.grbTimKiem.TabStop = false;

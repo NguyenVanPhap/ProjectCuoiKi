@@ -31,12 +31,11 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTongKet));
-            this.TONGKETBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BangDiem = new Nhom11_DoAnQuanLySinhVien.BangDiem();
+            this.DataTableTongKetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QuanLyDiemSinhVien = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVien();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
-            this.TONGKETTableAdapter = new Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.TONGKETTableAdapter();
             this.cbbKhoa = new System.Windows.Forms.ComboBox();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.lblKhoa = new System.Windows.Forms.Label();
@@ -44,33 +43,34 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.cbbLop = new System.Windows.Forms.ComboBox();
             this.lblLop = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.TONGKETBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).BeginInit();
+            this.DataTableTongKetTableAdapter = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVienTableAdapters.DataTableTongKetTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTableTongKetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).BeginInit();
             this.pnlTittlebar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TONGKETBindingSource
+            // DataTableTongKetBindingSource
             // 
-            this.TONGKETBindingSource.DataMember = "TONGKET";
-            this.TONGKETBindingSource.DataSource = this.BangDiem;
+            this.DataTableTongKetBindingSource.DataMember = "DataTableTongKet";
+            this.DataTableTongKetBindingSource.DataSource = this.QuanLyDiemSinhVien;
             // 
-            // BangDiem
+            // QuanLyDiemSinhVien
             // 
-            this.BangDiem.DataSetName = "BangDiem";
-            this.BangDiem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.QuanLyDiemSinhVien.DataSetName = "QuanLyDiemSinhVien";
+            this.QuanLyDiemSinhVien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.TONGKETBindingSource;
+            reportDataSource1.Name = "DataSetTongKet";
+            reportDataSource1.Value = this.DataTableTongKetBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Nhom11_DoAnQuanLySinhVien.ReportTongKet.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 49);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1181, 603);
+            this.reportViewer1.Size = new System.Drawing.Size(1193, 603);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -82,7 +82,7 @@
             this.pnlTittlebar.Location = new System.Drawing.Point(0, 0);
             this.pnlTittlebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTittlebar.Name = "pnlTittlebar";
-            this.pnlTittlebar.Size = new System.Drawing.Size(1181, 53);
+            this.pnlTittlebar.Size = new System.Drawing.Size(1193, 53);
             this.pnlTittlebar.TabIndex = 1;
             this.pnlTittlebar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTittlebar_Paint);
             this.pnlTittlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTittlebar_MouseDown);
@@ -107,10 +107,6 @@
             this.btnexit.UseVisualStyleBackColor = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // TONGKETTableAdapter
-            // 
-            this.TONGKETTableAdapter.ClearBeforeFill = true;
-            // 
             // cbbKhoa
             // 
             this.cbbKhoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,11 +125,11 @@
             this.cbbNam.FormattingEnabled = true;
             this.cbbNam.Items.AddRange(new object[] {
             "ALL",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021"});
+            "2017-2018",
+            "2018-2019",
+            "2019-2020",
+            "2020-2021",
+            "2021-2022"});
             this.cbbNam.Location = new System.Drawing.Point(872, 113);
             this.cbbNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbNam.Name = "cbbNam";
@@ -203,11 +199,15 @@
             this.lblLop.TabIndex = 49;
             this.lblLop.Text = "Lớp";
             // 
+            // DataTableTongKetTableAdapter
+            // 
+            this.DataTableTongKetTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmTongKet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 652);
+            this.ClientSize = new System.Drawing.Size(1193, 652);
             this.Controls.Add(this.lblLop);
             this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.btnTimKiem);
@@ -222,8 +222,8 @@
             this.Name = "FrmTongKet";
             this.Text = "FrmTongKet";
             this.Load += new System.EventHandler(this.FrmTongKet_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.TONGKETBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTableTongKetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,9 +233,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource TONGKETBindingSource;
-        private BangDiem BangDiem;
-        private BangDiemTableAdapters.TONGKETTableAdapter TONGKETTableAdapter;
         private System.Windows.Forms.Panel pnlTittlebar;
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.ComboBox cbbKhoa;
@@ -245,5 +242,8 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.ComboBox cbbLop;
         private System.Windows.Forms.Label lblLop;
+        private System.Windows.Forms.BindingSource DataTableTongKetBindingSource;
+        private QuanLyDiemSinhVien QuanLyDiemSinhVien;
+        private QuanLyDiemSinhVienTableAdapters.DataTableTongKetTableAdapter DataTableTongKetTableAdapter;
     }
 }

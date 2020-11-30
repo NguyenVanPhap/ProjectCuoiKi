@@ -30,7 +30,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             //    "',N'" + HoTen + "','" + NgaySinh + "',N'" + GioiTinh + "',N'" +
             //    DiaChi + "','" + MaLop + "')";
             string sqlstring = "sp_ThemSinhVien";
-            string[] paramenters = { "@MaSV , @TenSV, @NgaySinh, @GioiTinh, @QueQuan, @MaLop " };
+            string[] paramenters = { "@MaSV" , "@TenSV", "@NgaySinh", "@GioiTinh", "@QueQuan", "@MaLop" };
             string[] values = { MaSv, HoTen, NgaySinh, GioiTinh, DiaChi, MaLop };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
@@ -49,7 +49,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             //    MaLop + "' Where MaSv='"+MaSv+"'";
             //return db.MyExcuteNonQuery(sqlString, CommandType.Text, ref err
             string sqlstring = "sp_CapNhatSinhVien";
-            string[] paramenters = { "@MaSV , @TenSV, @NgaySinh, @GioiTinh, @QueQuan, @MaLop  " };
+            string[] paramenters = { "@MaSV" , "@TenSV", "@NgaySinh", "@GioiTinh", "@QueQuan", "@MaLop" };
             string[] values = { MaSv, HoTen, NgaySinh, GioiTinh, DiaChi, MaLop };
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
@@ -94,7 +94,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             ////reader.Dispose();
             //return dsMaLopTimKiem;
             List<string> dsMaLopTimKiem = new List<string>();
-            string sqlstring = "sp_LayMaLopTimKiem";
+            string sqlstring = "sp_LayMaLopTuKhoa";
             string[] paramenters = { "@MaKhoa" };
             string[] values = { MaKhoa };
             SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);

@@ -41,24 +41,24 @@ namespace Nhom11_DoAnQuanLySinhVien
         private void ReportDanhSachMon_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'BangDiem.MON' table. You can move, or remove it, as needed.
-            this.MONTableAdapter.Fill(this.BangDiem.MON);
+            //this.MONTableAdapter.Fill(this.BangDiem.MON);
 
-            this.rpvDSM.RefreshReport();
+            //this.rpvDSM.RefreshReport();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (this.cbbMaMon.Text != "ALL")
             {
-                this.MONTableAdapter.FillMon(this.BangDiem.MON, "%"+ this.cbbMaMon.Text+ "%");
+                //this.MONTableAdapter.FillMon(this.BangDiem.MON, "%"+ this.cbbMaMon.Text+ "%");
 
-                this.rpvDSM.RefreshReport();
+                //this.rpvDSM.RefreshReport();
             }
             else
             {
-                this.MONTableAdapter.Fill(this.BangDiem.MON);
+                //this.MONTableAdapter.Fill(this.BangDiem.MON);
 
-                this.rpvDSM.RefreshReport();
+                //this.rpvDSM.RefreshReport();
             }
         }
 

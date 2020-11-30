@@ -32,29 +32,23 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachLop));
             this.LOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BangDiem = new Nhom11_DoAnQuanLySinhVien.BangDiem();
             this.rpvDSL = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblMaLop = new System.Windows.Forms.Label();
-            this.LOPTableAdapter = new Nhom11_DoAnQuanLySinhVien.BangDiemTableAdapters.LOPTableAdapter();
             this.cbbMaLop = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LOPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).BeginInit();
             this.pnlTittlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // LOPBindingSource
             // 
             this.LOPBindingSource.DataMember = "LOP";
-            this.LOPBindingSource.DataSource = this.BangDiem;
             // 
             // BangDiem
             // 
-            this.BangDiem.DataSetName = "BangDiem";
-            this.BangDiem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+           // 
             // rpvDSL
             // 
             reportDataSource1.Name = "DataSetLop";
@@ -132,7 +126,6 @@
             // 
             // LOPTableAdapter
             // 
-            this.LOPTableAdapter.ClearBeforeFill = true;
             // 
             // cbbMaLop
             // 
@@ -162,7 +155,6 @@
             this.Text = "ReportDanhSachLop";
             this.Load += new System.EventHandler(this.ReportDanhSachLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LOPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BangDiem)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,10 +165,8 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer rpvDSL;
         private System.Windows.Forms.BindingSource LOPBindingSource;
-        private BangDiem BangDiem;
         private System.Windows.Forms.Panel pnlTittlebar;
         private System.Windows.Forms.Button btnexit;
-        private BangDiemTableAdapters.LOPTableAdapter LOPTableAdapter;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label lblMaLop;
         private System.Windows.Forms.ComboBox cbbMaLop;
