@@ -493,7 +493,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>QuanLyDiemSinhVien</rd:DataSetName>
-        <rd:SchemaPath>D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\QuanLyDiemSinhVien.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\PC\Downloads\ProjectCuoiKi-master\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\QuanLyDiemSinhVien.xsd</rd:SchemaPath>
         <rd:TableName>Lop</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

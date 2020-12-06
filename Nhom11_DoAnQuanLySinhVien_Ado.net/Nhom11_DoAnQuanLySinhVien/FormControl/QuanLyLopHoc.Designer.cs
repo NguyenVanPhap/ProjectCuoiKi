@@ -39,8 +39,6 @@
             this.lblMaKhoa = new System.Windows.Forms.Label();
             this.lblMalop = new System.Windows.Forms.Label();
             this.grbSelection = new System.Windows.Forms.GroupBox();
-            this.txtSiSo = new System.Windows.Forms.TextBox();
-            this.lblSiSo = new System.Windows.Forms.Label();
             this.lblTenLop = new System.Windows.Forms.Label();
             this.dgvLop = new System.Windows.Forms.DataGridView();
             this.grbDanhSach = new System.Windows.Forms.GroupBox();
@@ -54,6 +52,8 @@
             this.lblHuyBo = new System.Windows.Forms.Label();
             this.lblLuu = new System.Windows.Forms.Label();
             this.lblXoa = new System.Windows.Forms.Label();
+            this.txtSiSo = new System.Windows.Forms.TextBox();
+            this.lblSiSo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.epvMaLop)).BeginInit();
             this.grbSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
@@ -132,16 +132,16 @@
             // grbSelection
             // 
             this.grbSelection.Controls.Add(this.txtSiSo);
+            this.grbSelection.Controls.Add(this.lblSiSo);
             this.grbSelection.Controls.Add(this.txtTenLop);
             this.grbSelection.Controls.Add(this.txtMaLop);
             this.grbSelection.Controls.Add(this.cboMaKhoa);
-            this.grbSelection.Controls.Add(this.lblSiSo);
             this.grbSelection.Controls.Add(this.lblMaKhoa);
             this.grbSelection.Controls.Add(this.lblTenLop);
             this.grbSelection.Controls.Add(this.lblMalop);
             this.grbSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSelection.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbSelection.Location = new System.Drawing.Point(52, 139);
+            this.grbSelection.Location = new System.Drawing.Point(53, 115);
             this.grbSelection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbSelection.Name = "grbSelection";
             this.grbSelection.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -149,27 +149,6 @@
             this.grbSelection.TabIndex = 45;
             this.grbSelection.TabStop = false;
             this.grbSelection.Text = "Lựa chọn";
-            // 
-            // txtSiSo
-            // 
-            this.txtSiSo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtSiSo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSiSo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSiSo.Location = new System.Drawing.Point(159, 193);
-            this.txtSiSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSiSo.Name = "txtSiSo";
-            this.txtSiSo.Size = new System.Drawing.Size(170, 35);
-            this.txtSiSo.TabIndex = 9;
-            // 
-            // lblSiSo
-            // 
-            this.lblSiSo.AutoSize = true;
-            this.lblSiSo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSiSo.Location = new System.Drawing.Point(27, 199);
-            this.lblSiSo.Name = "lblSiSo";
-            this.lblSiSo.Size = new System.Drawing.Size(63, 27);
-            this.lblSiSo.TabIndex = 4;
-            this.lblSiSo.Text = "Sĩ số:";
             // 
             // lblTenLop
             // 
@@ -209,7 +188,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLop.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLop.RowHeadersWidth = 51;
-            this.dgvLop.Size = new System.Drawing.Size(550, 391);
+            this.dgvLop.Size = new System.Drawing.Size(699, 391);
             this.dgvLop.TabIndex = 0;
             this.dgvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellClick);
             // 
@@ -218,11 +197,11 @@
             this.grbDanhSach.Controls.Add(this.dgvLop);
             this.grbDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbDanhSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDanhSach.Location = new System.Drawing.Point(433, 139);
+            this.grbDanhSach.Location = new System.Drawing.Point(434, 115);
             this.grbDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbDanhSach.Name = "grbDanhSach";
             this.grbDanhSach.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbDanhSach.Size = new System.Drawing.Size(556, 423);
+            this.grbDanhSach.Size = new System.Drawing.Size(705, 423);
             this.grbDanhSach.TabIndex = 46;
             this.grbDanhSach.TabStop = false;
             this.grbDanhSach.Text = "Danh sách";
@@ -237,7 +216,7 @@
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuyBo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuyBo.Location = new System.Drawing.Point(1043, 311);
+            this.btnHuyBo.Location = new System.Drawing.Point(467, 560);
             this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(96, 90);
@@ -255,7 +234,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1043, 501);
+            this.btnXoa.Location = new System.Drawing.Point(721, 560);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(96, 90);
@@ -272,7 +251,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(1043, 409);
+            this.btnLuu.Location = new System.Drawing.Point(600, 560);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(96, 90);
@@ -289,7 +268,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(1043, 217);
+            this.btnSua.Location = new System.Drawing.Point(329, 560);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(96, 90);
@@ -306,7 +285,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(1043, 122);
+            this.btnThem.Location = new System.Drawing.Point(193, 560);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(96, 90);
@@ -319,7 +298,7 @@
             this.lblThem.AutoSize = true;
             this.lblThem.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThem.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblThem.Location = new System.Drawing.Point(1159, 148);
+            this.lblThem.Location = new System.Drawing.Point(196, 651);
             this.lblThem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThem.Name = "lblThem";
             this.lblThem.Size = new System.Drawing.Size(88, 35);
@@ -331,7 +310,7 @@
             this.lblSua.AutoSize = true;
             this.lblSua.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSua.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblSua.Location = new System.Drawing.Point(1176, 242);
+            this.lblSua.Location = new System.Drawing.Point(337, 651);
             this.lblSua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSua.Name = "lblSua";
             this.lblSua.Size = new System.Drawing.Size(64, 35);
@@ -343,7 +322,7 @@
             this.lblHuyBo.AutoSize = true;
             this.lblHuyBo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblHuyBo.Location = new System.Drawing.Point(1153, 337);
+            this.lblHuyBo.Location = new System.Drawing.Point(461, 651);
             this.lblHuyBo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHuyBo.Name = "lblHuyBo";
             this.lblHuyBo.Size = new System.Drawing.Size(108, 35);
@@ -355,7 +334,7 @@
             this.lblLuu.AutoSize = true;
             this.lblLuu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuu.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblLuu.Location = new System.Drawing.Point(1173, 434);
+            this.lblLuu.Location = new System.Drawing.Point(612, 651);
             this.lblLuu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLuu.Name = "lblLuu";
             this.lblLuu.Size = new System.Drawing.Size(69, 35);
@@ -367,12 +346,33 @@
             this.lblXoa.AutoSize = true;
             this.lblXoa.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXoa.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblXoa.Location = new System.Drawing.Point(1172, 530);
+            this.lblXoa.Location = new System.Drawing.Point(726, 651);
             this.lblXoa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblXoa.Name = "lblXoa";
             this.lblXoa.Size = new System.Drawing.Size(73, 35);
             this.lblXoa.TabIndex = 54;
             this.lblXoa.Text = " Xóa";
+            // 
+            // txtSiSo
+            // 
+            this.txtSiSo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtSiSo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSiSo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSiSo.Location = new System.Drawing.Point(161, 194);
+            this.txtSiSo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSiSo.Name = "txtSiSo";
+            this.txtSiSo.Size = new System.Drawing.Size(170, 35);
+            this.txtSiSo.TabIndex = 11;
+            // 
+            // lblSiSo
+            // 
+            this.lblSiSo.AutoSize = true;
+            this.lblSiSo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiSo.Location = new System.Drawing.Point(29, 200);
+            this.lblSiSo.Name = "lblSiSo";
+            this.lblSiSo.Size = new System.Drawing.Size(72, 27);
+            this.lblSiSo.TabIndex = 10;
+            this.lblSiSo.Text = "Sỉ Số :";
             // 
             // QuanLyLopHoc
             // 
@@ -394,7 +394,7 @@
             this.Controls.Add(this.grbDanhSach);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyLopHoc";
-            this.Size = new System.Drawing.Size(1284, 647);
+            this.Size = new System.Drawing.Size(1284, 692);
             this.Load += new System.EventHandler(this.QuanLyLopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epvMaLop)).EndInit();
             this.grbSelection.ResumeLayout(false);
@@ -424,12 +424,12 @@
         private System.Windows.Forms.Label lblMalop;
         private System.Windows.Forms.GroupBox grbDanhSach;
         private System.Windows.Forms.DataGridView dgvLop;
-        private System.Windows.Forms.TextBox txtSiSo;
-        private System.Windows.Forms.Label lblSiSo;
         private System.Windows.Forms.Label lblXoa;
         private System.Windows.Forms.Label lblLuu;
         private System.Windows.Forms.Label lblHuyBo;
         private System.Windows.Forms.Label lblSua;
         private System.Windows.Forms.Label lblThem;
+        private System.Windows.Forms.TextBox txtSiSo;
+        private System.Windows.Forms.Label lblSiSo;
     }
 }

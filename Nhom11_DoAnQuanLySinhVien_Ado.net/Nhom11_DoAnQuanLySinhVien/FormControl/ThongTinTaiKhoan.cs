@@ -28,8 +28,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             lblAcount.Text = "ACCOUNT INFORMATION";
             lblAccountID.Text = "Account:";
 
-            lblName.Text = "Name:";
-            lblSex.Text = "Sex:";
+            
             lblQuyen.Text = "Permission:";
             lblDoiMatKhau.Text = "Change password";
 
@@ -42,8 +41,6 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             lblAcount.Text = "THÔNG TIN TÀI KHOẢN";
             lblAccountID.Text = "Mã số tài khoản:";
 
-            lblName.Text = "Họ và tên:";
-            lblSex.Text = "Giới tính:";
             lblQuyen.Text = "Quyền:";
             lblDoiMatKhau.Text = "Đổi mật khẩu";
 
@@ -56,11 +53,10 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
             foreach (DataRow row in dt.Rows)
             {
-                this.txtMaTK.Text = row["TenDN"].ToString();
-                this.txtHoTen.Text = row["HoTen"].ToString();
-                this.txtGioiTinh.Text = row["GioiTinh"].ToString();
-                this.txtPhone.Text = row["Phone"].ToString();
+                this.txtMaTK.Text = row["TenDangNhap"].ToString();
+                //this.txtHoTen.Text = row["MatKhau"].ToString();
                 this.txtEmail.Text = row["Email"].ToString();
+                this.txtPhone.Text = row["SoDienThoai"].ToString();
                 this.txtQuyen.Text = row["Quyen"].ToString();
             }
         }

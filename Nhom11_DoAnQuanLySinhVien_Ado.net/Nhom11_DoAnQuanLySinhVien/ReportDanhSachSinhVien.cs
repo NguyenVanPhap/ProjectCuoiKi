@@ -89,7 +89,7 @@ namespace Nhom11_DoAnQuanLySinhVien
         private void ReportDanhSachSinhVien_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'QuanLyDiemSinhVien.SinhVien' table. You can move, or remove it, as needed.
-            this.SinhVienTableAdapter.Fill(this.QuanLyDiemSinhVien.SinhVien);
+            //this.SinhVienTableAdapter.Fill(this.QuanLyDiemSinhVien.SinhVien);
             load_data();
         }
 

@@ -31,32 +31,28 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachKhoa));
-            this.KHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rpvDSK = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblKhoa = new System.Windows.Forms.Label();
             this.cbbMaKhoa = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.KHOABindingSource)).BeginInit();
+            this.QuanLyDiemSinhVien = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVien();
+            this.KhoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.KhoaTableAdapter = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVienTableAdapters.KhoaTableAdapter();
             this.pnlTittlebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhoaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // KHOABindingSource
-            // 
-            this.KHOABindingSource.DataMember = "KHOA";
-            // 
-            // BangDiem
-            // 
             // 
             // rpvDSK
             // 
-            reportDataSource1.Name = "DataSetKhoa";
-            reportDataSource1.Value = this.KHOABindingSource;
+            reportDataSource1.Name = "Khoa";
+            reportDataSource1.Value = this.KhoaBindingSource;
             this.rpvDSK.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvDSK.LocalReport.ReportEmbeddedResource = "Nhom11_DoAnQuanLySinhVien.ReportDanhSachKhoa.rdlc";
             this.rpvDSK.Location = new System.Drawing.Point(0, 50);
-            this.rpvDSK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpvDSK.Margin = new System.Windows.Forms.Padding(4);
             this.rpvDSK.Name = "rpvDSK";
             this.rpvDSK.ServerReport.BearerToken = null;
             this.rpvDSK.Size = new System.Drawing.Size(986, 696);
@@ -123,10 +119,6 @@
             this.lblKhoa.TabIndex = 52;
             this.lblKhoa.Text = "Mã Khoa:";
             // 
-            // KHOATableAdapter
-            // 
-            
-            // 
             // cbbMaKhoa
             // 
             this.cbbMaKhoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,10 +126,24 @@
             this.cbbMaKhoa.Items.AddRange(new object[] {
             "ALL"});
             this.cbbMaKhoa.Location = new System.Drawing.Point(699, 114);
-            this.cbbMaKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMaKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMaKhoa.Name = "cbbMaKhoa";
             this.cbbMaKhoa.Size = new System.Drawing.Size(148, 30);
             this.cbbMaKhoa.TabIndex = 55;
+            // 
+            // QuanLyDiemSinhVien
+            // 
+            this.QuanLyDiemSinhVien.DataSetName = "QuanLyDiemSinhVien";
+            this.QuanLyDiemSinhVien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // KhoaBindingSource
+            // 
+            this.KhoaBindingSource.DataMember = "Khoa";
+            this.KhoaBindingSource.DataSource = this.QuanLyDiemSinhVien;
+            // 
+            // KhoaTableAdapter
+            // 
+            this.KhoaTableAdapter.ClearBeforeFill = true;
             // 
             // ReportDanhSachKhoa
             // 
@@ -150,12 +156,13 @@
             this.Controls.Add(this.pnlTittlebar);
             this.Controls.Add(this.rpvDSK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportDanhSachKhoa";
             this.Text = "ReportDanhSachKhoa";
             this.Load += new System.EventHandler(this.ReportDanhSachKhoa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.KHOABindingSource)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhoaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,10 +173,12 @@
         private Microsoft.Reporting.WinForms.ReportViewer rpvDSK;
         private System.Windows.Forms.Panel pnlTittlebar;
         private System.Windows.Forms.Button btnexit;
-        private System.Windows.Forms.BindingSource KHOABindingSource;
 
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label lblKhoa;
         private System.Windows.Forms.ComboBox cbbMaKhoa;
+        private System.Windows.Forms.BindingSource KhoaBindingSource;
+        private QuanLyDiemSinhVien QuanLyDiemSinhVien;
+        private QuanLyDiemSinhVienTableAdapters.KhoaTableAdapter KhoaTableAdapter;
     }
 }

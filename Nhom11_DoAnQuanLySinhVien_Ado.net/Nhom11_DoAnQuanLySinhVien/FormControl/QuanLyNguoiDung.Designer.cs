@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.epvTaiKhoan = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblUsers = new System.Windows.Forms.Label();
             this.mskPhone = new System.Windows.Forms.MaskedTextBox();
@@ -87,7 +87,7 @@
             this.mskPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mskPhone.Mask = "9999 000 000";
             this.mskPhone.Name = "mskPhone";
-            this.mskPhone.Size = new System.Drawing.Size(181, 35);
+            this.mskPhone.Size = new System.Drawing.Size(220, 35);
             this.mskPhone.TabIndex = 53;
             // 
             // txtEmail
@@ -98,7 +98,7 @@
             this.txtEmail.Location = new System.Drawing.Point(143, 133);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(181, 35);
+            this.txtEmail.Size = new System.Drawing.Size(220, 35);
             this.txtEmail.TabIndex = 52;
             // 
             // label3
@@ -117,11 +117,11 @@
             this.grbDanhSach.Controls.Add(this.dgvLogin);
             this.grbDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbDanhSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDanhSach.Location = new System.Drawing.Point(128, 331);
+            this.grbDanhSach.Location = new System.Drawing.Point(125, 380);
             this.grbDanhSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbDanhSach.Name = "grbDanhSach";
             this.grbDanhSach.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbDanhSach.Size = new System.Drawing.Size(776, 321);
+            this.grbDanhSach.Size = new System.Drawing.Size(1087, 265);
             this.grbDanhSach.TabIndex = 56;
             this.grbDanhSach.TabStop = false;
             this.grbDanhSach.Text = "Danh sách";
@@ -130,14 +130,14 @@
             // 
             this.dgvLogin.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLogin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLogin.EnableHeadersVisualStyles = false;
@@ -145,16 +145,16 @@
             this.dgvLogin.Location = new System.Drawing.Point(3, 30);
             this.dgvLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLogin.Name = "dgvLogin";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogin.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLogin.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLogin.RowHeadersWidth = 51;
-            this.dgvLogin.Size = new System.Drawing.Size(770, 289);
+            this.dgvLogin.Size = new System.Drawing.Size(1081, 233);
             this.dgvLogin.TabIndex = 0;
             this.dgvLogin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLogin_CellClick);
             // 
@@ -178,7 +178,7 @@
             "Sinh Viên",
             "Giảng Viên",
             "Admin"});
-            this.cboQuyen.Location = new System.Drawing.Point(541, 98);
+            this.cboQuyen.Location = new System.Drawing.Point(143, 217);
             this.cboQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboQuyen.Name = "cboQuyen";
             this.cboQuyen.Size = new System.Drawing.Size(181, 35);
@@ -190,7 +190,7 @@
             this.lblQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblQuyen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuyen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblQuyen.Location = new System.Drawing.Point(406, 102);
+            this.lblQuyen.Location = new System.Drawing.Point(17, 220);
             this.lblQuyen.Name = "lblQuyen";
             this.lblQuyen.Size = new System.Drawing.Size(82, 27);
             this.lblQuyen.TabIndex = 17;
@@ -201,7 +201,7 @@
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtMatKhau.Location = new System.Drawing.Point(541, 46);
+            this.txtMatKhau.Location = new System.Drawing.Point(143, 175);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(181, 35);
@@ -215,7 +215,7 @@
             this.txtTaiKhoan.Location = new System.Drawing.Point(143, 46);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(181, 35);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(220, 35);
             this.txtTaiKhoan.TabIndex = 13;
             // 
             // lblTaiKhoan
@@ -245,11 +245,11 @@
             this.grbTTCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbTTCT.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTTCT.ForeColor = System.Drawing.Color.Black;
-            this.grbTTCT.Location = new System.Drawing.Point(128, 110);
+            this.grbTTCT.Location = new System.Drawing.Point(125, 83);
             this.grbTTCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbTTCT.Name = "grbTTCT";
             this.grbTTCT.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbTTCT.Size = new System.Drawing.Size(776, 209);
+            this.grbTTCT.Size = new System.Drawing.Size(513, 282);
             this.grbTTCT.TabIndex = 55;
             this.grbTTCT.TabStop = false;
             this.grbTTCT.Text = "Thông tin chi tiết";
@@ -260,7 +260,7 @@
             this.lblpassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblpassword.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblpassword.Location = new System.Drawing.Point(406, 50);
+            this.lblpassword.Location = new System.Drawing.Point(17, 178);
             this.lblpassword.Name = "lblpassword";
             this.lblpassword.Size = new System.Drawing.Size(110, 27);
             this.lblpassword.TabIndex = 11;
@@ -271,7 +271,7 @@
             this.lblXoa.AutoSize = true;
             this.lblXoa.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXoa.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblXoa.Location = new System.Drawing.Point(1125, 545);
+            this.lblXoa.Location = new System.Drawing.Point(861, 330);
             this.lblXoa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblXoa.Name = "lblXoa";
             this.lblXoa.Size = new System.Drawing.Size(73, 35);
@@ -283,7 +283,7 @@
             this.lblLuu.AutoSize = true;
             this.lblLuu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuu.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblLuu.Location = new System.Drawing.Point(1128, 453);
+            this.lblLuu.Location = new System.Drawing.Point(1017, 191);
             this.lblLuu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLuu.Name = "lblLuu";
             this.lblLuu.Size = new System.Drawing.Size(69, 35);
@@ -295,7 +295,7 @@
             this.lblHuyBo.AutoSize = true;
             this.lblHuyBo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblHuyBo.Location = new System.Drawing.Point(1108, 356);
+            this.lblHuyBo.Location = new System.Drawing.Point(717, 330);
             this.lblHuyBo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHuyBo.Name = "lblHuyBo";
             this.lblHuyBo.Size = new System.Drawing.Size(108, 35);
@@ -307,7 +307,7 @@
             this.lblSua.AutoSize = true;
             this.lblSua.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSua.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblSua.Location = new System.Drawing.Point(1131, 261);
+            this.lblSua.Location = new System.Drawing.Point(870, 192);
             this.lblSua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSua.Name = "lblSua";
             this.lblSua.Size = new System.Drawing.Size(64, 35);
@@ -319,7 +319,7 @@
             this.lblThem.AutoSize = true;
             this.lblThem.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThem.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblThem.Location = new System.Drawing.Point(1113, 166);
+            this.lblThem.Location = new System.Drawing.Point(717, 191);
             this.lblThem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThem.Name = "lblThem";
             this.lblThem.Size = new System.Drawing.Size(88, 35);
@@ -336,7 +336,7 @@
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuyBo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuyBo.Location = new System.Drawing.Point(997, 330);
+            this.btnHuyBo.Location = new System.Drawing.Point(711, 239);
             this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(96, 90);
@@ -354,7 +354,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(997, 519);
+            this.btnXoa.Location = new System.Drawing.Point(853, 239);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(96, 90);
@@ -371,7 +371,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(997, 427);
+            this.btnLuu.Location = new System.Drawing.Point(1001, 100);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(96, 90);
@@ -388,7 +388,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(997, 235);
+            this.btnSua.Location = new System.Drawing.Point(853, 100);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(96, 90);
@@ -405,7 +405,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(997, 140);
+            this.btnThem.Location = new System.Drawing.Point(709, 100);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(96, 90);
@@ -433,7 +433,7 @@
             this.Controls.Add(this.btnLuu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyNguoiDung";
-            this.Size = new System.Drawing.Size(1243, 738);
+            this.Size = new System.Drawing.Size(1243, 761);
             this.Load += new System.EventHandler(this.QuanLyNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epvTaiKhoan)).EndInit();
             this.grbDanhSach.ResumeLayout(false);

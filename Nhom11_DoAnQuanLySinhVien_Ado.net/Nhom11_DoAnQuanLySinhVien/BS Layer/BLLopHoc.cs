@@ -23,11 +23,11 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string[] values = { };
             return db.ExcuteQueryDataSet(sqlstring, CommandType.StoredProcedure, paramenters, values);
         }
-        public bool ThemLopHoc(string MaKhoa, string MaLop, string TenLop, string SiSo, ref string err)
+        public bool ThemLopHoc(string MaKhoa, string MaLop, string TenLop,string SiSo, ref string err)
         {
             String sqlstring = "sp_ThemLopHoc";
-            string[] paramenters = { "@MaLop", "@TenLop", "@MaKhoa" };
-            string[] values = { MaLop, TenLop, MaKhoa };
+            string[] paramenters = { "@MaLop", "@TenLop", "@MaKhoa" ,"@SiSo"};
+            string[] values = { MaLop, TenLop, MaKhoa,SiSo};
 
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
@@ -42,8 +42,8 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         public bool CapNhatLopHoc(string MaKhoa, string MaLop, string TenLop, string SiSo, ref string err)
         {
             String sqlstring = "sp_CapNhapLopHoc";
-            string[] paramenters = { "@MaLop", "@TenLop", "@MaKhoa" };
-            string[] values = { MaLop, TenLop, MaKhoa };
+            string[] paramenters = { "@MaLop", "@TenLop", "@MaKhoa", "@SiSo" };
+            string[] values = { MaLop, TenLop, MaKhoa ,SiSo};
 
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
 
@@ -52,9 +52,9 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         public List<string> LayMaKhoa()
         {
             List<string> dsMaKhoa = new List<string>();
-            String sqlstring = "sp_LayLopHoc";
-            string[] paramenters = {};
-            string[] values = {};
+            String sqlstring = "sp_LayMaKhoa";
+            string[] paramenters = { };
+            string[] values = { };
             SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
 
             while (reader.Read())
@@ -66,10 +66,10 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         {
 
 
-            String sqlstring = "sp_KiemTraMaLopTonTai";
+            String sqlstring = "sp_KiemTraMaLop";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.Text,paramenters,values);
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.Text, paramenters, values);
             if (reader.Read())
             {
                 reader.Dispose();
@@ -80,10 +80,10 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool kiemTraMaKhoaChinhXac(string MaKhoa, ref string err)
         {
-            string sqlstring = "sp_KiemTraMaKhoaChinhXac";
+            string sqlstring = "sp_KiemTraKhoa";
             string[] paramenters = { "@MaKhoa" };
             string[] values = { MaKhoa };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure,paramenters,values);
+            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
             if (reader.Read())
             {
                 reader.Dispose();
@@ -94,7 +94,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool kiemTraSinhVienCoLop(string MaLop, ref string err)
         {
-            string sqlstring = "sp_KiemTraMaKhoaChinhXac";
+            string sqlstring = "sp_kiemTraSinhVienCoLop";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
             SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);

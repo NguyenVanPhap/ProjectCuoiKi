@@ -95,14 +95,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ma Khoa</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -114,7 +114,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -137,7 +137,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ten Khoa</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
@@ -365,7 +365,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>QuanLyDiemSinhVien</rd:DataSetName>
-        <rd:SchemaPath>D:\Nam3\Hệ quản trị CSDL\Project_CuoiKi\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\QuanLyDiemSinhVien.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Nam3\Hệ quản trị CSDL\Nhom11_DoAnQuanLySinhVien_Ado.net\Nhom11_DoAnQuanLySinhVien\QuanLyDiemSinhVien.xsd</rd:SchemaPath>
         <rd:TableName>Khoa</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

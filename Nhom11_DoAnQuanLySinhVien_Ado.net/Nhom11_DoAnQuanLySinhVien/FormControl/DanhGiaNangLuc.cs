@@ -66,8 +66,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         }
         private void Load_Data()
         {
-            try
-            {
+            /*try
+            {*/
                 dtTinhHinhHocTap = new DataTable();
                 dtTinhHinhHocTap.Clear();
                 DataSet ds = DBTHHT.LayDiemTrungBinhTrongKhoaNamHoc(cbbKhoa.Text, cbbNamHoc.Text);
@@ -76,11 +76,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 dgvTHHT.AutoResizeColumns();
                 Load_Khoa();
                 FillChart();
-            }
+            /*}
             catch
             {
                 MessageBox.Show("Không Load được. Lỗi rồi!!!");
-            }
+            }*/
         }
         private void Chart_Load(object sender, EventArgs e)
         {
@@ -98,7 +98,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             int D = 0;
             int F = 0;
 
-            for(int i=0;i<dgvTHHT.Rows.Count-1;i++)
+            for (int i = 0; i < dgvTHHT.Rows.Count - 1; i++)
             {
                 if (float.Parse(dgvTHHT.Rows[i].Cells[2].Value.ToString()) < 4)
                     F++;
@@ -123,9 +123,9 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 else
                     A++;
             }
-            
-            int[] yValues = { A,Bplus,B,Cplus,C,Dplus,D,F };
-            string[] xValues = { "A", "B+", "B", "C+","C","D","D+","F"};
+
+            int[] yValues = { A, Bplus, B, Cplus, C, Dplus, D, F };
+            string[] xValues = { "A", "B+", "B", "C+", "C", "D", "D+", "F" };
 
             chartTHHT.Series["Grade"].Points.DataBindXY(xValues, yValues);
             chartTHHT.Series[0].Label = "#PERCENT{P2}";

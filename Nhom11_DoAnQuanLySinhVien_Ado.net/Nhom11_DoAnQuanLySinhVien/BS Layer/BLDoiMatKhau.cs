@@ -20,8 +20,8 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
 
         public bool kiemTraThongTinTaiKhoan(string TenDN, string password, ref string err)
         {
-            String sqlstring = "sp_Check_Login";
-            string[] paramenters = { "@tenDN", "@MatKhau" };
+            String sqlstring = "sp_Check_Account";
+            string[] paramenters = { "@tenDN", "@MatKhau"};
             string[] values = { TenDN, password };
             SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
 

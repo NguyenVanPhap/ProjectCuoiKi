@@ -249,7 +249,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             //txtMaSV.ResetText();
             
             errorProvider.Clear();
-            if (cbbKhoa.Text == "ALL")
+            if (cbbKhoa.Text == "")
                 errorProvider.SetError(cbbKhoa, "Chưa chọn khoa");
             else
             if (cbbHocKi.Text == "" || cbbHocKi.Text == "ALL")
@@ -415,7 +415,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                         ref err))
                     {
                         Load_Data();
-                        Kiemtra();
+                        //Kiemtra();
                         MessageBox.Show("Đã xóa xong!");
                     }
                     else
@@ -426,46 +426,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             }
         }
 
-      
-        private void Kiemtra()
-        {
-            errorProvider.Clear();
-            foreach (DataGridViewRow r in dgvDiem.Rows)
-                r.Selected = false;
-            if (txtMaSV.Text == "")
-                errorProvider.SetError(txtMaSV, "Chưa nhập Mã Sinh Viên ");
-            else
-            {
-                int dem = 0;
-                for (int i = 0; i < dgvDiem.Rows.Count - 1; i++)
-                {
-                    if (dgvDiem.Rows[i].Cells[0].Value.ToString() == txtMaSV.Text)
-                    {
-                        dem++;
-                        dgvDiem.Rows[i].Selected = true;
-                        txtDiemthi1.Text = dgvDiem.Rows[i].Cells[7].Value.ToString();
-                        txtDiemThi2.Text = dgvDiem.Rows[i].Cells[8].Value.ToString();
-                       
-                        if (Them)
-                        {
-                            if (dgvDiem.Rows[i].Cells[3].Value.ToString() == cbbMonHoc.Text && dgvDiem.Rows[i].Cells[5].Value.ToString() == cbbHocKi.Text && dgvDiem.Rows[i].Cells[6].Value.ToString() == cbbNamHoc.Text)
-                                MessageBox.Show("Sinh Viên này đã được nhập điểm từ trước.");
-                        }
-                    }
-                }
-                if (dem == 0)
-                {
-                    if (Them == false)
-                        MessageBox.Show("Không tìm thấy Sinh Viên này!");
-                    else
-                        MessageBox.Show("Bạn chưa nhập điểm cho Sinh Viên này!");
-                }
-            }
-        }
-        private void btnKiemTra_Click(object sender, EventArgs e)
-        {
-            Kiemtra();
-        }
+   
+        
 
         private void dgvDiem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -473,27 +435,21 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             {
                 int r = dgvDiem.CurrentCell.RowIndex;
                 txtMaSV.Text = dgvDiem.Rows[r].Cells[0].Value.ToString();
-                txtDCC.Text = dgvDiem.Rows[r].Cells[7].Value.ToString();
-                txtDiemGK.Text = dgvDiem.Rows[r].Cells[8].Value.ToString();
-                txtDiemBT.Text = dgvDiem.Rows[r].Cells[9].Value.ToString();
-
-                txtDiemthi1.Text = dgvDiem.Rows[r].Cells[10].Value.ToString();
-                txtDiemThi2.Text = dgvDiem.Rows[r].Cells[11].Value.ToString();
-
-
-                cbbHocKi.SelectedIndex = cbbHocKi.Items.IndexOf(dgvDiem.Rows[r].Cells[5].Value.ToString());
-                cbbHocKi.Text = dgvDiem.Rows[r].Cells[5].Value.ToString();
-
-                cbbMonHoc.SelectedIndex = cbbMonHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[3].Value.ToString());
-                cbbMonHoc.Text = dgvDiem.Rows[r].Cells[3].Value.ToString();
-
-                cbbNamHoc.SelectedIndex = cbbNamHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[6].Value.ToString());
-                cbbNamHoc.Text = dgvDiem.Rows[r].Cells[6].Value.ToString();
 
                 cbbLop.SelectedIndex = cbbLop.Items.IndexOf(dgvDiem.Rows[r].Cells[2].Value.ToString());
                 cbbLop.Text = dgvDiem.Rows[r].Cells[2].Value.ToString();
-
-                cbbKhoa.SelectedIndex = cbbKhoa.Items.IndexOf(dbDSV.LayMaKhoa_SinhVien(txtMaSV.Text));
+                cbbMonHoc.SelectedIndex = cbbMonHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[3].Value.ToString());
+                cbbMonHoc.Text = dgvDiem.Rows[r].Cells[3].Value.ToString();
+                cbbHocKi.SelectedIndex = cbbHocKi.Items.IndexOf(dgvDiem.Rows[r].Cells[5].Value.ToString());
+                cbbHocKi.Text = dgvDiem.Rows[r].Cells[5].Value.ToString();
+                cbbNamHoc.SelectedIndex = cbbNamHoc.Items.IndexOf(dgvDiem.Rows[r].Cells[6].Value.ToString());
+                cbbNamHoc.Text = dgvDiem.Rows[r].Cells[6].Value.ToString();
+                txtDCC.Text = dgvDiem.Rows[r].Cells[7].Value.ToString();
+                txtDiemGK.Text = dgvDiem.Rows[r].Cells[8].Value.ToString();
+                txtDiemBT.Text = dgvDiem.Rows[r].Cells[9].Value.ToString();
+                txtDiemthi1.Text = dgvDiem.Rows[r].Cells[10].Value.ToString();
+                txtDiemThi2.Text = dgvDiem.Rows[r].Cells[11].Value.ToString();
+                //cbbKhoa.SelectedIndex = cbbKhoa.Items.IndexOf(dbDSV.LayMaKhoa_SinhVien(txtMaSV.Text));
 
 
             }

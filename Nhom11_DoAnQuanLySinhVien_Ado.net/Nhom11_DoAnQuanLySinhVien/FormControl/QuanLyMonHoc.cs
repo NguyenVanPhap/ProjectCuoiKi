@@ -354,5 +354,10 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
             
         }
+
+        private void lblThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.epvMaMon = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtSoTinChi = new System.Windows.Forms.TextBox();
             this.lblSoTinChi = new System.Windows.Forms.Label();
@@ -171,14 +171,14 @@
             // 
             this.dgvMonHoc.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvMonHoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMonHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMonHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMonHoc.EnableHeadersVisualStyles = false;
@@ -186,14 +186,14 @@
             this.dgvMonHoc.Location = new System.Drawing.Point(3, 30);
             this.dgvMonHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMonHoc.Name = "dgvMonHoc";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMonHoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMonHoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMonHoc.RowHeadersWidth = 51;
             this.dgvMonHoc.Size = new System.Drawing.Size(561, 388);
             this.dgvMonHoc.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.lblXoa.AutoSize = true;
             this.lblXoa.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXoa.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblXoa.Location = new System.Drawing.Point(1155, 523);
+            this.lblXoa.Location = new System.Drawing.Point(695, 664);
             this.lblXoa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblXoa.Name = "lblXoa";
             this.lblXoa.Size = new System.Drawing.Size(73, 35);
@@ -216,7 +216,7 @@
             this.lblLuu.AutoSize = true;
             this.lblLuu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuu.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblLuu.Location = new System.Drawing.Point(1160, 431);
+            this.lblLuu.Location = new System.Drawing.Point(566, 664);
             this.lblLuu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLuu.Name = "lblLuu";
             this.lblLuu.Size = new System.Drawing.Size(69, 35);
@@ -228,7 +228,7 @@
             this.lblHuyBo.AutoSize = true;
             this.lblHuyBo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblHuyBo.Location = new System.Drawing.Point(1140, 334);
+            this.lblHuyBo.Location = new System.Drawing.Point(425, 664);
             this.lblHuyBo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHuyBo.Name = "lblHuyBo";
             this.lblHuyBo.Size = new System.Drawing.Size(108, 35);
@@ -240,7 +240,7 @@
             this.lblSua.AutoSize = true;
             this.lblSua.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSua.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblSua.Location = new System.Drawing.Point(1163, 239);
+            this.lblSua.Location = new System.Drawing.Point(324, 664);
             this.lblSua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSua.Name = "lblSua";
             this.lblSua.Size = new System.Drawing.Size(64, 35);
@@ -252,12 +252,13 @@
             this.lblThem.AutoSize = true;
             this.lblThem.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThem.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblThem.Location = new System.Drawing.Point(1145, 144);
+            this.lblThem.Location = new System.Drawing.Point(188, 664);
             this.lblThem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThem.Name = "lblThem";
             this.lblThem.Size = new System.Drawing.Size(88, 35);
             this.lblThem.TabIndex = 64;
             this.lblThem.Text = "Thêm";
+            this.lblThem.Click += new System.EventHandler(this.lblThem_Click);
             // 
             // btnHuyBo
             // 
@@ -269,7 +270,7 @@
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuyBo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuyBo.Location = new System.Drawing.Point(1029, 308);
+            this.btnHuyBo.Location = new System.Drawing.Point(431, 572);
             this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(96, 90);
@@ -287,7 +288,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1029, 497);
+            this.btnXoa.Location = new System.Drawing.Point(684, 572);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(96, 90);
@@ -304,7 +305,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(1029, 405);
+            this.btnLuu.Location = new System.Drawing.Point(553, 572);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(96, 90);
@@ -321,7 +322,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(1029, 213);
+            this.btnSua.Location = new System.Drawing.Point(304, 572);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(96, 90);
@@ -338,7 +339,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(1029, 118);
+            this.btnThem.Location = new System.Drawing.Point(180, 572);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(96, 90);
@@ -366,7 +367,7 @@
             this.Controls.Add(this.grbDanhSach);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyMonHoc";
-            this.Size = new System.Drawing.Size(1269, 647);
+            this.Size = new System.Drawing.Size(1269, 707);
             this.Load += new System.EventHandler(this.QuanLyMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epvMaMon)).EndInit();
             this.grbTTCT.ResumeLayout(false);

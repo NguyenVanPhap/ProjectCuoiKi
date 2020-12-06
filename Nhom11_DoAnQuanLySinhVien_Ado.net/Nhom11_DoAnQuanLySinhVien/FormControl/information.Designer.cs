@@ -35,6 +35,8 @@
             this.lblGVHD = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,11 +45,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(803, 315);
+            this.label6.Location = new System.Drawing.Point(803, 319);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(346, 31);
+            this.label6.Size = new System.Drawing.Size(314, 31);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Nguyễn Văn Pháp - 18110333";
+            this.label6.Text = "Trần Văn Hoàng-18110289";
             // 
             // lblname1
             // 
@@ -56,9 +58,10 @@
             this.lblname1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblname1.Location = new System.Drawing.Point(803, 278);
             this.lblname1.Name = "lblname1";
-            this.lblname1.Size = new System.Drawing.Size(364, 31);
+            this.lblname1.Size = new System.Drawing.Size(325, 31);
             this.lblname1.TabIndex = 15;
-            this.lblname1.Text = "Huỳnh Trọng Nghĩa - 18110326";
+            this.lblname1.Text = "Nguyễn Văn Pháp -1811033";
+            this.lblname1.Click += new System.EventHandler(this.lblname1_Click);
             // 
             // label4
             // 
@@ -118,11 +121,35 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(803, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(296, 31);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Bùi Văn Nghĩa-18110324";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(803, 405);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 31);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Từ Hữu Hà Đức";
+            // 
             // information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblname1);
@@ -149,5 +176,7 @@
         private System.Windows.Forms.Label lblSVTH;
         private System.Windows.Forms.Label lblGVHD;
         private System.Windows.Forms.Label lbltitle;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

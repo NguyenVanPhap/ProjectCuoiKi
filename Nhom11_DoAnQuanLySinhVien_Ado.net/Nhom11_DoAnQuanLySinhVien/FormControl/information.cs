@@ -34,5 +34,10 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
 
         }
+
+        private void lblname1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

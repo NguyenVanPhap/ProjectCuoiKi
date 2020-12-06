@@ -8,11 +8,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nhom11_DoAnQuanLySinhVien.BS_Layer;
 
 namespace Nhom11_DoAnQuanLySinhVien
 {
     public partial class ReportDanhSachLop : Form
     {
+        BLTinhHinhHocTap DBTHHT = new BLTinhHinhHocTap();
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImport("user32.dll")]
@@ -32,12 +34,54 @@ namespace Nhom11_DoAnQuanLySinhVien
         {
             lblMaLop.Text = "Mã Lớp:";
         }
-
-        private void ReportDanhSachLop_Load(object sender, EventArgs e)
+        private void load_khoa()
         {
-            // TODO: This line of code loads data into the 'BangDiem.LOP' table. You can move, or remove it, as needed.
 
+            cbbMaKhoa.Items.Clear();
+            List<string> dskhoa = new List<string>();
+            dskhoa = DBTHHT.LayKhoa();
+            cbbMaKhoa.Items.Add("ALL");
+            foreach (string khoa in dskhoa)
+            {
+                cbbMaKhoa.Items.Add(khoa);
+            }
+        }
+        private void load_lop()
+        {
+            List<string> dslop = new List<string>();
+            dslop.Clear();
+            dslop = DBTHHT.LayLopTrongKhoa(cbbMaKhoa.Text);
+            cbbMaLop.Items.Clear();
+            cbbMaLop.Items.Add("ALL");
+            foreach (string lop in dslop)
+            {
+                cbbMaLop.Items.Add(lop);
+            }
+        }
+        private void load_data()
+        {
+            load_khoa();
+            load_lop();
+            //TODO: This line of code loads data into the 'BangDiem.SINHVIEN' table.You can move, or remove it, as needed.
+
+
+            if (cbbMaLop.Text == "ALL")
+            {
+                if (cbbMaKhoa.Text == "ALL")
+                    this.LopTableAdapter.Fill(this.QuanLyDiemSinhVien.Lop);
+                else
+                    this.LopTableAdapter.FillByKhoa(this.QuanLyDiemSinhVien.Lop, cbbMaKhoa.Text);
+
+            }
+            else
+                this.LopTableAdapter.FillByLop(this.QuanLyDiemSinhVien.Lop, cbbMaLop.Text);
             this.rpvDSL.RefreshReport();
+        }
+            private void ReportDanhSachLop_Load(object sender, EventArgs e)
+        {
+            load_data();
+
+            
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -47,18 +91,7 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (this.cbbMaLop.Text != "ALL")
-            {
-                //this.LOPTableAdapter.FillLop(this.BangDiem.LOP, "%"+this.cbbMaLop.Text+"%");
-
-                this.rpvDSL.RefreshReport();
-            }
-            else
-            {
-                //this.LOPTableAdapter.Fill(this.BangDiem.LOP);
-
-                this.rpvDSL.RefreshReport();
-            }    
+            load_data();
         }
 
         private void pnlTittlebar_MouseDown(object sender, MouseEventArgs e)
@@ -71,6 +104,11 @@ namespace Nhom11_DoAnQuanLySinhVien
         }
 
         private void rpvDSL_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbMaKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -34,15 +34,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiemSinhVien));
             this.grbDSV = new System.Windows.Forms.GroupBox();
             this.dgvDiem = new System.Windows.Forms.DataGridView();
+            this.MaSv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HocKi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemChuyenCan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemGiuaKi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemBT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemLan1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemLan2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbGhiChu = new System.Windows.Forms.GroupBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.grbTTChiTiet = new System.Windows.Forms.GroupBox();
+            this.txtDCC = new System.Windows.Forms.TextBox();
             this.lblDGK = new System.Windows.Forms.Label();
             this.txtDiemGK = new System.Windows.Forms.TextBox();
             this.lblDiemBT = new System.Windows.Forms.Label();
             this.txtDiemBT = new System.Windows.Forms.TextBox();
             this.lblDCC = new System.Windows.Forms.Label();
-            this.btnKiemTra = new System.Windows.Forms.Button();
             this.lblDiemLan1 = new System.Windows.Forms.Label();
             this.txtDiemthi1 = new System.Windows.Forms.TextBox();
             this.txtDiemThi2 = new System.Windows.Forms.TextBox();
@@ -74,19 +86,6 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtDCC = new System.Windows.Forms.TextBox();
-            this.MaSv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HocKi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemChuyenCan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemGiuaKi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemBT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemLan1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemLan2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
             this.grbGhiChu.SuspendLayout();
@@ -153,6 +152,102 @@
             this.dgvDiem.TabIndex = 0;
             this.dgvDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiem_CellClick);
             // 
+            // MaSv
+            // 
+            this.MaSv.DataPropertyName = "MaSv";
+            this.MaSv.HeaderText = "Mã Sinh Viên";
+            this.MaSv.MinimumWidth = 6;
+            this.MaSv.Name = "MaSv";
+            this.MaSv.Width = 125;
+            // 
+            // TenSV
+            // 
+            this.TenSV.DataPropertyName = "TenSV";
+            this.TenSV.HeaderText = "Tên Sinh Viên";
+            this.TenSV.MinimumWidth = 6;
+            this.TenSV.Name = "TenSV";
+            this.TenSV.Width = 125;
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã Lớp";
+            this.MaLop.MinimumWidth = 6;
+            this.MaLop.Name = "MaLop";
+            this.MaLop.Width = 125;
+            // 
+            // MaMH
+            // 
+            this.MaMH.DataPropertyName = "MaMH";
+            this.MaMH.HeaderText = "Mã Môn Học";
+            this.MaMH.MinimumWidth = 6;
+            this.MaMH.Name = "MaMH";
+            this.MaMH.Width = 125;
+            // 
+            // TenMH
+            // 
+            this.TenMH.DataPropertyName = "TenMH";
+            this.TenMH.HeaderText = "Tên Môn Học";
+            this.TenMH.MinimumWidth = 6;
+            this.TenMH.Name = "TenMH";
+            this.TenMH.Width = 125;
+            // 
+            // HocKi
+            // 
+            this.HocKi.DataPropertyName = "HocKi";
+            this.HocKi.HeaderText = "Học Kì";
+            this.HocKi.MinimumWidth = 6;
+            this.HocKi.Name = "HocKi";
+            this.HocKi.Width = 125;
+            // 
+            // NamHoc
+            // 
+            this.NamHoc.DataPropertyName = "NamHoc";
+            this.NamHoc.HeaderText = "Năm Học";
+            this.NamHoc.MinimumWidth = 6;
+            this.NamHoc.Name = "NamHoc";
+            this.NamHoc.Width = 125;
+            // 
+            // DiemChuyenCan
+            // 
+            this.DiemChuyenCan.DataPropertyName = "DiemChuyenCan";
+            this.DiemChuyenCan.HeaderText = "Điểm Chuyên Cần";
+            this.DiemChuyenCan.MinimumWidth = 6;
+            this.DiemChuyenCan.Name = "DiemChuyenCan";
+            this.DiemChuyenCan.Width = 125;
+            // 
+            // DiemGiuaKi
+            // 
+            this.DiemGiuaKi.DataPropertyName = "DiemGiuaKi";
+            this.DiemGiuaKi.HeaderText = "Điểm Giữa Kì";
+            this.DiemGiuaKi.MinimumWidth = 6;
+            this.DiemGiuaKi.Name = "DiemGiuaKi";
+            this.DiemGiuaKi.Width = 125;
+            // 
+            // DiemBT
+            // 
+            this.DiemBT.DataPropertyName = "DiemBaiTap";
+            this.DiemBT.HeaderText = "Điểm Bài Tập";
+            this.DiemBT.MinimumWidth = 6;
+            this.DiemBT.Name = "DiemBT";
+            this.DiemBT.Width = 125;
+            // 
+            // DiemLan1
+            // 
+            this.DiemLan1.DataPropertyName = "DiemThiLan1";
+            this.DiemLan1.HeaderText = "Điểm lần 1";
+            this.DiemLan1.MinimumWidth = 6;
+            this.DiemLan1.Name = "DiemLan1";
+            this.DiemLan1.Width = 125;
+            // 
+            // DiemLan2
+            // 
+            this.DiemLan2.DataPropertyName = "DiemThiLan2";
+            this.DiemLan2.HeaderText = "Điểm Lần 2";
+            this.DiemLan2.MinimumWidth = 6;
+            this.DiemLan2.Name = "DiemLan2";
+            this.DiemLan2.Width = 125;
+            // 
             // grbGhiChu
             // 
             this.grbGhiChu.Controls.Add(this.txtGhiChu);
@@ -187,7 +282,6 @@
             this.grbTTChiTiet.Controls.Add(this.lblDiemBT);
             this.grbTTChiTiet.Controls.Add(this.txtDiemBT);
             this.grbTTChiTiet.Controls.Add(this.lblDCC);
-            this.grbTTChiTiet.Controls.Add(this.btnKiemTra);
             this.grbTTChiTiet.Controls.Add(this.lblDiemLan1);
             this.grbTTChiTiet.Controls.Add(this.txtDiemthi1);
             this.grbTTChiTiet.Controls.Add(this.txtDiemThi2);
@@ -203,6 +297,16 @@
             this.grbTTChiTiet.TabIndex = 35;
             this.grbTTChiTiet.TabStop = false;
             this.grbTTChiTiet.Text = "Thông tin chi tiết";
+            // 
+            // txtDCC
+            // 
+            this.txtDCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDCC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDCC.Location = new System.Drawing.Point(440, 32);
+            this.txtDCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDCC.Name = "txtDCC";
+            this.txtDCC.Size = new System.Drawing.Size(68, 30);
+            this.txtDCC.TabIndex = 54;
             // 
             // lblDGK
             // 
@@ -253,24 +357,6 @@
             this.lblDCC.Size = new System.Drawing.Size(144, 22);
             this.lblDCC.TabIndex = 49;
             this.lblDCC.Text = "Điểm chuyên cần";
-            // 
-            // btnKiemTra
-            // 
-            this.btnKiemTra.BackColor = System.Drawing.Color.Transparent;
-            this.btnKiemTra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKiemTra.BackgroundImage")));
-            this.btnKiemTra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnKiemTra.FlatAppearance.BorderSize = 0;
-            this.btnKiemTra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKiemTra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKiemTra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKiemTra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKiemTra.Location = new System.Drawing.Point(95, 69);
-            this.btnKiemTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnKiemTra.Name = "btnKiemTra";
-            this.btnKiemTra.Size = new System.Drawing.Size(67, 62);
-            this.btnKiemTra.TabIndex = 47;
-            this.btnKiemTra.UseVisualStyleBackColor = false;
-            this.btnKiemTra.Click += new System.EventHandler(this.btnKiemTra_Click);
             // 
             // lblDiemLan1
             // 
@@ -663,112 +749,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtDCC
-            // 
-            this.txtDCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDCC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDCC.Location = new System.Drawing.Point(440, 32);
-            this.txtDCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDCC.Name = "txtDCC";
-            this.txtDCC.Size = new System.Drawing.Size(68, 30);
-            this.txtDCC.TabIndex = 54;
-            // 
-            // MaSv
-            // 
-            this.MaSv.DataPropertyName = "MaSv";
-            this.MaSv.HeaderText = "Mã Sinh Viên";
-            this.MaSv.MinimumWidth = 6;
-            this.MaSv.Name = "MaSv";
-            this.MaSv.Width = 125;
-            // 
-            // TenSV
-            // 
-            this.TenSV.DataPropertyName = "TenSV";
-            this.TenSV.HeaderText = "Tên Sinh Viên";
-            this.TenSV.MinimumWidth = 6;
-            this.TenSV.Name = "TenSV";
-            this.TenSV.Width = 125;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.MinimumWidth = 6;
-            this.MaLop.Name = "MaLop";
-            this.MaLop.Width = 125;
-            // 
-            // MaMH
-            // 
-            this.MaMH.DataPropertyName = "MaMH";
-            this.MaMH.HeaderText = "Mã Môn Học";
-            this.MaMH.MinimumWidth = 6;
-            this.MaMH.Name = "MaMH";
-            this.MaMH.Width = 125;
-            // 
-            // TenMH
-            // 
-            this.TenMH.DataPropertyName = "TenMH";
-            this.TenMH.HeaderText = "Tên Môn Học";
-            this.TenMH.MinimumWidth = 6;
-            this.TenMH.Name = "TenMH";
-            this.TenMH.Width = 125;
-            // 
-            // HocKi
-            // 
-            this.HocKi.DataPropertyName = "HocKi";
-            this.HocKi.HeaderText = "Học Kì";
-            this.HocKi.MinimumWidth = 6;
-            this.HocKi.Name = "HocKi";
-            this.HocKi.Width = 125;
-            // 
-            // NamHoc
-            // 
-            this.NamHoc.DataPropertyName = "NamHoc";
-            this.NamHoc.HeaderText = "Năm Học";
-            this.NamHoc.MinimumWidth = 6;
-            this.NamHoc.Name = "NamHoc";
-            this.NamHoc.Width = 125;
-            // 
-            // DiemChuyenCan
-            // 
-            this.DiemChuyenCan.DataPropertyName = "DiemChuyenCan";
-            this.DiemChuyenCan.HeaderText = "Điểm Chuyên Cần";
-            this.DiemChuyenCan.MinimumWidth = 6;
-            this.DiemChuyenCan.Name = "DiemChuyenCan";
-            this.DiemChuyenCan.Width = 125;
-            // 
-            // DiemGiuaKi
-            // 
-            this.DiemGiuaKi.DataPropertyName = "DiemGiuaKi";
-            this.DiemGiuaKi.HeaderText = "Điểm Giữa Kì";
-            this.DiemGiuaKi.MinimumWidth = 6;
-            this.DiemGiuaKi.Name = "DiemGiuaKi";
-            this.DiemGiuaKi.Width = 125;
-            // 
-            // DiemBT
-            // 
-            this.DiemBT.DataPropertyName = "DiemBaiTap";
-            this.DiemBT.HeaderText = "Điểm Bài Tập";
-            this.DiemBT.MinimumWidth = 6;
-            this.DiemBT.Name = "DiemBT";
-            this.DiemBT.Width = 125;
-            // 
-            // DiemLan1
-            // 
-            this.DiemLan1.DataPropertyName = "DiemThiLan1";
-            this.DiemLan1.HeaderText = "Điểm lần 1";
-            this.DiemLan1.MinimumWidth = 6;
-            this.DiemLan1.Name = "DiemLan1";
-            this.DiemLan1.Width = 125;
-            // 
-            // DiemLan2
-            // 
-            this.DiemLan2.DataPropertyName = "DiemThiLan2";
-            this.DiemLan2.HeaderText = "Điểm Lần 2";
-            this.DiemLan2.MinimumWidth = 6;
-            this.DiemLan2.Name = "DiemLan2";
-            this.DiemLan2.Width = 125;
-            // 
             // DiemSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -832,7 +812,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label lblNam;
         private System.Windows.Forms.ComboBox cbbNamHoc;
-        private System.Windows.Forms.Button btnKiemTra;
         private System.Windows.Forms.Label lblTimKiem;
         private System.Windows.Forms.Label lblXoa;
         private System.Windows.Forms.Label lblLuu;

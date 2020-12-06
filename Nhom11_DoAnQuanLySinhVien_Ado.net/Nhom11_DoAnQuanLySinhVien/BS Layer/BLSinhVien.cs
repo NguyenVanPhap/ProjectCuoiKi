@@ -86,13 +86,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public List<string> LayMaLopTimKiem(string MaKhoa)
         {
-            //List<string> dsMaLopTimKiem = new List<string>();
-            //string sqlString = "Select MaLop From Lop Where MaKhoa='" + MaKhoa + "'";
-            ////SqlDataReader reader = db.MyExcuteReader(sqlString, CommandType.Text);
-            ////while (reader.Read())
-            ////    dsMaLopTimKiem.Add(reader.GetString(0));
-            ////reader.Dispose();
-            //return dsMaLopTimKiem;
+            
             List<string> dsMaLopTimKiem = new List<string>();
             string sqlstring = "sp_LayMaLopTuKhoa";
             string[] paramenters = { "@MaKhoa" };

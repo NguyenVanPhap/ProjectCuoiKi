@@ -35,9 +35,8 @@ namespace Nhom11_DoAnQuanLySinhVien
         private void ReportDanhSachKhoa_Load(object sender, EventArgs e)
         {
             //// TODO: This line of code loads data into the 'BangDiem.KHOA' table. You can move, or remove it, as needed.
-            //this.KHOATableAdapter.Fill(this.BangDiem.KHOA);
-
-            //this.rpvDSK.RefreshReport();
+            this.KhoaTableAdapter.Fill(this.QuanLyDiemSinhVien.Khoa);
+            this.rpvDSK.RefreshReport();
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -47,17 +46,16 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (this.cbbMaKhoa.Text != "ALL")
+            if (this.cbbMaKhoa.Text != "ALL" && this.cbbMaKhoa.Text != "")
             {
-                //this.KHOATableAdapter.FillKhoa(this.BangDiem.KHOA, "%" +this.cbbMaKhoa.Text+ "%");
+                this.KhoaTableAdapter.FillByMaKhoa(this.QuanLyDiemSinhVien.Khoa, cbbMaKhoa.Text);
 
-                //this.rpvDSK.RefreshReport();
+                this.rpvDSK.RefreshReport();
             }
             else
             {
-                //this.KHOATableAdapter.Fill(this.BangDiem.KHOA);
-
-                //this.rpvDSK.RefreshReport();
+                this.KhoaTableAdapter.Fill(this.QuanLyDiemSinhVien.Khoa);
+                this.rpvDSK.RefreshReport();
             }    
         }
 

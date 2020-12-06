@@ -34,11 +34,9 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
             dgvLogin.Columns[0].HeaderText = "Account";
             dgvLogin.Columns[1].HeaderText = "Password";
-            dgvLogin.Columns[2].HeaderText = "Name";
-            dgvLogin.Columns[3].HeaderText = "Sex";
-            dgvLogin.Columns[4].HeaderText = "Phone";
-            dgvLogin.Columns[5].HeaderText = "Email";
-            dgvLogin.Columns[6].HeaderText = "Permission";
+            dgvLogin.Columns[2].HeaderText =  "Email";
+            dgvLogin.Columns[3].HeaderText = "Phone";
+            dgvLogin.Columns[4].HeaderText = "Permission";
 
             dgvLogin.AutoResizeColumns();
 
@@ -68,13 +66,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             dgvLogin.Columns[2].Width = 200;
             dgvLogin.Columns[3].Width = 200;
 
-            dgvLogin.Columns[0].HeaderText = "Tài Khoản";
-            dgvLogin.Columns[1].HeaderText = "Mật Khẩu";
-            dgvLogin.Columns[2].HeaderText = "Họ Tên";
-            dgvLogin.Columns[3].HeaderText = "Giới Tính";
-            dgvLogin.Columns[4].HeaderText = "Phone";
-            dgvLogin.Columns[5].HeaderText = "Email";
-            dgvLogin.Columns[6].HeaderText = "Quyển";
+            dgvLogin.Columns[0].HeaderText = "TenDangNhap";
+            dgvLogin.Columns[1].HeaderText = "MatKhau";
+            dgvLogin.Columns[2].HeaderText = "Email";
+            dgvLogin.Columns[3].HeaderText = "SoDienThoai";
+            dgvLogin.Columns[4].HeaderText = "Quyển";
 
             dgvLogin.AutoResizeColumns();
 
@@ -193,13 +189,13 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 dgvLogin.Rows[r].Cells[0].Value.ToString();
             this.txtMatKhau.Text =
                 dgvLogin.Rows[r].Cells[1].Value.ToString();
-            
+
             this.mskPhone.Text =
-                dgvLogin.Rows[r].Cells[4].Value.ToString();
+                dgvLogin.Rows[r].Cells[3].Value.ToString();
             this.txtEmail.Text =
-                dgvLogin.Rows[r].Cells[5].Value.ToString();
+                dgvLogin.Rows[r].Cells[2].Value.ToString();
             this.cboQuyen.Text =
-                dgvLogin.Rows[r].Cells[6].Value.ToString();
+                dgvLogin.Rows[r].Cells[4].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -325,32 +321,32 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 }
                 else
                 {
-                    //if (dbLogin.ThemLogin(this.txtTaiKhoan.Text.Trim(), this.txtMatKhau.Text.Trim(),
-                    //        this.txtHoTen.Text, this.cboGioiTinh.Text, this.mskPhone.Text, this.txtEmail.Text,
-                    //        this.cboQuyen.Text, ref err))
-                    //{
-                    //    LoadData();
-                    //    MessageBox.Show("Đã thêm xong!");
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
-                    //}
+                    if (dbLogin.ThemLogin(this.txtTaiKhoan.Text.Trim(), this.txtMatKhau.Text.Trim(),
+                           this.mskPhone.Text, this.txtEmail.Text,
+                            this.cboQuyen.Text, ref err))
+                    {
+                        LoadData();
+                        MessageBox.Show("Đã thêm xong!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
+                    }
                 }
             }
             else
             {
-                //if (dbLogin.CapNhatLogin(this.txtTaiKhoan.Text, this.txtMatKhau.Text.Trim(),
-                //        this.txtHoTen.Text, this.cboGioiTinh.Text, this.mskPhone.Text, this.txtEmail.Text,
-                //        this.cboQuyen.Text, ref err))
-                //{
-                //    LoadData();
-                //    MessageBox.Show("Đã sửa xong!");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
-                //}
+                if (dbLogin.CapNhatLogin(this.txtTaiKhoan.Text, this.txtMatKhau.Text.Trim(),
+                        this.mskPhone.Text, this.txtEmail.Text,
+                        this.cboQuyen.Text, ref err))
+                {
+                    LoadData();
+                    MessageBox.Show("Đã sửa xong!");
+                }
+                else
+                {
+                    MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
+                }
             }
         }
 

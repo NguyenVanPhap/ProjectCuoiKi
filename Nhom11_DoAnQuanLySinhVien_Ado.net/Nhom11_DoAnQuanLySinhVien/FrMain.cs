@@ -19,18 +19,18 @@ namespace Nhom11_DoAnQuanLySinhVien
         private bool Hidden = false;
         public string account;
         
-        //SoLuongSinhVienTheoKhoa SLSVTK;
-        //DanhGiaNangLuc chart;
-        //DoiMatKhau DMK;
-        //information inf;
-        //FormControl.QuanLyNguoiDung QLND;
+        SoLuongSinhVienTheoKhoa SLSVTK;
+        DanhGiaNangLuc chart;
+        DoiMatKhau DMK;
+        information inf;
+        FormControl.QuanLyNguoiDung QLND;
        
         QuanLyMonHoc QLMH;
         DiemSinhVien DiemSV;
-        //QuanLyKhoa QLK;
-        //QuanLyLopHoc QLLH;
+        QuanLyKhoa QLK;
+        QuanLyLopHoc QLLH;
         ThongTinSinhVien TTSV;
-        //ThongTinTaiKhoan TTTK;
+        ThongTinTaiKhoan TTTK;
 
         int language = 0;
 
@@ -59,58 +59,58 @@ namespace Nhom11_DoAnQuanLySinhVien
         private void FrMain_Load(object sender, EventArgs e)
         {
             
-            //chart = new DanhGiaNangLuc();
+            chart = new DanhGiaNangLuc();
             ////THHT = new TinhHinhHocTap();
           
             QLMH = new QuanLyMonHoc();
             DiemSV = new DiemSinhVien();
-           // QLK = new QuanLyKhoa();
-           // QLLH = new QuanLyLopHoc();
+            QLK = new QuanLyKhoa();
+            QLLH = new QuanLyLopHoc();
            TTSV = new ThongTinSinhVien();
-           // DMK = new DoiMatKhau(account);
-           // TTTK = new ThongTinTaiKhoan(account, DMK);
-           // inf = new information();
-           // QLND = new QuanLyNguoiDung();
-           // SLSVTK = new SoLuongSinhVienTheoKhoa();
-           // this.pnlDisplay.Controls.Add(SLSVTK);
+           DMK = new DoiMatKhau(account);
+           TTTK = new ThongTinTaiKhoan(account, DMK);
+           inf = new information();
+           QLND = new QuanLyNguoiDung();
+           SLSVTK = new SoLuongSinhVienTheoKhoa();
+           this.pnlDisplay.Controls.Add(SLSVTK);
            
 
-           //this.pnlDisplay.Controls.Add(QLND);
+           this.pnlDisplay.Controls.Add(QLND);
             
            this.pnlDisplay.Controls.Add(QLMH);
            this.pnlDisplay.Controls.Add(DiemSV);
-            //this.pnlDisplay.Controls.Add(QLK);
-            //this.pnlDisplay.Controls.Add(QLLH);
+           this.pnlDisplay.Controls.Add(QLK);
+            this.pnlDisplay.Controls.Add(QLLH);
            this.pnlDisplay.Controls.Add(TTSV);
-            //this.pnlDisplay.Controls.Add(TTTK);
-            //this.pnlDisplay.Controls.Add(inf);
-            //this.pnlDisplay.Controls.Add(DMK);
-            //this.pnlDisplay.Controls.Add(chart);
+           this.pnlDisplay.Controls.Add(TTTK);
+            this.pnlDisplay.Controls.Add(inf);
+            this.pnlDisplay.Controls.Add(DMK);
+            this.pnlDisplay.Controls.Add(chart);
             
-            //this.SLSVTK.Visible = false;
-            //this.chart.Visible = false;
-            //this.QLND.Visible = false;
+            this.SLSVTK.Visible = false;
+            this.chart.Visible = false;
+            this.QLND.Visible = false;
             this.DiemSV.Visible = false;
             
             this.QLMH.Visible = false;
-            //this.QLK.Visible = false;
-            //this.QLLH.Visible = false;
+            this.QLK.Visible = false;
+            this.QLLH.Visible = false;
             this.TTSV.Visible = false;
-            //this.DMK.Visible = false;
-            //this.TTTK.Visible = false;
-            //this.inf.Visible = false;  
+            this.DMK.Visible = false;
+            this.TTTK.Visible = false;
+            this.inf.Visible = false;  
             
             if(Permission=="Sinh Viên"||Permission=="Giảng Viên")
             {
                 
-                //QLK.UnEnable();
-                //QLLH.UnEnable();
-                //QLMH.UnEnable();
-                //TTSV.UnEnable();
+                QLK.UnEnable();
+                QLLH.UnEnable();
+                QLMH.UnEnable();
+                TTSV.UnEnable();
             }   
             if(Permission=="Sinh Viên")
             {
-                //DiemSV.UnEnable();
+                DiemSV.UnEnable();
             }    
         }
 
@@ -150,8 +150,8 @@ namespace Nhom11_DoAnQuanLySinhVien
             }
             
             this.ptbTroVe.Visible = true;
-            //this.QLK.Visible = true;
-            //this.QLK.BringToFront();
+            this.QLK.Visible = true;
+            this.QLK.BringToFront();
         }
 
         private void btnQLlop_Click(object sender, EventArgs e)
@@ -161,11 +161,11 @@ namespace Nhom11_DoAnQuanLySinhVien
                 crtl.Visible = false;
             }
             
-            //this.ptbTroVe.Visible = true;
-            //this.QLLH.Visible = true;
-            //this.QLLH.BringToFront();
+            this.ptbTroVe.Visible = true;
+            this.QLLH.Visible = true;
+            this.QLLH.BringToFront();
 
-            //this.QLLH.LoadCboMaKhoa();
+            this.QLLH.LoadCboMaKhoa();
         }
 
         private void btnQLSV_Click(object sender, EventArgs e)
@@ -185,10 +185,10 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnQLMH_Click(object sender, EventArgs e)
         {
-            //foreach (Control crtl in this.pnlDisplay.Controls)
-            //{
-            //    crtl.Visible = false;
-            //}
+            foreach (Control crtl in this.pnlDisplay.Controls)
+            {
+                crtl.Visible = false;
+            }
             
             this.ptbTroVe.Visible = true;
             this.QLMH.Visible = true;
@@ -241,19 +241,19 @@ namespace Nhom11_DoAnQuanLySinhVien
             }
             else
             {
-                //foreach (Control crtl in this.pnlDisplay.Controls)
-                //{
-                //    crtl.Visible = false;
-                //}
-                //this.ptbTroVe.Visible = true;
-                //if (Permission == "Sinh Viên" || Permission == "Giảng Viên")
-                //{
-                //    QLND.UnEnable();
-                //}
-                //this.QLND.Visible = true;
-                //this.QLND.BringToFront();
+                foreach (Control crtl in this.pnlDisplay.Controls)
+                {
+                    crtl.Visible = false;
+                }
+                this.ptbTroVe.Visible = true;
+                if (Permission == "Sinh Viên" || Permission == "Giảng Viên")
+                {
+                    QLND.UnEnable();
+                }
+                this.QLND.Visible = true;
+                this.QLND.BringToFront();
 
-                //this.QLND.LoadData();
+                this.QLND.LoadData();
             }
         }
 
@@ -271,8 +271,8 @@ namespace Nhom11_DoAnQuanLySinhVien
                 crtl.Visible = false;
             }
             this.ptbTroVe.Visible = true;
-            //this.inf.Visible = true;
-            //this.inf.BringToFront();
+            this.inf.Visible = true;
+            this.inf.BringToFront();
         }
 
         private void mnstrDoiMK_Click(object sender, EventArgs e)
@@ -287,8 +287,8 @@ namespace Nhom11_DoAnQuanLySinhVien
                 crtl.Visible = false;
             }
             this.ptbTroVe.Visible = true;
-            //this.DMK.Visible = true;
-            //this.DMK.BringToFront();
+            this.DMK.Visible = true;
+            this.DMK.BringToFront();
         }
 
         private void mnstrQuanlinguoidung_Click(object sender, EventArgs e)
@@ -354,8 +354,8 @@ namespace Nhom11_DoAnQuanLySinhVien
             }
             
             this.ptbTroVe.Visible = true;
-            //this.chart.Visible = true;
-            //this.chart.BringToFront();
+            this.chart.Visible = true;
+            this.chart.BringToFront();
         }
 
         private void mnstrDiemTK_Click(object sender, EventArgs e)
@@ -417,8 +417,8 @@ namespace Nhom11_DoAnQuanLySinhVien
                 crtl.Visible = false;
             }
             this.ptbTroVe.Visible = true;
-            //this.TTTK.Visible = true;
-            //this.TTTK.BringToFront();
+            this.TTTK.Visible = true;
+            this.TTTK.BringToFront();
         }
 
         private void tmrMenu_Tick(object sender, EventArgs e)
@@ -450,19 +450,19 @@ namespace Nhom11_DoAnQuanLySinhVien
             pnlPhanCach.Size = new Size(590, 1);
 
             language = 0;
-            
+
             //TTTK.ChangeLanguageToVietNamese();
-           
-            //TTSV.ChangeLanguageToVietnamese();
-            //QLMH.ChangeLanguageToVietNamese();
-            //QLLH.ChangeLanguageToVietnamese();
-            //QLK.ChangeLanguageToVietNamese();
-            //QLND.ChangeLanguageToVietNamese();
-            //inf.ChangeLanguageToVietNamese();
-            //DiemSV.ChangeLanguageToVietNamese();
-            //chart.ChangeLanguageToVietNamese();
-            //DMK.ChangeLanguageToVietnamese();
-            //SLSVTK.ChangeLanguageToVietNamese();
+
+            TTSV.ChangeLanguageToVietnamese();
+            QLMH.ChangeLanguageToVietNamese();
+            QLLH.ChangeLanguageToVietnamese();
+            QLK.ChangeLanguageToVietNamese();
+            QLND.ChangeLanguageToVietNamese();
+            inf.ChangeLanguageToVietNamese();
+            DiemSV.ChangeLanguageToVietNamese();
+            chart.ChangeLanguageToVietNamese();
+            DMK.ChangeLanguageToVietnamese();
+            SLSVTK.ChangeLanguageToVietNamese();
             btnHome.Text = "      Nhà";
             btnManagre.Text = "       Người dùng";
             btnLogout.Text = "       Đăng xuất";
@@ -503,7 +503,6 @@ namespace Nhom11_DoAnQuanLySinhVien
             mnuDSSV.Text = "Danh sách SV";
             mnuDiemTK.Text = "Điểm tổng kết của SV";
             mnuDGNL.Text = "Đánh giá năng lực";
-            mnuSLGVTM.Text = "Số lượng Giảng Viên theo Môn";
             mnuSLSVTK.Text = "Số lượng Sinh Viên theo Khoa";
 
             mnuLanguage.Text = "Ngôn ngữ";
@@ -557,23 +556,22 @@ namespace Nhom11_DoAnQuanLySinhVien
             mnDSL.Text = "Class list";
             mnuDSM.Text = "Subject list";
             mnuSLSVTK.Text = "Student data by Faculty";
-            mnuSLGVTM.Text = "Lecturer data by Subject";
 
             mnuLanguage.Text = "Language";
             mnuTTTK.Text = "Account information";
 
-            //TTSV.ChangeLanguageToEnglish();
-            //QLMH.ChangeLanguageToEngLish();
-            //QLLH.ChangeLanguageToEnglish();
-            //QLK.ChangeLanguageToEngLish();
-          
-            //QLND.ChangeLanguageToEngLish();
-            //TTTK.ChangeLanguageToEngLish();
-            //inf.ChangeLanguageToEngLish();
-            //DiemSV.ChangeLanguageToEngLish();
-            //chart.ChangeLanguageToEngLish();
-            //DMK.ChangeLanguageToEnglish();
-            //SLSVTK.ChangelanguagetoEngLish();
+            TTSV.ChangeLanguageToEnglish();
+            QLMH.ChangeLanguageToEngLish();
+            QLLH.ChangeLanguageToEnglish();
+            QLK.ChangeLanguageToEngLish();
+
+            QLND.ChangeLanguageToEngLish();
+            TTTK.ChangeLanguageToEngLish();
+            inf.ChangeLanguageToEngLish();
+            DiemSV.ChangeLanguageToEngLish();
+            chart.ChangeLanguageToEngLish();
+            DMK.ChangeLanguageToEnglish();
+            SLSVTK.ChangelanguagetoEngLish();
         }
 
         private void danhSáchKhoaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -653,8 +651,8 @@ namespace Nhom11_DoAnQuanLySinhVien
             }
             
             this.ptbTroVe.Visible = true;
-            //this.chart.Visible = true;
-            //this.chart.BringToFront();
+            this.chart.Visible = true;
+            this.chart.BringToFront();
         }
 
         private void sốLiệuSinhViênTheoKhoaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -664,10 +662,12 @@ namespace Nhom11_DoAnQuanLySinhVien
                 crtl.Visible = false;
             }
             this.ptbTroVe.Visible = true;
-            //this.SLSVTK.Visible = true;
-            //this.SLSVTK.BringToFront();
+            this.SLSVTK.Visible = true;
+            this.SLSVTK.BringToFront();
         }
 
        
+
+        
     }
 }

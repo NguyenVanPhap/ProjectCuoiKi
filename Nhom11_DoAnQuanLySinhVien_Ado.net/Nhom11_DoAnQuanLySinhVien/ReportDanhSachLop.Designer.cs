@@ -31,35 +31,43 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachLop));
-            this.LOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LopBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QuanLyDiemSinhVien = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVien();
             this.rpvDSL = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblMaLop = new System.Windows.Forms.Label();
             this.cbbMaLop = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.LOPBindingSource)).BeginInit();
+            this.LopTableAdapter = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVienTableAdapters.LopTableAdapter();
+            this.cbbMaKhoa = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.LopBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).BeginInit();
             this.pnlTittlebar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LOPBindingSource
+            // LopBindingSource
             // 
-            this.LOPBindingSource.DataMember = "LOP";
+            this.LopBindingSource.DataMember = "Lop";
+            this.LopBindingSource.DataSource = this.QuanLyDiemSinhVien;
             // 
-            // BangDiem
+            // QuanLyDiemSinhVien
             // 
-           // 
+            this.QuanLyDiemSinhVien.DataSetName = "QuanLyDiemSinhVien";
+            this.QuanLyDiemSinhVien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rpvDSL
             // 
-            reportDataSource1.Name = "DataSetLop";
-            reportDataSource1.Value = this.LOPBindingSource;
+            reportDataSource1.Name = "DataSetLopHoc";
+            reportDataSource1.Value = this.LopBindingSource;
             this.rpvDSL.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvDSL.LocalReport.ReportEmbeddedResource = "Nhom11_DoAnQuanLySinhVien.ReportDanhSachLop.rdlc";
-            this.rpvDSL.Location = new System.Drawing.Point(0, 49);
-            this.rpvDSL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpvDSL.Location = new System.Drawing.Point(0, 50);
+            this.rpvDSL.Margin = new System.Windows.Forms.Padding(4);
             this.rpvDSL.Name = "rpvDSL";
             this.rpvDSL.ServerReport.BearerToken = null;
-            this.rpvDSL.Size = new System.Drawing.Size(1115, 692);
+            this.rpvDSL.Size = new System.Drawing.Size(1115, 691);
             this.rpvDSL.TabIndex = 0;
             this.rpvDSL.Load += new System.EventHandler(this.rpvDSL_Load);
             // 
@@ -104,7 +112,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(1001, 108);
+            this.btnTimKiem.Location = new System.Drawing.Point(956, 268);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(67, 64);
@@ -117,15 +125,12 @@
             this.lblMaLop.AutoSize = true;
             this.lblMaLop.BackColor = System.Drawing.Color.White;
             this.lblMaLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaLop.Location = new System.Drawing.Point(752, 129);
+            this.lblMaLop.Location = new System.Drawing.Point(845, 221);
             this.lblMaLop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaLop.Name = "lblMaLop";
             this.lblMaLop.Size = new System.Drawing.Size(79, 22);
             this.lblMaLop.TabIndex = 55;
             this.lblMaLop.Text = "Mã Lớp:";
-            // 
-            // LOPTableAdapter
-            // 
             // 
             // cbbMaLop
             // 
@@ -133,28 +138,61 @@
             this.cbbMaLop.FormattingEnabled = true;
             this.cbbMaLop.Items.AddRange(new object[] {
             "ALL"});
-            this.cbbMaLop.Location = new System.Drawing.Point(836, 126);
-            this.cbbMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMaLop.Location = new System.Drawing.Point(932, 218);
+            this.cbbMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMaLop.Name = "cbbMaLop";
             this.cbbMaLop.Size = new System.Drawing.Size(140, 30);
             this.cbbMaLop.TabIndex = 59;
+            this.cbbMaLop.Text = "ALL";
+            // 
+            // LopTableAdapter
+            // 
+            this.LopTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbbMaKhoa
+            // 
+            this.cbbMaKhoa.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.cbbMaKhoa.FormattingEnabled = true;
+            this.cbbMaKhoa.Items.AddRange(new object[] {
+            "ALL"});
+            this.cbbMaKhoa.Location = new System.Drawing.Point(932, 181);
+            this.cbbMaKhoa.Name = "cbbMaKhoa";
+            this.cbbMaKhoa.Size = new System.Drawing.Size(140, 30);
+            this.cbbMaKhoa.TabIndex = 60;
+            this.cbbMaKhoa.Text = "ALL";
+            this.cbbMaKhoa.SelectedIndexChanged += new System.EventHandler(this.cbbMaKhoa_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(845, 184);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 22);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Mã Khoa:";
             // 
             // ReportDanhSachLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1119, 745);
+            this.Controls.Add(this.cbbMaKhoa);
             this.Controls.Add(this.cbbMaLop);
             this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaLop);
             this.Controls.Add(this.pnlTittlebar);
             this.Controls.Add(this.rpvDSL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportDanhSachLop";
             this.Text = "ReportDanhSachLop";
             this.Load += new System.EventHandler(this.ReportDanhSachLop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.LOPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,11 +202,15 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer rpvDSL;
-        private System.Windows.Forms.BindingSource LOPBindingSource;
         private System.Windows.Forms.Panel pnlTittlebar;
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label lblMaLop;
         private System.Windows.Forms.ComboBox cbbMaLop;
+        private System.Windows.Forms.BindingSource LopBindingSource;
+        private QuanLyDiemSinhVien QuanLyDiemSinhVien;
+        private QuanLyDiemSinhVienTableAdapters.LopTableAdapter LopTableAdapter;
+        private System.Windows.Forms.ComboBox cbbMaKhoa;
+        private System.Windows.Forms.Label label1;
     }
 }

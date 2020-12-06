@@ -34,7 +34,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
             lblLop.Text = "CLASS MANAGEMENT";
             lblMaKhoa.Text = "Faculty ID:";
-            lblSiSo.Text = "ToTal:";
+            //lblSiSo.Text = "ToTal:";
             lblTenLop.Text = "Class name:";
             lblMalop.Text = "Class ID:";
 
@@ -61,7 +61,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         {
             lblLop.Text = "       QUẢN LÝ LỚP";
             lblMaKhoa.Text = "Mã khoa:";
-            lblSiSo.Text = "Sỉ số:";
+            //lblSiSo.Text = "Sỉ số:";
             lblTenLop.Text = "Tên lớp:";
             lblMalop.Text = "Mã lớp:";
 
@@ -123,7 +123,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 this.cboMaKhoa.ResetText();
                 this.txtMaLop.ResetText();
                 this.txtTenLop.ResetText();
-                this.txtSiSo.ResetText();
+                //this.txtSiSo.ResetText();
 
                 this.btnLuu.Enabled = false;
                 this.btnHuyBo.Enabled = false;
@@ -147,7 +147,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 this.lblSua.ForeColor = Color.SteelBlue;
                 this.lblXoa.ForeColor = Color.SteelBlue;
 
-                dgvLop_CellClick(null, null);
+                //dgvLop_CellClick(null, null);
             }
             catch (SqlException)
             {
@@ -184,15 +184,16 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int r = dgvLop.CurrentCell.RowIndex;
-            //this.cboMaKhoa.Text =
-            //    dgvLop.Rows[r].Cells[0].Value.ToString();
-            //this.txtMaLop.Text =
-            //    dgvLop.Rows[r].Cells[1].Value.ToString();
-            //this.txtTenLop.Text =
-            //    dgvLop.Rows[r].Cells[2].Value.ToString();
-            //this.txtSiSo.Text =
-            //    dgvLop.Rows[r].Cells[3].Value.ToString();
+            int r = dgvLop.CurrentCell.RowIndex;
+            //MessageBox.Show(r.ToString());
+            this.cboMaKhoa.Text =
+                dgvLop.Rows[r].Cells[2].Value.ToString();
+            this.txtMaLop.Text =
+                dgvLop.Rows[r].Cells[0].Value.ToString();
+            this.txtTenLop.Text =
+                dgvLop.Rows[r].Cells[1].Value.ToString();
+            this.txtSiSo.Text =
+                dgvLop.Rows[r].Cells[3].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -202,7 +203,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             this.cboMaKhoa.ResetText();
             this.txtMaLop.ResetText();
             this.txtTenLop.ResetText();
-            this.txtSiSo.ResetText();
+            //this.txtSiSo.ResetText();
 
             this.btnLuu.Enabled = true;
             this.btnHuyBo.Enabled = true;
@@ -319,14 +320,14 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 }
                 else
                 {
-                    if(dbLopHoc.ThemLopHoc(this.cboMaKhoa.Text, this.txtMaLop.Text, this.txtTenLop.Text,this.txtSiSo.Text, ref err))
-                    { 
+                    if (dbLopHoc.ThemLopHoc(this.cboMaKhoa.Text, this.txtMaLop.Text, this.txtTenLop.Text,txtSiSo.Text, ref err))
+                    {
                         LoadData();
                         MessageBox.Show("Đã thêm xong!");
                     }
                     else
                     {
-                        MessageBox.Show("Không thêm được. Lỗi rồi!!! "+err);
+                        MessageBox.Show("Không thêm được. Lỗi rồi!!! " + err);
                     }
                 }
             }
@@ -338,14 +339,14 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 }
                 else
                 {
-                    if (dbLopHoc.CapNhatLopHoc(this.cboMaKhoa.Text, this.txtMaLop.Text, this.txtTenLop.Text,this.txtSiSo.Text, ref err))
-                    {     
+                    if (dbLopHoc.CapNhatLopHoc(this.cboMaKhoa.Text, this.txtMaLop.Text, this.txtTenLop.Text,txtSiSo.Text, ref err))
+                    {
                         LoadData();
                         MessageBox.Show("Đã sửa xong!");
                     }
                     else
                     {
-                        MessageBox.Show("Không sửa được. Lỗi rồi!!! "+err);
+                        MessageBox.Show("Không sửa được. Lỗi rồi!!! " + err);
                     }
                 }
             }
@@ -363,6 +364,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
+
                     if (dbLopHoc.XoaLopHoc(this.txtMaLop.Text, ref err))
                     {
                         LoadData();
@@ -378,5 +380,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             else
                 MessageBox.Show("Không thực hiện việc xóa mẫu tin!");
         }
+
+
     }
 }

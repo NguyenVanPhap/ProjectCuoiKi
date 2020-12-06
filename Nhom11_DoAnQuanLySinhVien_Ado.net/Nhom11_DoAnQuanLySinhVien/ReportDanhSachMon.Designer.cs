@@ -31,23 +31,19 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDanhSachMon));
-            this.MONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlTittlebar = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.Button();
             this.rpvDSM = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblMaMon = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.cbbMaMon = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.MONBindingSource)).BeginInit();
+            this.QuanLyDiemSinhVien = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVien();
+            this.MonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MonHocTableAdapter = new Nhom11_DoAnQuanLySinhVien.QuanLyDiemSinhVienTableAdapters.MonHocTableAdapter();
             this.pnlTittlebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonHocBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // MONBindingSource
-            // 
-            this.MONBindingSource.DataMember = "MON";
-            // 
-            // BangDiem
-            // 
             // 
             // pnlTittlebar
             // 
@@ -83,18 +79,15 @@
             // rpvDSM
             // 
             reportDataSource1.Name = "DataSetMon";
-            reportDataSource1.Value = this.MONBindingSource;
+            reportDataSource1.Value = this.MonHocBindingSource;
             this.rpvDSM.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvDSM.LocalReport.ReportEmbeddedResource = "Nhom11_DoAnQuanLySinhVien.ReportDanhSachMon.rdlc";
             this.rpvDSM.Location = new System.Drawing.Point(0, 52);
-            this.rpvDSM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpvDSM.Margin = new System.Windows.Forms.Padding(4);
             this.rpvDSM.Name = "rpvDSM";
             this.rpvDSM.ServerReport.BearerToken = null;
             this.rpvDSM.Size = new System.Drawing.Size(951, 707);
             this.rpvDSM.TabIndex = 4;
-            // 
-            // MONTableAdapter
-            // 
             // 
             // lblMaMon
             // 
@@ -133,10 +126,24 @@
             this.cbbMaMon.Items.AddRange(new object[] {
             "ALL"});
             this.cbbMaMon.Location = new System.Drawing.Point(589, 121);
-            this.cbbMaMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMaMon.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMaMon.Name = "cbbMaMon";
             this.cbbMaMon.Size = new System.Drawing.Size(148, 30);
             this.cbbMaMon.TabIndex = 53;
+            // 
+            // QuanLyDiemSinhVien
+            // 
+            this.QuanLyDiemSinhVien.DataSetName = "QuanLyDiemSinhVien";
+            this.QuanLyDiemSinhVien.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // MonHocBindingSource
+            // 
+            this.MonHocBindingSource.DataMember = "MonHoc";
+            this.MonHocBindingSource.DataSource = this.QuanLyDiemSinhVien;
+            // 
+            // MonHocTableAdapter
+            // 
+            this.MonHocTableAdapter.ClearBeforeFill = true;
             // 
             // ReportDanhSachMon
             // 
@@ -149,12 +156,13 @@
             this.Controls.Add(this.rpvDSM);
             this.Controls.Add(this.pnlTittlebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportDanhSachMon";
             this.Text = "ReportDanhSachMon";
             this.Load += new System.EventHandler(this.ReportDanhSachMon_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.MONBindingSource)).EndInit();
             this.pnlTittlebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyDiemSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonHocBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,9 +173,11 @@
         private System.Windows.Forms.Panel pnlTittlebar;
         private System.Windows.Forms.Button btnexit;
         private Microsoft.Reporting.WinForms.ReportViewer rpvDSM;
-        private System.Windows.Forms.BindingSource MONBindingSource;
       private System.Windows.Forms.Label lblMaMon;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.ComboBox cbbMaMon;
+        private System.Windows.Forms.BindingSource MonHocBindingSource;
+        private QuanLyDiemSinhVien QuanLyDiemSinhVien;
+        private QuanLyDiemSinhVienTableAdapters.MonHocTableAdapter MonHocTableAdapter;
     }
 }

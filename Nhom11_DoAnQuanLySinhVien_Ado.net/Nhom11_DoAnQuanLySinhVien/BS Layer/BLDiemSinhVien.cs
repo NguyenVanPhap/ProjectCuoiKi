@@ -105,15 +105,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         public string DiemCaNhan(string masv)
         {
             string KQHTCN = "";
-           /* KQHTCN = "____Mã môn_____Học kì____năm học_____Điểm thi lần 1____Điểm thi lần 2______Điểm Tổng\n";
-            string selectcomand = "select * from KETQUAHOCTAP Where masv='"+masv+"'"+"order by NamHoc";
-            DataTable dt = new DataTable();
-            dt.Clear();
-            dt =db.ExcuteQueryDataSet(selectcomand, CommandType.Text).Tables[0];
-            foreach(DataRow row in dt.Rows)
-            {
-                KQHTCN += "\n\n____" +row["MaMon"].ToString() +"__" + row["HocKi"].ToString() + "__" + row["NamHoc"].ToString() + "___" + row["DiemThiLan1"].ToString() + "____" + row["DiemThiLan2"].ToString() + "__" + row["DiemTongKet"].ToString();
-            }    */
+           
             return KQHTCN;
             
         }
@@ -186,61 +178,9 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
 
         public DataSet LayDiemHocLaiTheoKhoaLopHocKiMon(string MaKhoa, string Malop, string HK, string Mon, string NamHoc)
         {
-            string[] paramenters = { };
-            string[] values = { };
-            string SqlString = "sp_LayDiemSinhVien";
-
-            if (MaKhoa == "ALL")
-            {
-                SqlString = "sp_LayDiemSinhVien";
-
-            }
-            else
-            {
-                if (Mon == "ALL")
-                {
-                    
-                    if (Malop != "ALL" )
-                    {
-                        //SqlString = "='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.HocKi=" + HK + " and kqhl.NamHoc=" + NamHoc;
-                        SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HocKi_namHoc";
-                        paramenters = new string[] { "@MaKhoa", "@lop", "@HK", "@namhoc" };
-                        values = new string[] { MaKhoa, Malop, HK, NamHoc };
-                    }
-                    
-                    if (Malop == "ALL"|| Malop == "")
-                    {
-                        //SqlString = "'" + MaKhoa + "' and kqhl.HocKi=" + HK + " and kqhl.NamHoc=" + NamHoc;
-                        SqlString = "sp_LayDiemSinhVien_Khoa_HocKi_namHoc";
-                        paramenters = new string[] { "@MaKhoa", "@HK", "@namhoc" };
-                        values = new string[] { MaKhoa, HK, NamHoc };
-                    }
-                }
-                else
-                {
-                    
-                    if (Malop != "ALL")
-                    {
-                        //SqlString = "='" + MaKhoa + "' and lp.MaLop='" + Malop + "' and kqhl.HocKi=" + HK + "and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
-                        SqlString = "sp_LayDiemSinhVien_Khoa_Lop_HocKi_Mon_namHoc";
-                        paramenters = new string[] { "@MaKhoa","@lop","@HK","@mon" ,"@namhoc"};
-                        values = new string[] { MaKhoa, Malop, HK, Mon, NamHoc };
-                    }
-                    
-                    if (Malop == "ALL"|| Malop == "")
-                    {
-                        //SqlString = "'" + MaKhoa + "' and kqhl.HocKi=" + HK + "and mn.MaMon='" + Mon + "' and kqhl.NamHoc=" + NamHoc;
-                        SqlString = "sp_LayDiemSinhVien_Khoa_HocKi_Mon_namHoc";
-                        paramenters = new string[] { "@MaKhoa", "@HK", "@mon", "@namhoc" };
-                        values = new string[] { MaKhoa, HK, Mon, NamHoc };
-                    }
-
-                }
-
-
-
-
-            }
+            string[] paramenters = { "@MaKhoa","@Lop","@mon","@HocKi","NamHoc"};
+            string[] values = { MaKhoa,Malop,Mon,HK,NamHoc};
+            string SqlString = "sp_LayDiemSinhVien1";
             return db.ExcuteQueryDataSet(SqlString, System.Data.CommandType.StoredProcedure,paramenters,values);
 
         }
