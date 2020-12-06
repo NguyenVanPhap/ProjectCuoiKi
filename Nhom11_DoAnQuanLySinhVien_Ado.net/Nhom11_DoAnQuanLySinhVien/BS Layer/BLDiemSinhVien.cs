@@ -200,10 +200,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
                 DiemThiLan1 = "0";
             if (DiemThiLan2 == "")
                 DiemThiLan2 = "0";
-            if (DiemTongKet == "")
-            {
-                DiemTongKet = ((float)(float.Parse(DiemThiLan1) + float.Parse(DiemThiLan2)) / 2).ToString();
-            }
+                
             string sqlstring = "sp_insDIEM";
             string[] paramenters = {  "@MaSV","@MaMH", "@MaHK","@DiemChuyenCan","@DiemGiuaKi","@DiemBaiTap","@DiemLan1", "@DiemLan2","@DiemTongKet" };
             string[] values = {MaSV ,
@@ -223,10 +220,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
                 DiemThiLan1 = "0";
             if (DiemThiLan2 == "")
                 DiemThiLan2 = "0";
-            if (DiemTongKet == "")
-            {
-                DiemTongKet = ((float)(float.Parse(DiemThiLan1) + float.Parse(DiemThiLan2)) / 2).ToString();
-            }
+           
             string MaHocKi = laymahocki(HocKi, namhoc).ToString();
             string sqlstring = "sp_updateDIEM";
             string[] paramenters = { "@MaSV", "@MaMH", "@MaHK", "@DiemChuyenCan", "@DiemGiuaKi", "@DiemBaiTap", "@DiemLan1", "@DiemLan2", "@DiemTongKet" };

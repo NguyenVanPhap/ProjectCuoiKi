@@ -478,7 +478,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                         MessageBox.Show("Dữ liệu bị trùng!");
                     else
                     {
-                        if (dbDSV.ThemDiemSinhVien(txtMaSV.Text, cbbMonHoc.Text, cbbHocKi.Text, cbbNamHoc.Text,txtDCC.Text,txtDiemGK.Text,txtDiemBT.Text, txtDiemthi1.Text, txtDiemThi2.Text,"", ref err))
+                        if (dbDSV.ThemDiemSinhVien(txtMaSV.Text, cbbMonHoc.Text, cbbHocKi.Text, cbbNamHoc.Text,txtDCC.Text,txtDiemGK.Text,txtDiemBT.Text, txtDiemthi1.Text, txtDiemThi2.Text,"0", ref err))
                         {
                             cbbHocKi.Text = hk;
                             cbbMonHoc.Text = mon;
@@ -510,7 +510,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                         txtDiemBT.Text,
                         txtDiemthi1.Text, 
                         txtDiemThi2.Text, 
-                        "", 
+                        "0", 
                         ref err))
                     {
                         Load_Data();
