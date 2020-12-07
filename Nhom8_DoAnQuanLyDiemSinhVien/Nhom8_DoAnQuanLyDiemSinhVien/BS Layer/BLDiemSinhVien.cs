@@ -172,7 +172,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string[] paramenters = { };
             string[] values = { };
             string sqlstring= "select * from dsDiemSV_View";
-            return db.ExcuteQueryDataSet(sqlstring, System.Data.CommandType.StoredProcedure,paramenters,values);
+            return db.ExcuteQueryDataSet(sqlstring, System.Data.CommandType.Text,paramenters,values);
         }
         
 
