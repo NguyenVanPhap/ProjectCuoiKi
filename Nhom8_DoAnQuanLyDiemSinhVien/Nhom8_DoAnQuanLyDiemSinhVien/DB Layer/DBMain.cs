@@ -34,6 +34,22 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
             }    
             return comm.ExecuteReader();
         }
+        public string MyExecuteScalar(string strSQl, CommandType ct, string[] parammenters, string[] values)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            comm.CommandText = strSQl;
+            comm.CommandType = CommandType.Text;
+            comm.Parameters.Clear();
+            for (int i = 0; i < parammenters.Length; i++)
+            {
+                comm.Parameters.Add(new SqlParameter { ParameterName = parammenters[i], Value = values[i] });
+            }
+            return comm.ExecuteScalar().ToString();
+
+            
+        }
         public void myDispose()
         {
             comm.Dispose();

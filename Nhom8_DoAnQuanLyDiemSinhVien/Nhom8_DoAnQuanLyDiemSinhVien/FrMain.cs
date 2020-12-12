@@ -100,7 +100,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             this.TTTK.Visible = false;
             this.inf.Visible = false;  
             
-            if(Permission=="Sinh Viên"||Permission=="Giảng Viên")
+            if(Permission=="sinhvien"||Permission=="sinhvien")
             {
                 
                 QLK.UnEnable();
@@ -108,7 +108,7 @@ namespace Nhom11_DoAnQuanLySinhVien
                 QLMH.UnEnable();
                 TTSV.UnEnable();
             }   
-            if(Permission=="Sinh Viên")
+            if(Permission=="sinhvien")
             {
                 DiemSV.UnEnable();
             }    
@@ -224,7 +224,7 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnManagre_Click(object sender, EventArgs e)
         {
-            if (Permission == "Sinh Viên" || Permission == "Giảng Viên")
+            if (Permission == "sinhvien" || Permission == "giangvien")
             {
                 if (language == 0)
                 {
@@ -246,7 +246,7 @@ namespace Nhom11_DoAnQuanLySinhVien
                     crtl.Visible = false;
                 }
                 this.ptbTroVe.Visible = true;
-                if (Permission == "Sinh Viên" || Permission == "Giảng Viên")
+                if (Permission == "sinhvien" || Permission == "giangvien")
                 {
                     QLND.UnEnable();
                 }

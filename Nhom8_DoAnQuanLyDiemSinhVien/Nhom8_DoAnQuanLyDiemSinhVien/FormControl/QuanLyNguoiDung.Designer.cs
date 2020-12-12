@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.epvTaiKhoan = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblUsers = new System.Windows.Forms.Label();
             this.mskPhone = new System.Windows.Forms.MaskedTextBox();
@@ -39,8 +39,6 @@
             this.grbDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvLogin = new System.Windows.Forms.DataGridView();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.cboQuyen = new System.Windows.Forms.ComboBox();
-            this.lblQuyen = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
@@ -56,6 +54,8 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.cboQuyen = new System.Windows.Forms.ComboBox();
+            this.lblQuyen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.epvTaiKhoan)).BeginInit();
             this.grbDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).BeginInit();
@@ -130,14 +130,14 @@
             // 
             this.dgvLogin.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLogin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLogin.EnableHeadersVisualStyles = false;
@@ -145,14 +145,14 @@
             this.dgvLogin.Location = new System.Drawing.Point(3, 30);
             this.dgvLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLogin.Name = "dgvLogin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogin.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLogin.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvLogin.RowHeadersWidth = 51;
             this.dgvLogin.Size = new System.Drawing.Size(1081, 233);
             this.dgvLogin.TabIndex = 0;
@@ -168,33 +168,6 @@
             this.lblPhone.Size = new System.Drawing.Size(79, 27);
             this.lblPhone.TabIndex = 50;
             this.lblPhone.Text = "Phone:";
-            // 
-            // cboQuyen
-            // 
-            this.cboQuyen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboQuyen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cboQuyen.FormattingEnabled = true;
-            this.cboQuyen.Items.AddRange(new object[] {
-            "Sinh Viên",
-            "Giảng Viên",
-            "Admin"});
-            this.cboQuyen.Location = new System.Drawing.Point(143, 217);
-            this.cboQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboQuyen.Name = "cboQuyen";
-            this.cboQuyen.Size = new System.Drawing.Size(181, 35);
-            this.cboQuyen.TabIndex = 18;
-            // 
-            // lblQuyen
-            // 
-            this.lblQuyen.AutoSize = true;
-            this.lblQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblQuyen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuyen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblQuyen.Location = new System.Drawing.Point(17, 220);
-            this.lblQuyen.Name = "lblQuyen";
-            this.lblQuyen.Size = new System.Drawing.Size(82, 27);
-            this.lblQuyen.TabIndex = 17;
-            this.lblQuyen.Text = "Quyền:";
             // 
             // txtMatKhau
             // 
@@ -413,6 +386,33 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // cboQuyen
+            // 
+            this.cboQuyen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboQuyen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cboQuyen.FormattingEnabled = true;
+            this.cboQuyen.Items.AddRange(new object[] {
+            "sinhvien",
+            "giangvien",
+            "admin"});
+            this.cboQuyen.Location = new System.Drawing.Point(143, 217);
+            this.cboQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboQuyen.Name = "cboQuyen";
+            this.cboQuyen.Size = new System.Drawing.Size(181, 35);
+            this.cboQuyen.TabIndex = 18;
+            // 
+            // lblQuyen
+            // 
+            this.lblQuyen.AutoSize = true;
+            this.lblQuyen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblQuyen.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuyen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblQuyen.Location = new System.Drawing.Point(17, 220);
+            this.lblQuyen.Name = "lblQuyen";
+            this.lblQuyen.Size = new System.Drawing.Size(82, 27);
+            this.lblQuyen.TabIndex = 17;
+            this.lblQuyen.Text = "Quyền:";
+            // 
             // QuanLyNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -456,8 +456,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.ComboBox cboQuyen;
-        private System.Windows.Forms.Label lblQuyen;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label lblpassword;
@@ -472,5 +470,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.ComboBox cboQuyen;
+        private System.Windows.Forms.Label lblQuyen;
     }
 }

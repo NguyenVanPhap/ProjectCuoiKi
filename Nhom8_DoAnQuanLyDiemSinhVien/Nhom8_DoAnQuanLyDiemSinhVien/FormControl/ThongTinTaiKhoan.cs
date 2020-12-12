@@ -57,7 +57,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 //this.txtHoTen.Text = row["MatKhau"].ToString();
                 this.txtEmail.Text = row["Email"].ToString();
                 this.txtPhone.Text = row["SoDienThoai"].ToString();
-                this.txtQuyen.Text = row["Quyen"].ToString();
+                
             }
         }
 

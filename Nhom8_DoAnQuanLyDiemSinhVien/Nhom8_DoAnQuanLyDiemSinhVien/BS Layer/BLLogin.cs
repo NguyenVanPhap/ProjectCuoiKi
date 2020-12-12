@@ -26,7 +26,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool ThemLogin(string TenDN, string MatKhau, string Phone, string Email, string Quyen, ref string err)
         {
-            String sqlstring = "sp_ThemTK";
+            String sqlstring = "sp_ThemTaiKhoan";
             string[] paramenters = { "@TenDangNhap", "@MatKhau", "@Email", "@SoDienThoai", "@Quyen" };
             string[] values = { TenDN, MatKhau, Email, Phone, Quyen };
 

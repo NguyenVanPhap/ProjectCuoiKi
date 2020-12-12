@@ -66,17 +66,17 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void rdoSV_CheckedChanged(object sender, EventArgs e)
         {
-            QuyenTruyCap = rdoSV.Text;
+            QuyenTruyCap = "sinhvien";
         }
 
         private void rdoGiangVien_CheckedChanged(object sender, EventArgs e)
         {
-            QuyenTruyCap = rdoGiangVien.Text;
+            QuyenTruyCap = "giangvien";
         }
 
         private void rdoNhanVien_CheckedChanged(object sender, EventArgs e)
         {
-            QuyenTruyCap = "Admin";
+            QuyenTruyCap = "admin";
         }
 
         private void pnlTittle_MouseDown(object sender, MouseEventArgs e)

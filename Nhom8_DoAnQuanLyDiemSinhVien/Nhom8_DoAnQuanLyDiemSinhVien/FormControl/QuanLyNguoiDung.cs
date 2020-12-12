@@ -36,8 +36,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             dgvLogin.Columns[1].HeaderText = "Password";
             dgvLogin.Columns[2].HeaderText =  "Email";
             dgvLogin.Columns[3].HeaderText = "Phone";
-            dgvLogin.Columns[4].HeaderText = "Permission";
-
+            
             dgvLogin.AutoResizeColumns();
 
             lblUsers.Text = "USERS MANAGEMENT";
@@ -70,8 +69,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             dgvLogin.Columns[1].HeaderText = "MatKhau";
             dgvLogin.Columns[2].HeaderText = "Email";
             dgvLogin.Columns[3].HeaderText = "SoDienThoai";
-            dgvLogin.Columns[4].HeaderText = "Quyển";
-
+            
             dgvLogin.AutoResizeColumns();
 
             
@@ -109,8 +107,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         }
         public void LoadData()
         {
-            try
-            {
+            /*try
+            {*/
                 dtLogin = new DataTable();
                 dtLogin.Clear();
 
@@ -149,11 +147,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 this.lblXoa.ForeColor = Color.SteelBlue;
 
                 dgvLogin_CellClick(null, null);
-            }
+            /*}
             catch
             {
                 MessageBox.Show("Không lấy được nội dung trong table LOGIN. Lỗi rồi!!!" + err);
-            }
+            }*/
         }
 
         private void QuanLyNguoiDung_Load(object sender, EventArgs e)
@@ -194,8 +192,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 dgvLogin.Rows[r].Cells[3].Value.ToString();
             this.txtEmail.Text =
                 dgvLogin.Rows[r].Cells[2].Value.ToString();
-            this.cboQuyen.Text =
-                dgvLogin.Rows[r].Cells[4].Value.ToString();
+            /*this.cboQuyen.Text =
+                dgvLogin.Rows[r].Cells[4].Value.ToString();*/
         }
 
         private void btnThem_Click(object sender, EventArgs e)

@@ -22,19 +22,19 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         public bool kiemTraThongTinDangNhap(string TenDN, string password, ref string err,string Quyen)
         {
             
-            String sqlstring = "sp_Check_Login";
+            String sqlstring = "SELECT dbo.function_KiemTraThongTinTaiKhoan(@tenDN,@MatKhau,@Quyen)";
             string[] paramenters = { "@tenDN", "@MatKhau", "@Quyen" };
             string[] values = { TenDN, password, Quyen };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
+            string x  = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
 
-            if (reader.Read())
-            {
-                reader.Dispose();
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
+
+      
+
+
 
     }
 
