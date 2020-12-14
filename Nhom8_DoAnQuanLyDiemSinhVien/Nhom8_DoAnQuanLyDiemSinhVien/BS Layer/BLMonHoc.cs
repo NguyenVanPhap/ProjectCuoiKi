@@ -50,7 +50,8 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool KiemTraMaMonTonTai(string MaMon, ref string err)
         {
-            String sqlstring = "SELECT fn_KiemTraMaMon(@MaMH )";
+            String sqlstring = "SELECT  dbo.fn_KiemTraMaMonTonTai(@MaMH)";
+            
             string[] paramenters = { "@MaMH" };
             string[] values = { MaMon };
             string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
@@ -61,7 +62,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public int KiemTraMonHocTonTaiKhac(string MaMon, ref string err)
         {
-            String sqlstring = "SELECT fn_KiemTraMaMonTonTaiTrongKQHT(@MaMH  )";
+            String sqlstring = "SELECT  dbo.fn_KiemTraMaMonTonTaiTrongKQHT(@MaMH  )";
             string[] paramenters = { "@MaMH" };
             string[] values = { MaMon };
             string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);

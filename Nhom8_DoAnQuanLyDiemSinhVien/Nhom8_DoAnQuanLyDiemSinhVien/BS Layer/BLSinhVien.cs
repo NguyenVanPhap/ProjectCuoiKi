@@ -125,7 +125,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool KiemTraSinhVienTonTai(string MaSV)
         {
-            String sqlstring = "SELECT fn_KiemTraSinhVienTonTai(@MaSV)";
+            String sqlstring = "SELECT  dbo.fn_KiemTraSinhVienTonTai(@MaSV)";
             string[] paramenters = { "@MaSV" };
             string[] values = { MaSV };
             string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
@@ -136,7 +136,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
 
         public bool KiemTraSinhVienTonTaiKhac(string MaSv)
         {
-            String sqlstring = "SELECT fn_KiemTraSinhVienTonTaiTrongKQHT(@MaSV)";
+            String sqlstring = "SELECT  dbo.fn_KiemTraSinhVienTonTaiTrongKQHT(@MaSV)";
             string[] paramenters = { "@MaSV" };
             string[] values = { MaSv };
             string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
