@@ -108,16 +108,16 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             else
             if (MaKhoa != "ALL" && MaLop == "ALL")
             {
-                sqlstring = "Lay_SinhVien_trongKhoa";
-                paramenters= new string[] { "@MaKhoa","@Malop" };
-                values = new string[] { MaKhoa, MaLop };
+                sqlstring = "sp_LaySinhVien_Khoa";
+                paramenters= new string[] { "@khoa" };
+                values = new string[] { MaKhoa };
 
             }
             else if (MaKhoa != "ALL" && MaLop != "ALL")
             {
-                sqlstring = "Lay_SinhVien_Lop_Khoa";
-                paramenters = new string[] { "@MaKhoa" };
-                values = new string[] { MaKhoa };
+                sqlstring = "sp_Lay_SinhVien_Lop_Khoa";
+                paramenters = new string[] { "@MaKhoa", "@Malop" };
+                values = new string[] { MaKhoa, MaLop };
             }
 
             return db.ExcuteQueryDataSet(sqlstring, CommandType.StoredProcedure, paramenters, values);

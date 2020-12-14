@@ -445,8 +445,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            try
-            {
+            /*try
+            {*/
                 this.txtMaSV.ResetText();
                 this.txtHoTen.ResetText();
                 this.mskNgaySinh.ResetText();
@@ -464,11 +464,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 dgvSinhVien.AutoResizeColumns();
                 if (dgvSinhVien.Rows.Count != 1)
                     dgvSinhVien_CellClick(null, null);
-            }
+            /*}
             catch
             {
                 MessageBox.Show("Không tìm kiếm được lỗi rồi!" + err);
-            }
+            }*/
         }
 
         
