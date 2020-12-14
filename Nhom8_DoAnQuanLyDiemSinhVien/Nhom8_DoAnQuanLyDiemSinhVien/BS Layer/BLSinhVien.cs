@@ -36,7 +36,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool XoaSinhVien(string MaSv, ref string err)
         {
-            //string sqlString = "Delete from SINHVIEN where MaSv='" + MaSv + "'";
+            
             string sqlstring = "sp_XoaSinhVien";
             string[] paramenters = { "@MaSV " };
             string[] values = { MaSv };
@@ -44,10 +44,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool CapNhatSinhVien(string MaSv, string HoTen, string NgaySinh, string GioiTinh, string DiaChi, string MaLop, ref string err)
         {
-            //string sqlString = "Update SinhVien Set HoTen=N'" + HoTen + "',NgaySinh='" +
-            //    NgaySinh + "',GioiTinh=N'" + GioiTinh + "',DiaChi=N'" + DiaChi + "',MaLop='" +
-            //    MaLop + "' Where MaSv='"+MaSv+"'";
-            //return db.MyExcuteNonQuery(sqlString, CommandType.Text, ref err
+            
             string sqlstring = "sp_CapNhatSinhVien";
             string[] paramenters = { "@MaSV" , "@TenSV", "@NgaySinh", "@GioiTinh", "@QueQuan", "@MaLop" };
             string[] values = { MaSv, HoTen, NgaySinh, GioiTinh, DiaChi, MaLop };
@@ -128,46 +125,35 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool KiemTraSinhVienTonTai(string MaSV)
         {
-            string sqlstring = "sp_KiemTraSinhVienTonTai";
+            String sqlstring = "SELECT fn_KiemTraSinhVienTonTai(@MaSV)";
             string[] paramenters = { "@MaSV" };
             string[] values = { MaSV };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
 
         public bool KiemTraSinhVienTonTaiKhac(string MaSv)
         {
-            string sqlstring = "sp_KiemTraSinhVienTonTaiKhac";
+            String sqlstring = "SELECT fn_KiemTraSinhVienTonTaiTrongKQHT(@MaSV)";
             string[] paramenters = { "@MaSV" };
             string[] values = { MaSv };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
 
         public bool KiemTraMaLop(string MaLop)
         {
-            string sqlstring = "sp_KiemTraMaLop";
+            String sqlstring = "SELECT dbo.fn_KiemTraMaLop(@MaLop)";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
     }

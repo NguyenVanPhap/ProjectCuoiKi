@@ -64,46 +64,37 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool kiemTraMaLopTonTai(string MaLop, ref string err)
         {
-
-
-            String sqlstring = "sp_KiemTraMaLop";
+            String sqlstring = "SELECT dbo.fn_KiemTraMaLop(@MaLop)";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.Text, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
         public bool kiemTraMaKhoaChinhXac(string MaKhoa, ref string err)
         {
-            string sqlstring = "sp_KiemTraKhoa";
+            String sqlstring = "SELECT dbo.fn_KiemTraMaKhoaTonTai(@MaKhoa)";
             string[] paramenters = { "@MaKhoa" };
             string[] values = { MaKhoa };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
         public bool kiemTraSinhVienCoLop(string MaLop, ref string err)
+
         {
-            string sqlstring = "sp_kiemTraSinhVienCoLop";
+            
+            String sqlstring = "SELECT dbo.fn_KiemTraSinhVienCoTrongLop(@MaLop)";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
     }
