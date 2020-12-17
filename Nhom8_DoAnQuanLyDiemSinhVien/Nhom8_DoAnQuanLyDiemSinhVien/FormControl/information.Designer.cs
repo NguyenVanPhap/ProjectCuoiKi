@@ -104,9 +104,9 @@
             this.lbltitle.ForeColor = System.Drawing.Color.Red;
             this.lbltitle.Location = new System.Drawing.Point(172, 30);
             this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(813, 42);
+            this.lbltitle.Size = new System.Drawing.Size(923, 42);
             this.lbltitle.TabIndex = 11;
-            this.lbltitle.Text = "             CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN";
+            this.lbltitle.Text = "             CHƯƠNG TRÌNH QUẢN LÝ ĐIỂM SINH VIÊN";
             // 
             // pictureBox1
             // 
