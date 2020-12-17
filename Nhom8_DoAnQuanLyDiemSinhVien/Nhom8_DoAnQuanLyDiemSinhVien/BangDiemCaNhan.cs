@@ -85,7 +85,7 @@ namespace Nhom11_DoAnQuanLySinhVien
         private void BangDiemCaNhan_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'QuanLyDiemSinhVien.KetQuaHocTap' table. You can move, or remove it, as needed.
-            this.KetQuaHocTapTableAdapter.Fill(this.QuanLyDiemSinhVien.KetQuaHocTap);
+            this.KetQuaHocTapTableAdapter.FillByMSV(this.QuanLyDiemSinhVien.KetQuaHocTap,MASV);
             // TODO: This line of code loads data into the 'BangDiem.KETQUAHOCTAP' table. You can move, or remove it, as needed.
             load_data();
         }

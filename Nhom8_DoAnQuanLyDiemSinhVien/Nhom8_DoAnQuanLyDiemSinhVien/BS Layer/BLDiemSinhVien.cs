@@ -176,7 +176,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         
 
-        public DataSet LayDiemHocLaiTheoKhoaLopHocKiMon(string MaKhoa, string Malop, string HK, string Mon, string NamHoc)
+        public DataSet LayDiemTheoKhoaLopHocKiMon(string MaKhoa, string Malop, string HK, string Mon, string NamHoc)
         {
             string[] paramenters = { "@MaKhoa","@Lop","@mon","@HocKi","NamHoc"};
             string[] values = { MaKhoa,Malop,Mon,HK,NamHoc};

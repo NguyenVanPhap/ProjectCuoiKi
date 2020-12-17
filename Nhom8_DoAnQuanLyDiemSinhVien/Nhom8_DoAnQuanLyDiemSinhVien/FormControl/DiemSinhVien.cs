@@ -174,7 +174,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             {
                 dtDiemSinhVien = new DataTable();
                 dtDiemSinhVien.Clear();
-                DataSet ds = dbDSV.LayDiemHocLaiTheoKhoaLopHocKiMon(cbbKhoa.Text, cbbLop.Text, cbbHocKi.Text, cbbMonHoc.Text, cbbNamHoc.Text);
+                DataSet ds = dbDSV.LayDiemTheoKhoaLopHocKiMon(cbbKhoa.Text, cbbLop.Text, cbbHocKi.Text, cbbMonHoc.Text, cbbNamHoc.Text);
                 dtDiemSinhVien = ds.Tables[0];
                 dgvDiem.DataSource = dtDiemSinhVien;
                 dgvDiem.AutoResizeColumns();
@@ -261,7 +261,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     dtDiemSinhVien = new DataTable();
                     dtDiemSinhVien.Clear();
                     DataSet ds = new DataSet();
-                    ds = dbDSV.LayDiemHocLaiTheoKhoaLopHocKiMon(cbbKhoa.Text, cbbLop.Text, cbbHocKi.Text, cbbMonHoc.Text, cbbNamHoc.Text);
+                    ds = dbDSV.LayDiemTheoKhoaLopHocKiMon(cbbKhoa.Text, cbbLop.Text, cbbHocKi.Text, cbbMonHoc.Text, cbbNamHoc.Text);
                     dtDiemSinhVien = ds.Tables[0];
                     dgvDiem.DataSource = dtDiemSinhVien;
                     dgvDiem.AutoResizeColumns();

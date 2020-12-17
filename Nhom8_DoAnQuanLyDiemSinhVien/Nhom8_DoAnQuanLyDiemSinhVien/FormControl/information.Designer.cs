@@ -70,9 +70,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(803, 198);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 31);
+            this.label4.Size = new System.Drawing.Size(279, 31);
             this.label4.TabIndex = 14;
-            this.label4.Text = "TS.Lê Văn Vinh";
+            this.label4.Text = "Ths. Nguyễn Thành Sơn";
             // 
             // lblSVTH
             // 
@@ -139,9 +139,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(803, 405);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 31);
+            this.label3.Size = new System.Drawing.Size(312, 31);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Từ Hữu Hà Đức";
+            this.label3.Text = "Từ Hữu Hà Đức-18110273";
             // 
             // information
             // 
