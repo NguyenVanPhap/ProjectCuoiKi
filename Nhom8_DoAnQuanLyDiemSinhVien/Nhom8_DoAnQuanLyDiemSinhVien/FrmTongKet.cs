@@ -87,7 +87,7 @@ namespace Nhom11_DoAnQuanLySinhVien
                 else
                 {
                     if (cbbLop.Text == "ALL")
-                       this.DataTableTongKetTableAdapter.FillBynamHoc_Khoa(this.QuanLyDiemSinhVien.DataTableTongKet, cbbKhoa.Text, cbbNam.Text);
+                       this.DataTableTongKetTableAdapter.FillBynamHoc_Khoa(this.QuanLyDiemSinhVien.DataTableTongKet, cbbNam.Text, cbbKhoa.Text);
                     else
                         this.DataTableTongKetTableAdapter.FillBylopNamHoc(this.QuanLyDiemSinhVien.DataTableTongKet, cbbLop.Text, cbbNam.Text);
 

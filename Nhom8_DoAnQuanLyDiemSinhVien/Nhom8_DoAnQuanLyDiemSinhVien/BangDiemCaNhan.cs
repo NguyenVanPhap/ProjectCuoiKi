@@ -64,7 +64,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             }
             else
             {
-                this.KetQuaHocTapTableAdapter.FillByMSV_NamHoc(this.QuanLyDiemSinhVien.KetQuaHocTap, MASV, cbbNamHoc.Text);
+                this.KetQuaHocTapTableAdapter.FillByNam(this.QuanLyDiemSinhVien.KetQuaHocTap, cbbNamHoc.Text);
                 double? TBNam = KetQuaHocTapTableAdapter.Get_Tb_Nam(MASV, cbbNamHoc.Text);
                 lblTBnam.Text = "Trung bình năm :" + Math.Round(Convert.ToDouble(TBNam), 2).ToString();
 

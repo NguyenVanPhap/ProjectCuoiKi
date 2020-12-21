@@ -192,8 +192,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 dgvLogin.Rows[r].Cells[3].Value.ToString();
             this.txtEmail.Text =
                 dgvLogin.Rows[r].Cells[2].Value.ToString();
-            /*this.cboQuyen.Text =
-                dgvLogin.Rows[r].Cells[4].Value.ToString();*/
+            this.cboQuyen.Text =
+                dgvLogin.Rows[r].Cells[4].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)

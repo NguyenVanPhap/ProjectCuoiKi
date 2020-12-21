@@ -116,6 +116,9 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnQLdiemSV_Click(object sender, EventArgs e)
         {
+            DiemSV = new DiemSinhVien();
+            this.pnlDisplay.Controls.Add(DiemSV);
+
             foreach (Control crtl in this.pnlDisplay.Controls)
             {
                 crtl.Visible = false;
@@ -156,6 +159,8 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnQLlop_Click(object sender, EventArgs e)
         {
+            QLLH = new QuanLyLopHoc();
+            this.pnlDisplay.Controls.Add(QLLH);
             foreach (Control crtl in this.pnlDisplay.Controls)
             {
                 crtl.Visible = false;
@@ -170,6 +175,9 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnQLSV_Click(object sender, EventArgs e)
         {
+            TTSV = new ThongTinSinhVien();
+            this.pnlDisplay.Controls.Add(TTSV);
+
             foreach (Control crtl in this.pnlDisplay.Controls)
             {
                 crtl.Visible = false;
@@ -348,6 +356,8 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnDGNL_Click(object sender, EventArgs e)
         {
+            chart = new DanhGiaNangLuc();
+            this.pnlDisplay.Controls.Add(chart);
             foreach (Control crtl in this.pnlDisplay.Controls)
             {
                 crtl.Visible = false;

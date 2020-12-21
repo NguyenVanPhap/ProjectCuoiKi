@@ -50,16 +50,12 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         }
         public bool KiemTraTaiKhoanTonTai(string TenDN, ref string err)
         {
-            string sqlstring = "sp_KiemTraTKTonTai";
+            string sqlstring = "SELECT dbo.fn_KiemTraTKTonTai(@TenDangNhap)";
             string[] paramenters = { "@TenDangNhap" };
             string[] values = { TenDN };
-            SqlDataReader reader = db.MyExcuteReader(sqlstring, CommandType.StoredProcedure, paramenters, values);
-            if (reader.Read())
-            {
-                reader.Dispose();
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            if (x == "1")
                 return true;
-            }
-            reader.Dispose();
             return false;
         }
     }
