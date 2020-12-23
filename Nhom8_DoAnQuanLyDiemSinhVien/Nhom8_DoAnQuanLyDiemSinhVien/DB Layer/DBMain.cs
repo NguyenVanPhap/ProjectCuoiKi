@@ -17,24 +17,39 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
 
         public DBMain()
         {
+            if(SQLconnectionStr.username!="")
+            {
+                this.connStr = "Data Source=DESKTOP-D3AR037;Initial Catalog=QuanLyDiemSinhVienDB;User ID=" + "u" + SQLconnectionStr.username + ";password = " + SQLconnectionStr.password;
+
+            }
+            conn = new SqlConnection(connStr);
+            comm = conn.CreateCommand();
+        }
+        public DBMain(string username ,string password)
+        {
+            username = SQLconnectionStr.username;
+            password = SQLconnectionStr.password;
+            string connStr = "Data Source=DESKTOP-D3AR037;Initial Catalog=QuanLyDiemSinhVienDB;User ID="+"u"+username+";password = "+password;
             conn = new SqlConnection(connStr);
             comm = conn.CreateCommand();
         }
         public SqlDataReader MyExcuteReader(string strSQl, CommandType ct,string[] parammenters,string[] values)
         {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
-            conn.Open();
-            comm.CommandText = strSQl;
-            comm.CommandType = CommandType.StoredProcedure;
-            comm.Parameters.Clear();
-            for (int i = 0; i < parammenters.Length; i++)
-            {
-                comm.Parameters.Add(new SqlParameter {ParameterName= parammenters[i],Value= values[i]});
-            }    
-            return comm.ExecuteReader();
+            
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+                conn.Open();
+                comm.CommandText = strSQl;
+                comm.CommandType = CommandType.StoredProcedure;
+                comm.Parameters.Clear();
+                for (int i = 0; i < parammenters.Length; i++)
+                {
+                    comm.Parameters.Add(new SqlParameter { ParameterName = parammenters[i], Value = values[i] });
+                }
+                return comm.ExecuteReader();
+            
         }
-        public string MyExecuteScalar(string strSQl, CommandType ct, string[] parammenters, string[] values)
+        public string MyExecuteScalar(string strSQl, CommandType ct, string[] parammenters, string[] values, ref string error)
         {
             if (conn.State == ConnectionState.Open)
                 conn.Close();
@@ -46,9 +61,22 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
             {
                 comm.Parameters.Add(new SqlParameter { ParameterName = parammenters[i], Value = values[i] });
             }
-            return comm.ExecuteScalar().ToString();
-
-            
+            String str = "";
+            try
+            {
+                str = comm.ExecuteScalar().ToString();
+                
+            }
+            catch (SqlException ex)
+            {
+                error = ex.Message;
+            }
+            finally
+            {
+                conn.Close();
+                
+            }
+            return str;
         }
         public void myDispose()
         {
@@ -70,6 +98,7 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
             DataSet ds = new DataSet();
             ada.Fill(ds);
             return ds;
+
         }
         public bool MyExcuteNonQuery(string strSQl, CommandType ct, string[] parammenters, string[] values, ref string error)
         {

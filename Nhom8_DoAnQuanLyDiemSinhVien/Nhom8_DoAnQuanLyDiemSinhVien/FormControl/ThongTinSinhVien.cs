@@ -349,7 +349,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     epvSinhVien.Clear();
                     this.txtMaSV.Focus();
                 }
-                else if(dbSinhVien.KiemTraSinhVienTonTai(this.txtMaSV.Text))
+                else if(dbSinhVien.KiemTraSinhVienTonTai(this.txtMaSV.Text,ref err))
                 {
                     epvSinhVien.SetError(this.txtMaSV, "!");
                     MessageBox.Show("Mã SV đã tồn tại!", "Thông báo",
@@ -357,7 +357,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     epvSinhVien.Clear();
                     this.txtMaSV.Focus();
                 }
-                else if(dbSinhVien.KiemTraMaLop(this.cboMaLop.Text)==false)
+                else if(dbSinhVien.KiemTraMaLop(this.cboMaLop.Text,ref err)==false)
                 {
                     MessageBox.Show("Mã Lớp không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }    
@@ -378,7 +378,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
             }
             else
             {
-                if (dbSinhVien.KiemTraMaLop(this.cboMaLop.Text) == false)
+                if (dbSinhVien.KiemTraMaLop(this.cboMaLop.Text,ref err) == false)
                 {
                     MessageBox.Show("Mã Lớp không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -406,7 +406,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (traloi == DialogResult.Yes)
             {
-                if (dbSinhVien.KiemTraSinhVienTonTaiKhac(this.txtMaSV.Text))
+                if (dbSinhVien.KiemTraSinhVienTonTaiKhac(this.txtMaSV.Text,ref err))
                     MessageBox.Show("Bạn phải xóa Mẫu SinhVien " + this.txtMaSV.Text + " từ bảng KẾT QUẢ HỌC TẬP.", "Thông báo!",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else

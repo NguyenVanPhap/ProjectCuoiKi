@@ -46,7 +46,6 @@
             this.mnuKhoa = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMonHoc = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLop = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuGiangVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSinhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDSV = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
@@ -256,7 +255,6 @@
             this.mnuKhoa,
             this.mnuMonHoc,
             this.mnuLop,
-            this.mnuGiangVien,
             this.mnuSinhVien,
             this.mnuDSV});
             this.mnuDanhMuc.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -284,12 +282,6 @@
             this.mnuLop.Size = new System.Drawing.Size(242, 32);
             this.mnuLop.Text = "Lớp";
             this.mnuLop.Click += new System.EventHandler(this.mnLop_Click);
-            // 
-            // mnuGiangVien
-            // 
-            this.mnuGiangVien.Name = "mnuGiangVien";
-            this.mnuGiangVien.Size = new System.Drawing.Size(242, 32);
-            this.mnuGiangVien.Text = "Giảng viên";
             // 
             // mnuSinhVien
             // 
@@ -718,7 +710,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem mnuThoat;
         public System.Windows.Forms.ToolStripMenuItem mnuDanhMuc;
-        private System.Windows.Forms.ToolStripMenuItem mnuGiangVien;
         private System.Windows.Forms.ToolStripMenuItem mnuLop;
         private System.Windows.Forms.ToolStripMenuItem mnuMonHoc;
         private System.Windows.Forms.ToolStripMenuItem mnuKhoa;

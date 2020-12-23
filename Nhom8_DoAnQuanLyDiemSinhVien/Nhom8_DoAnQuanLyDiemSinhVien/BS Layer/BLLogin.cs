@@ -53,7 +53,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             string sqlstring = "SELECT dbo.fn_KiemTraTKTonTai(@TenDangNhap)";
             string[] paramenters = { "@TenDangNhap" };
             string[] values = { TenDN };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
             if (x == "1")
                 return true;
             return false;

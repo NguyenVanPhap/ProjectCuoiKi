@@ -25,16 +25,17 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             String sqlstring = "SELECT dbo.function_KiemTraThongTinTaiKhoan(@tenDN,@MatKhau,@Quyen)";
             string[] paramenters = { "@tenDN", "@MatKhau", "@Quyen" };
             string[] values = { TenDN, password, Quyen };
-            string x  = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x  = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
 
             if (x == "1")
+            {
+                SQLconnectionStr.username = TenDN;
+                SQLconnectionStr.password = password;
                 return true;
+
+            }
             return false;
         }
-
-      
-
-
 
     }
 

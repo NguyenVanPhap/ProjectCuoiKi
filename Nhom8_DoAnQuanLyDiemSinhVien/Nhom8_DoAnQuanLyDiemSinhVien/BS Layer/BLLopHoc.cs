@@ -67,7 +67,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             String sqlstring = "SELECT dbo.fn_KiemTraMaLop(@MaLop)";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
 
             if (x == "1")
                 return true;
@@ -78,7 +78,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             String sqlstring = "SELECT dbo.fn_KiemTraMaKhoaTonTai(@MaKhoa)";
             string[] paramenters = { "@MaKhoa" };
             string[] values = { MaKhoa };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
 
             if (x == "1")
                 return true;
@@ -91,7 +91,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             String sqlstring = "SELECT dbo.fn_KiemTraSinhVienCoTrongLop(@MaLop)";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
 
             if (x == "1")
                 return true;

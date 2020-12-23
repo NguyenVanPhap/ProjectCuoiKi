@@ -47,24 +47,24 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
 
             return db.MyExcuteNonQuery(sqlstring, CommandType.StoredProcedure, paramenters, values, ref err);
         }
-        public bool KiemTraMaKhoaTonTai(string MaKhoa)
+        public bool KiemTraMaKhoaTonTai(string MaKhoa, ref string err)
         {
             String sqlstring = "SELECT dbo.fn_KiemTraMaKhoaTonTai(@MaKhoa)";
             string[] paramenters = { "@MaKhoa" };
             string[] values = { MaKhoa };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
 
             if (x == "1")
                 return true;
             return false;
         }
-        public bool KiemTraMaKhoaTrongLop(string MaKhoa)
+        public bool KiemTraMaKhoaTrongLop(string MaKhoa, ref string err)
         {
 
             String sqlstring = "SELECT dbo.fn_KiemTraMaKhoaTonTaiTrongLop(@MaKhoa)";
             string[] paramenters = { "@MaKhoa" };
             string[] values = { MaKhoa };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values, ref err);
             if (x == "1")
                 return true;
             return false;

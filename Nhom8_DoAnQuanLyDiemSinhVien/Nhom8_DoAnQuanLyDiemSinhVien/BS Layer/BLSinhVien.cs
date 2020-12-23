@@ -123,34 +123,34 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             return db.ExcuteQueryDataSet(sqlstring, CommandType.StoredProcedure, paramenters, values);
 
         }
-        public bool KiemTraSinhVienTonTai(string MaSV)
+        public bool KiemTraSinhVienTonTai(string MaSV,ref string err)
         {
             String sqlstring = "SELECT  dbo.fn_KiemTraSinhVienTonTai(@MaSV)";
             string[] paramenters = { "@MaSV" };
             string[] values = { MaSV };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
             if (x == "1")
                 return true;
             return false;
         }
 
-        public bool KiemTraSinhVienTonTaiKhac(string MaSv)
+        public bool KiemTraSinhVienTonTaiKhac(string MaSv, ref string err)
         {
             String sqlstring = "SELECT  dbo.fn_KiemTraSinhVienTonTaiTrongKQHT(@MaSV)";
             string[] paramenters = { "@MaSV" };
             string[] values = { MaSv };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
             if (x == "1")
                 return true;
             return false;
         }
 
-        public bool KiemTraMaLop(string MaLop)
+        public bool KiemTraMaLop(string MaLop,ref string err)
         {
             String sqlstring = "SELECT dbo.fn_KiemTraMaLop(@MaLop)";
             string[] paramenters = { "@MaLop" };
             string[] values = { MaLop };
-            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values);
+            string x = db.MyExecuteScalar(sqlstring, CommandType.Text, paramenters, values,ref err);
 
             if (x == "1")
                 return true;

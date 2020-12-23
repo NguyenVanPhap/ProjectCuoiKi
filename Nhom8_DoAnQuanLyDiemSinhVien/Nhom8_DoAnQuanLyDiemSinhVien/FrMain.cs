@@ -103,14 +103,14 @@ namespace Nhom11_DoAnQuanLySinhVien
             if(Permission=="sinhvien"||Permission=="sinhvien")
             {
                 
-                QLK.UnEnable();
+                /*QLK.UnEnable();
                 QLLH.UnEnable();
                 QLMH.UnEnable();
-                TTSV.UnEnable();
+                TTSV.UnEnable();*/
             }   
             if(Permission=="sinhvien")
             {
-                DiemSV.UnEnable();
+                /*DiemSV.UnEnable();*/
             }    
         }
 
@@ -232,9 +232,9 @@ namespace Nhom11_DoAnQuanLySinhVien
 
         private void btnManagre_Click(object sender, EventArgs e)
         {
-            if (Permission == "sinhvien" || Permission == "giangvien")
-            {
-                if (language == 0)
+            /*if (Permission == "sinhvien" || Permission == "giangvien")
+            {*/
+                /*if (language == 0)
                 {
                     System.Windows.Forms.MessageBox.Show("Bạn Không được vào chức năng này!", "Warning",
                         System.Windows.Forms.MessageBoxButtons.OK,
@@ -245,10 +245,10 @@ namespace Nhom11_DoAnQuanLySinhVien
                     System.Windows.Forms.MessageBox.Show("You must not use this function!", "Warning",
                        System.Windows.Forms.MessageBoxButtons.OK,
                        System.Windows.Forms.MessageBoxIcon.Warning);
-                }    
-            }
+                }*/    
+            /*}
             else
-            {
+            {*/
                 foreach (Control crtl in this.pnlDisplay.Controls)
                 {
                     crtl.Visible = false;
@@ -262,7 +262,7 @@ namespace Nhom11_DoAnQuanLySinhVien
                 this.QLND.BringToFront();
 
                 this.QLND.LoadData();
-            }
+           /* }*/
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -497,7 +497,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             mnuKhoa.Text = "Khoa";
             mnuMonHoc.Text = "Môn học";
             mnuLop.Text = "Lớp học";
-            mnuGiangVien.Text = "Giảng viên";
+           
             mnuSinhVien.Text = "Sinh viên";
             mnuDSV.Text = "Điểm sinh viên";
 
@@ -557,7 +557,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             mnuLop.Text = "Class";
             mnuKhoa.Text = "Faculty";
             mnuMonHoc.Text = "Subject";
-            mnuGiangVien.Text = "Teacher";
+            
             mnuDGNL.Text = "Rated capacity";
             mnuDSV.Text = "Scores";
             mnuDCN.Text = "Personal scores";

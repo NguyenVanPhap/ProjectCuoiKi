@@ -170,8 +170,8 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
         }
         public void Load_Data()
         {
-            try
-            {
+            /*try
+            {*/
                 dtDiemSinhVien = new DataTable();
                 dtDiemSinhVien.Clear();
                 DataSet ds = dbDSV.LayDiemTheoKhoaLopHocKiMon(cbbKhoa.Text, cbbLop.Text, cbbHocKi.Text, cbbMonHoc.Text, cbbNamHoc.Text);
@@ -205,11 +205,11 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 this.lblXoa.ForeColor = Color.SteelBlue;
 
                 dgvDiem_CellClick(null, null);
-            }
+            /*}
             catch
             {
                 MessageBox.Show("Không Load được dữ liệu. Lỗi rồi!!! " + err);
-            }
+            }*/
         }
 
         private void DiemSinhVien_Load(object sender, EventArgs e)

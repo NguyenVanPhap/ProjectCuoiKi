@@ -274,7 +274,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     epvMaKhoa.Clear();
                     this.txtMaKhoa.Focus();
                 }
-                else if (dbKhoa.KiemTraMaKhoaTonTai(this.txtMaKhoa.Text))
+                else if (dbKhoa.KiemTraMaKhoaTonTai(this.txtMaKhoa.Text,ref err))
                 {
                     epvMaKhoa.SetError(txtMaKhoa, "!");
                     MessageBox.Show("Mã Khoa đã tồn tại!", "Thông báo",
@@ -314,7 +314,7 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (traLoi == DialogResult.Yes)
             {
-                if (dbKhoa.KiemTraMaKhoaTrongLop(this.txtMaKhoa.Text))
+                if (dbKhoa.KiemTraMaKhoaTrongLop(this.txtMaKhoa.Text,ref err))
                     MessageBox.Show("Bạn phải xóa Mẫu Khoa '" + this.txtMaKhoa.Text.Trim() + "' từ bảng Lớp!!!",
                         "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else

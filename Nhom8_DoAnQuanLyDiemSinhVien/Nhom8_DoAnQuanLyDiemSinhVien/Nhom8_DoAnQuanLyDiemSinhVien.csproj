@@ -98,6 +98,7 @@
     <Compile Include="BS Layer\BLSoLuongSVTheoKhoa.cs" />
     <Compile Include="BS Layer\BLThongTinTaiKhoan.cs" />
     <Compile Include="BS Layer\BLTinhHinhHocTap.cs" />
+    <Compile Include="DB Layer\SQLconnectionStr.cs" />
     <Compile Include="DB Layer\DBMain.cs" />
     <Compile Include="FormControl\DanhGiaNangLuc.cs">
       <SubType>UserControl</SubType>
