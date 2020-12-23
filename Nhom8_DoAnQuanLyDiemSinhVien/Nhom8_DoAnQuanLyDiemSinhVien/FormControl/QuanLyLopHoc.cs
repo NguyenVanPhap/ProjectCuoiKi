@@ -314,10 +314,10 @@ namespace Nhom11_DoAnQuanLySinhVien.FormControl
                     epvMaLop.Clear();
                     txtMaLop.Focus();
                 }
-                /*else if (dbLopHoc.kiemTraMaKhoaChinhXac(this.cboMaKhoa.Text, ref err) == false)
+                else if (dbLopHoc.kiemTraMaKhoaChinhXac(this.cboMaKhoa.Text, ref err) == false)
                 {
-                    MessageBox.Show("Nhập mã khoa không chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }*/
+                    MessageBox.Show("Nhập mã khoa không chính xác!", "Thông báo"+err, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
                 {
                     if (dbLopHoc.ThemLopHoc(this.cboMaKhoa.Text, this.txtMaLop.Text, this.txtTenLop.Text,txtSiSo.Text, ref err))
