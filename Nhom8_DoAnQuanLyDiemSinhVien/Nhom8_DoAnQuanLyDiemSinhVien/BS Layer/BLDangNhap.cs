@@ -31,6 +31,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
             {
                 SQLconnectionStr.username = TenDN;
                 SQLconnectionStr.password = password;
+                SQLconnectionStr.quyen = Quyen;
                 return true;
 
             }

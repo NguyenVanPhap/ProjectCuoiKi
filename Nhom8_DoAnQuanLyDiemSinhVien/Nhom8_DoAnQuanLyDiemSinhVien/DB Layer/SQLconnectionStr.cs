@@ -11,5 +11,6 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
     {
         public static string username="";
         public static string password="";
+        public static string quyen = "";
     }
 }

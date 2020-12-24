@@ -14,7 +14,7 @@ namespace Nhom11_DoAnQuanLySinhVien.BS_Layer
         DBMain db = null;
         public BLLogin()
         {
-            db = new DBMain("","");
+            db = new DBMain("");
         }
         public DataSet LayLogin()
         {
