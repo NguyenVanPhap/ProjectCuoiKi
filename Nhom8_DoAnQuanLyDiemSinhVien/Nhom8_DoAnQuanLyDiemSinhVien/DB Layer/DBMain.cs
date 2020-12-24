@@ -27,9 +27,7 @@ namespace Nhom11_DoAnQuanLySinhVien.DB_Layer
         }
         public DBMain(string username ,string password)
         {
-            username = SQLconnectionStr.username;
-            password = SQLconnectionStr.password;
-            string connStr = "Data Source=DESKTOP-D3AR037;Initial Catalog=QuanLyDiemSinhVienDB;User ID="+"u"+username+";password = "+password;
+            string connStr = "Data Source=DESKTOP-D3AR037;Initial Catalog=QuanLyDiemSinhVienDB;Integrated Security=True";
             conn = new SqlConnection(connStr);
             comm = conn.CreateCommand();
         }

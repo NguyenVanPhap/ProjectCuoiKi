@@ -100,18 +100,7 @@ namespace Nhom11_DoAnQuanLySinhVien
             this.TTTK.Visible = false;
             this.inf.Visible = false;  
             
-            if(Permission=="sinhvien"||Permission=="sinhvien")
-            {
                 
-                /*QLK.UnEnable();
-                QLLH.UnEnable();
-                QLMH.UnEnable();
-                TTSV.UnEnable();*/
-            }   
-            if(Permission=="sinhvien")
-            {
-                /*DiemSV.UnEnable();*/
-            }    
         }
 
         private void btnQLdiemSV_Click(object sender, EventArgs e)
