@@ -1,4 +1,5 @@
-﻿using Nhom11_DoAnQuanLySinhVien.FormControl;
+﻿using Nhom11_DoAnQuanLySinhVien.DB_Layer;
+using Nhom11_DoAnQuanLySinhVien.FormControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -255,7 +256,10 @@ namespace Nhom11_DoAnQuanLySinhVien
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
-        {            
+        {
+            SQLconnectionStr.password = "";
+            SQLconnectionStr.username = "";
+            SQLconnectionStr.quyen = "";
             frmDangNhap f= new frmDangNhap();
             f.Show();
             this.Close();
